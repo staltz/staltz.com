@@ -1,0 +1,155 @@
+
+@import url(http://fonts.googleapis.com/css?family=Lora);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+body {
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4 {
+	font-family: 'Lora', serif;
+}
+p {
+	font-size: 16px;
+}
+a {
+	color: black;
+	text-decoration: underline;
+}
+
+.header {
+	height: 300px;
+	background-image: url('../img/header_photo.jpg');
+	background-size: cover;
+	background-color: #254357;
+	background-position: bottom;
+}
+.avatar {
+	background-image: url('../img/andre.jpg');
+	background-size: cover;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	width: 100px;
+	position: relative;
+	top: -50px;
+	margin-bottom: -50px;
+	border: 2px solid white;
+	-webkit-border-radius: 50px;
+	        border-radius: 50px;
+	-webkit-box-shadow: 0 0 6px 0 rgba(0,0,0,0.35);
+	        box-shadow: 0 0 6px 0 rgba(0,0,0,0.35);
+}
+.centered {
+	text-align: center;
+}
+.name-title {
+	color: #444;
+}
+a.name-title {
+	display: inline;
+	text-decoration: none;
+	color: #444;
+}
+a.name-title:hover {
+	text-decoration: none;
+	color: #444;
+	border-bottom: 1px dashed #444;
+	cursor: help;
+}
+.name-subtitle {
+	color: #999;
+	font-size: 18px;
+	font-family: 'Roboto Condensed';
+	margin-bottom: 40px;
+	text-transform: uppercase;
+}
+.syllables {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 20px;
+	color: #555;
+	margin-right: 15px;
+}
+h2.hr {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #AAA;
+	line-height: 0;
+	margin: 60px 0 30px;
+	font-size: 16px;
+	cursor: default;
+	-webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	   -khtml-user-select: none;
+	     -moz-user-select: none;
+	      -ms-user-select: none;
+	          user-select: none;
+}
+span.hr {
+	background-color: white;
+	padding: 0 10px;
+	font-family: 'Roboto Condensed';
+	color: #999;
+}
+ul.horizontal {
+	width: 100%;
+	max-width: 300px;
+	display: table;
+	padding: 0;
+	margin: 0 auto;
+}
+ul.horizontal li {
+	display: table-cell;
+	text-align: center;
+}
+ul.horizontal li a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 39px;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+ul.horizontal li a:hover, ul.horizontal li a:active {
+	text-decoration: none;
+	border-bottom: 4px solid rgba(0,0,0,0.3);
+}
+.twitter-bg {
+	background-color: #33CCFF;
+}
+.facebook-bg {
+	background-color: #3B5998;
+}
+.linkedin-bg {
+	background-color: #0E76A8;
+}
+.stackexchange-bg {
+	background-color: #EF8236;
+}
+.github-bg {
+	background-color: #171515;
+}
+.email-bg {
+	background-color: #888;
+}
+.footer {
+	margin-top: 60px;
+	background-color: #EEE;
+	text-align: center;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	padding: 30px 0;
+	color: #888;
+}
+.footer a {
+	color: #888;
+}
+.footer p {
+	font-size: 14px;
+}
+span.dot {
+	margin: 0 5px;
+}
