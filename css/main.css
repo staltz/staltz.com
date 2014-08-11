@@ -23,7 +23,7 @@ a {
 	background-image: url('../img/header_photo.jpg');
 	background-size: cover;
 	background-color: #598080;
-	background-position: bottom;
+	background-position: 0 -140px;
 }
 .avatar {
 	background-image: url('../img/andre.jpg');
