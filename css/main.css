@@ -12,6 +12,7 @@ h1, h2, h3, h4 {
 }
 p {
 	font-size: 16px;
+	line-height: 1.5;
 }
 a {
 	color: black;
@@ -24,6 +25,20 @@ a {
 	background-size: cover;
 	background-color: #598080;
 	background-position: center;
+}
+.header-post {
+	height: 100px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#83c3a5+0,72c2c1+100 */
+	background: #83c3a5; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #83c3a5 0%, #72c2c1 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#83c3a5), color-stop(100%,#72c2c1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #83c3a5 0%,#72c2c1 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  #83c3a5 0%,#72c2c1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  #83c3a5 0%,#72c2c1 100%); /* IE10+ */
+	background: linear-gradient(45deg,  #83c3a5 0%,#72c2c1 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83c3a5', endColorstr='#72c2c1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-size: cover;
+	text-transform: uppercase;
 }
 .avatar {
 	background-image: url('../img/andre.jpg');
@@ -63,6 +78,12 @@ a.name-title:hover {
 	font-size: 18px;
 	font-family: 'Roboto Condensed';
 	margin-bottom: 40px;
+	text-transform: uppercase;
+}
+.post-title {
+	color: #666;
+	font-family: 'Roboto Condensed';
+	margin: 40px 0;
 	text-transform: uppercase;
 }
 .syllables {
