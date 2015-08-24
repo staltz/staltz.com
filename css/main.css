@@ -10,7 +10,7 @@ body {
 h1, h2, h3, h4 {
 	font-family: 'Lora', serif;
 }
-p {
+p, ul {
 	font-size: 16px;
 	line-height: 1.5;
 }
@@ -155,6 +155,10 @@ ul.horizontal li a:hover, ul.horizontal li a:active {
 }
 .email-bg {
 	background-color: #888;
+}
+.post img {
+	width: 100%;
+	margin: 2em 0;
 }
 .footer {
 	margin-top: 60px;
