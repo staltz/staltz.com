@@ -50,7 +50,7 @@ First compulsory mention goes to [Flux](https://github.com/facebook/flux/). It c
 
 <h2 id="redux" class="hr"><span class="hr">REDUX</span></h2>
 
-[Redux](http://rackt.github.io/redux/) is a variation of Flux where the singleton Dispatcher was adapted to become a singleton Store. The Store is not implemented from scratch, instead, it is created by giving a sequence of reducer functions to a store factory.
+[Redux](http://rackt.github.io/redux/) is a variation of Flux where the singleton Dispatcher was adapted to become a singleton Store. The Store is not implemented from scratch, instead, it is created by giving a reducer function to a store factory.
 
 **Parts:**
 
