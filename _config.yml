@@ -1,0 +1,11 @@
+title: "André Staltz"
+author: "André Staltz"
+description: "User Interface Engineer"
+more: "read more"
+url: "http://andre.staltz.com/"
+permalink: none
+
+excerpt_separator: "\n\n\n"
+defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
+gems:
+  - octopress-autoprefixer
