@@ -15,7 +15,7 @@ Architectures might use the term "View" with drastically different connotations.
 
 > **User interface rendering** is the graphical output on the screen, commonly expressed as HTML or some comparable high-level declarative code such as JSX.
 
-> A **User interface (UI) program** is any program which takes user events as input and outputs rendering, as a ongoing process rather than a one-time transformation.
+> A **User interface (UI) program** is any program which takes user events as input and outputs rendering, as an ongoing process rather than a one-time transformation.
 
 The DOM and other layers such as frameworks and libraries are assumed to exist between the user and the architecture.
 
