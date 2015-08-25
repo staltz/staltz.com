@@ -63,7 +63,7 @@ First compulsory mention goes to [Flux](https://github.com/facebook/flux/). It c
 
 **Peculiarities:**
 
-**Factories for stores.** A Store is created using the `createStore()` factory function, taking a composition of reducer functions as arguments. There is also a meta-factory `applyMiddleware()` function which takes middleware functions as arguments. Middlewares are mechanisms of overriding the `dispatch()` function of a store with additional chained functionality.
+**Factories for stores.** A Store is created using the `createStore()` factory function, taking a composition of reducer functions as argument. There is also a meta-factory `applyMiddleware()` function which takes middleware functions as arguments. Middlewares are mechanisms of overriding the `dispatch()` function of a store with additional chained functionality.
 
 **Providers.** Redux is unopinionated with regards to the "View" framework used to make the UI program. It can be used with React or Angular or others. In the context of this architecture, "View" is a UI program. Like Flux, Redux is not (by design) fractal and the Store is an orchestrator.
 
