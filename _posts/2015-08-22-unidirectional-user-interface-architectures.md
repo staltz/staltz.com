@@ -3,7 +3,7 @@ layout: post
 title: "Unidirectional User Interface Architectures"
 ---
 
-This post is a non-exhaustive quick overview of the so-called "unidirectional data flow" architectures. Not meant to be taken as an beginner tutorial, but rather as an overview of their differences and peculiarities. At the end, I'll introduce a new architecture which deviates significantly from the others. This post assumes client-side Web UI frameworks only.
+This post is a non-exhaustive quick overview of the so-called "unidirectional data flow" architectures. Not meant to be taken as a beginner tutorial, but rather as an overview of their differences and peculiarities. At the end, I'll introduce a new architecture which deviates significantly from the others. This post assumes client-side Web UI frameworks only.
 
 <h2 id="terminology" class="hr"><span class="hr">TERMINOLOGY</span></h2>
 
@@ -67,7 +67,7 @@ First compulsory mention goes to [Flux](https://github.com/facebook/flux/). It c
 
 **Providers.** Redux is unopinionated with regards to the "View" framework used to make the UI program. It can be used with React or Angular or others. In the context of this architecture, "View" is a UI program. Like Flux, Redux is not (by design) fractal and the Store is an orchestrator.
 
-**User event handlers may or may not be are declared in the rendering.** It depends on the Provider at hand.
+**User event handlers may or may not be declared in the rendering.** It depends on the Provider at hand.
 
 <h2 id="best" class="hr"><span class="hr">BEST</span></h2>
 
