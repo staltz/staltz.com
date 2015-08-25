@@ -177,3 +177,5 @@ I don't want to be pretentious to say this is the best user interface architectu
 - - -
 
 Liked this? [Tweet it forward](https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fstaltz.com%2Funidirectional-user-interface-architectures.html%2F&amp;text=Unidirectional%20User%20Interface%20Architectures&amp;tw_p=tweetbutton&amp;url=http%3A%2F%2Fstaltz.com%2Funidirectional-user-interface-architectures.html&amp;via=andrestaltz).
+[Comments in Hacker News](https://news.ycombinator.com/item?id=10115314).
+
