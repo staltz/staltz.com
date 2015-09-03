@@ -3,7 +3,7 @@ layout: post
 title: "Random namespacing in Cycle.js"
 ---
 
-Regarding the new architecture for Cycle.js I've been promoting, Nested Dialogues, [Frederik Krautwald told me something](https://github.com/cyclejs/cycle-core/issues/167#issuecomment-136864542) that left me pondering:
+Regarding the new architecture for Cycle.js I've been promoting, [Nested Dialogues](http://staltz.com/unidirectional-user-interface-architectures.html#nested-dialogues), [Frederik Krautwald told me something](https://github.com/cyclejs/cycle-core/issues/167#issuecomment-136864542) that left me pondering:
 
 > Namespacing dialogues quickly becomes a nightmare. This is true when you need to place several dialogues of the same type in/on the same view/page. You need to come up with namespace after namespace. Definitely not a good solution IMO.
 

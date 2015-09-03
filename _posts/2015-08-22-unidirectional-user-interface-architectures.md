@@ -134,7 +134,7 @@ Introduced as a fully reactive unidirectional architecture based on [RxJS](https
 
 A MVI tuple is a UI program. This architecture is fractal if and only if all custom elements are implemented with MVI.
 
-<h2 id="elm" class="hr"><span class="hr">NESTED DIALOGUES</span></h2>
+<h2 id="nested-dialogues" class="hr"><span class="hr">NESTED DIALOGUES</span></h2>
 
 This blog post introduces *Nested Dialogues* as a new unidirectional architecture meant for Cycle.js and any other approach based solely on Observables. It is an evolution of the Model-View-Intent architecture.
 
