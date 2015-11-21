@@ -3,7 +3,7 @@ layout: post
 title: "Rx glitches aren't actually a problem"
 ---
 
-Once in a while someone points out how Rx does not have means to avoid glitches. [[1]](http://stackoverflow.com/questions/22332407/how-to-avoid-glitches-in-rx?rq=1) [[2]](https://social.msdn.microsoft.com/Forums/en-US/bc2c4b71-c97b-428e-ad71-324055a3cd03/another-discussion-on-glitches-and-rx?forum=rx)
+Once in a while someone points out how [ReactiveX (Rx)](http://reactivex.io/) does not have means to avoid glitches. [[1]](http://stackoverflow.com/questions/22332407/how-to-avoid-glitches-in-rx?rq=1) [[2]](https://social.msdn.microsoft.com/Forums/en-US/bc2c4b71-c97b-428e-ad71-324055a3cd03/another-discussion-on-glitches-and-rx?forum=rx)
 
 Glitches are temporary inconsistencies emitted by Observables. Take this example:
 
