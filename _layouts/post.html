@@ -24,7 +24,7 @@
           </div>
 {{ content }}
           <p>
-          If you liked this article, consider <a href="https://twitter.com/intent/tweet?original_referer={{ site.url | uri_escape }}{{ page.url | uri_escape }}&amp;text={{ page.title | uri_escape }}&amp;tw_p=tweetbutton&amp;url={{ site.url | uri_escape }}{{ page.url | uri_escape }}&amp;via=andrestaltz">tweeting</a> it to your followers.
+          If you liked this article, consider sharing <a href="https://twitter.com/intent/tweet?original_referer={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;text={{ page.title | uri_escape }}&amp;tw_p=tweetbutton&amp;url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;via=andrestaltz" rel="nofollow" target="_blank" title="tweeting">(tweeting)<span style="text-decoration: underline"></a> it to your followers.
           </p>
         </div>
       </div>
