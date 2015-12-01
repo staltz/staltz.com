@@ -23,6 +23,9 @@
             <h2 class="post-title">{{ page.title }}</h3>
           </div>
 {{ content }}
+          <p>
+          If you liked this article, consider <a href="https://twitter.com/intent/tweet?original_referer={{ site.url | uri_escape }}{{ page.url | uri_escape }}&amp;text={{ page.title | uri_escape }}&amp;tw_p=tweetbutton&amp;url={{ site.url | uri_escape }}{{ page.url | uri_escape }}&amp;via=andrestaltz">tweeting</a> it to your followers.
+          </p>
         </div>
       </div>
     </div>
@@ -30,9 +33,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-lg-offset-3">
-            <p>Built with</p>
-            <p><a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a><span class="dot">·</span><a href="http://fontawesome.io" target="_blank">FontAwesome 3.2.1</a>
-            </p>
+            <p><a href="/">Back home</a></p>
             <p><a href="https://github.com/staltz/staltz.github.io" target="_blank">Source code</a>
             </p>
           </div>
