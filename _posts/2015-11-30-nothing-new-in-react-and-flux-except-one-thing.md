@@ -79,7 +79,7 @@ Even Time Traveling and Snapshots, which are often attributed as novelties from 
 
 So what revolutionary technique does React bring?
 
-We can say it's the successful combination of all of those existing ideas into a coherent API for creating Components with one-day flow of data. But there is actually one thing which is entirely new to UI development (as least as far as my investigation could uncover).
+We can say it's the successful combination of all of those existing ideas into a coherent API for creating Components with one-way flow of data. But there is actually one thing which is entirely new to UI development (as least as far as my investigation could uncover).
 
 It's a **functional and reactive user interface API to wrap a mutable stateful UI API**. In other words, the Virtual DOM API to wrap the DOM's API.
 
