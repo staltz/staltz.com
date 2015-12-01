@@ -24,7 +24,7 @@ var dropdown =
 render(dropdown);
 {% endhighlight %}
 
-The idea of embedding markup in real code is an old one. Obviously Facebook took some inspiration from PHP in this regards. Extensively writing markup in PHP code led them to create [XHP](https://www.facebook.com/notes/facebook-engineering/xhp-a-new-way-to-write-php/294003943919) to ease the pain of escaping, among other reasons. Inspired by XHP, [JSX itself was used internally in Facebook](https://twitter.com/sebmarkbage/status/599805631382552576) before React was invented.
+The idea of embedding markup in real code is an old one. Facebook took some inspiration from PHP in this regards. Extensively writing markup in PHP code led them to create [XHP](https://www.facebook.com/notes/facebook-engineering/xhp-a-new-way-to-write-php/294003943919) to ease the pain of escaping, among other reasons. Inspired by XHP, [JSX itself was used internally in Facebook](https://twitter.com/sebmarkbage/status/599805631382552576) before React was invented.
 
 JSX is also very similar to [E4X](https://en.wikipedia.org/wiki/E4X), an Ecma standard for "XML in ECMAScript". It never had the wide success that JSX has, but still, the idea of embedding XML syntax in JavaScript existed since 2002.
 
