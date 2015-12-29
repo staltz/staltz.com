@@ -74,7 +74,7 @@ var shortLowerCaseName$ = name$
   .filter(name => name.length < 5);
 
 // This console.log will never happen!
-shortLowerCaseName$.do(name => console.log(x));
+shortLowerCaseName$.do(name => console.log(name));
 {% endhighlight %}
 
 The output from `do()` must be connected to the operator chain that gets eventually subscribed.
