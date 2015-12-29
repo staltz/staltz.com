@@ -48,11 +48,11 @@ layout: blank
           </ul>
 
           <h2 id="extras" class="hr"><span class="hr">BLOG</span></h2>
-          {% for post in site.posts %}
           <p>
-            <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%B" }})
-          </p>
+          {% for post in site.posts %}
+            <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%B" }})<br />
           {% endfor %}
+          </p>
           <h2 id="extras" class="hr"><span class="hr">EXTRAS</span></h2>
           <p><a href="http://users.ics.aalto.fi/desoua1/" target="_blank">I'm MSc</a> in Computer Science, and for my
           <a href="http://users.ics.aalto.fi/desoua1/HAcid_Thesis.pdf" target="_blank">Master's Thesis</a> I developed

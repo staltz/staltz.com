@@ -87,7 +87,13 @@ a.name-title:hover {
 .post-title {
 	color: #666;
 	font-family: 'Roboto Condensed';
-	margin: 40px 0;
+	margin: 40px 0 0;
+	text-transform: uppercase;
+}
+.post-date {
+	color: #999;
+	font-family: 'Source Sans Pro';
+	margin: 0 0 40px;
 	text-transform: uppercase;
 }
 .syllables {
