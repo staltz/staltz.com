@@ -66,6 +66,19 @@ Because Observables are lazy until you subscribe, a subscription triggers the op
 
 So `.do(x => console.log(x))` is a non-intrusive tracing technique that does not change the behavior of your program, it simply reflects what actually happens. A subscription is intrusive because it requests the operator chain to execute, changing the behavior of your program, specially if you are trying to debug a hot-or-cold bug.
 
+Notice also that `do()` is an **operator**: it returns a new Observable. If you just simply replace `subscribe()` with `do()`, nothing will happen because you just got a new Observable as output but you dropped it on the ground:
+
+{% highlight js %}
+var shortLowerCaseName$ = name$
+  .map(name => name.toLowerCase())
+  .filter(name => name.length < 5);
+
+// This console.log will never happen!
+shortLowerCaseName$.do(name => console.log(x));
+{% endhighlight %}
+
+The output from `do()` must be connected to the operator chain that gets eventually subscribed.
+
 <h2 id="drawing-dependency-graphs" class="hr"><span class="hr">DRAWING DEPENDENCY GRAPHS</span></h2>
 
 Suppose you have RxJS code that looks like this:
