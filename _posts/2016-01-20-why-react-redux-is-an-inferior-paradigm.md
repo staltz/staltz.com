@@ -164,4 +164,13 @@ With Cycle.js, I have witnessed two developers understand it in a few days and e
 
 One could argue that paradigms always have tradeoffs, and I have to agree. The React/Redux paradigm might have benefits that the Cycle paradigm or Elm paradigm don't offer. But just like horses and cars have tradeoffs for transporting people, one of them is a clear winner, despite disadvantages (cars can only drive on asphault, driving cars need more training, etc).
 
+As a reminder, there are multiple aspects to consider when picking a Frontend technology:
+
+- Learning cost
+- Paradigm ergonomy
+- Community size
+- Feature coverage
+
+React/Redux is clearly superior in some, but not in all these aspects. Neither is Cycle great in all aspects. The same can be said for Elm. This post is just to clarify how React/Redux is not the best in the "Paradigm ergonomy" aspect.
+
 As a conclusion, my message to the Frontend community is to continue searching for better solutions. On Twitter, I have seen respectable people claiming "we should declare React/Redux as the winner. We can finally stop evolving" and I fully disagree. *Even with solutions like Elm and Cycle* we can't consider Frontend development solved, we need to continue seeking for improvements to our workflow. The Frontend community has seen this happening continuously, first with jQuery et al, then Backbone, then Angular, and now React. Let's not stop there.
