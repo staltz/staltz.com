@@ -162,7 +162,7 @@ Once you learn Elm or Cycle, getting things done will be more productive, less i
 
 With Cycle.js, I have witnessed two developers understand it in a few days and enjoy it's simplicity, but I'll refrain from speaking much about Cycle.js since I'm biased. The goal of both Elm and Cycle.js is to provide a paradigm to get features delivered in an enjoyable manner with good signal-to-noise. Such paradigm is currently unachievable with React/Redux unless it is reinvented, because a paradigm is the foundation. Elm is known to not properly support server-side rendering, so from a feature coverage perspective, React is better in that regard. However, server-side rendering in Elm can be added and [there is ongoing work to achieve that](https://github.com/NoRedInk/take-home). However, a "good" paradigm cannot be added to React/Redux. It is a foundation, and can only be replaced.
 
-One could argue that paradigms always have tradeoffs, and I have to agree. The React/Redux paradigm might have benefits that the Cycle paradigm or Elm paradigm don't offer. But just like horses and cars have tradeoffs for transporting people, one of them is a clear winner, despite disadvantages (cars can only drive on asphault, driving cars need more training, etc).
+One could argue that paradigms always have tradeoffs, and I have to agree. The React/Redux paradigm might have benefits that the Cycle paradigm or Elm paradigm don't offer. But just like horses and cars have tradeoffs for transporting people, one of them is a clear winner, despite disadvantages (cars can only drive on asphalt, driving cars need more training, etc).
 
 As a reminder, there are multiple aspects to consider when picking a Frontend technology:
 
