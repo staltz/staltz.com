@@ -96,6 +96,66 @@ a.name-title:hover {
 	margin: 0 0 40px;
 	text-transform: uppercase;
 }
+
+.big-tweet-header {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.big-tweet-name-part {
+    margin-left: 20px;
+}
+
+.big-tweet-name {
+    margin-top: 0;
+    display: block;
+}
+
+.big-tweet-handle, .big-tweet-date {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    color: #888;
+}
+.big-tweet-handle a {
+    color: #888;
+}
+.big-tweet-date {
+    margin-left: 10px;
+}
+
+.big-tweet-avatar {
+    background-image: url('../img/andre.jpg');
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.big-tweet-body p {
+    font-size: 2.3rem;
+}
+.big-tweet-body pre {
+    font-size: 1.6rem;
+}
+
 .syllables {
 	font-family: 'Lora', serif;
 	font-style: italic;
