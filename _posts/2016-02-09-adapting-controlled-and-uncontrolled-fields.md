@@ -48,4 +48,4 @@ function main(sources) {
 }
 {% endhighlight %}
 
-Now we have a square peg (Event Stream) for a square hole (assigning values). See a [JSBin example](https://jsbin.com/vacuzo/edit?js,output) of this here.
+Now we have a square peg (Event Stream) for a square hole (assigning values). See a [JSBin example](https://jsbin.com/vacuzo/edit?js,output) of this.
