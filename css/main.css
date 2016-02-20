@@ -156,6 +156,16 @@ a.name-title:hover {
     font-size: 1.6rem;
 }
 
+.big-tweet-body table {
+	width: 100%;
+	margin: 40px 0;
+	font-size: 2.1rem;
+}
+
+.big-tweet-body th {
+	border-bottom: 1px solid #333;
+}
+
 .syllables {
 	font-family: 'Lora', serif;
 	font-style: italic;
