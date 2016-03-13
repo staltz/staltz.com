@@ -22,7 +22,7 @@ function main(sources) {
     .events('input').map(ev => ev.target.value);
 
   // Model
-  const list$ = add$.withLatestFrom(type$, (_, text) => text)
+  const list$ = type$.flatMapLatest(text => add$.first().map(text))
     .startWith([])
     .scan((acc, curr) => acc.concat(curr));
 
@@ -48,4 +48,4 @@ function main(sources) {
 }
 {% endhighlight %}
 
-Now we have a square peg (Event Stream) for a square hole (assigning values). See a [JSBin example](https://jsbin.com/wezoke/1/edit?js,output) of this.
+Now we have a square peg (Event Stream) for a square hole (assigning values). See a [JSBin example](https://jsbin.com/hojiluruva/1/edit?js,output) of this.
