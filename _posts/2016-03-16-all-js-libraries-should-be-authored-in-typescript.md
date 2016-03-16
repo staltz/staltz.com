@@ -15,6 +15,12 @@ Often in JS libraries, the types are vaguely defined as an afterthought when wri
 
 Immutable.js actually is a [good example](http://facebook.github.io/immutable-js/docs/#/List) of thoroughly considering the types of its API, written in TypeScript. Also React's documentation carefully considers the types in its API, e.g. [here](http://facebook.github.io/react/docs/glossary.html#nodes-and-elements).
 
+<h2 id="better-autocomplete" class="hr"><span class="hr">BETTER AUTOCOMPLETE</span></h2>
+
+Some editors and IDEs make use of type definitions to provide better code intelligence and autocomplete features, even when the project is authored in JavaScript.
+
+This happens at least in [Visual Studio Code](https://code.visualstudio.com/Docs/languages/javascript#_rich-editing-support).
+
 <h2 id="more-reliable-libraries" class="hr"><span class="hr">MORE RELIABLE LIBRARIES</span></h2>
 
 Types are there whether you like it or not. APIs never accept "whatever" and output "whatever". There are always preconditions and postconditions. Good library APIs have good contracts.
