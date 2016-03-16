@@ -20,7 +20,7 @@ Immutable.js actually is a [good example](http://facebook.github.io/immutable-js
 Types are there whether you like it or not. APIs never accept "whatever" and output "whatever". There are always preconditions and postconditions. Good library APIs have good contracts.
 
 Usually, a method accepts either a string or a number or a function or an object, etc.
-Even if the method accepts objects with varied structure, you always have some assumptions of what is a valid object or not. For instance, maybe all the properties are optional and some of them are `payload`, `port`, `ignore`, `host`, but these are usually a limited amount of predefined properties, and e.g. `paload` would be an invalid property.
+Even if the method accepts objects with varied structure, you always have some assumptions of what is a valid object or not. For instance, maybe all the properties are optional and some of them are `payload`, `port`, `ignore`, `host`, but these are usually a limited amount of predefined properties, and e.g. the typo `paload` would be an invalid property.
 
 The types are there. Instead of leaving them implicit, you can just make them explicit. Interfaces are a good way of defining the structure of valid objects.
 
