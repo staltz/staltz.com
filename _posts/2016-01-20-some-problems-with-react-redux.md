@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Some problems with React/Redux"
+redirect_from:
+  - /why-react-redux-is-an-inferior-paradigm.html
 ---
 
 About two years ago I first tried React in a real application. As I started using it extensively in that application, I found it unwieldy and unnecessarily complicated. After that I decided to build my own solutions using RxJS and virtual-dom and after a year or so I created a framework called [Cycle.js](http://cycle.js.org).
