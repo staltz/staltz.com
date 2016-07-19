@@ -5,6 +5,8 @@ title: "Setting up a JavaScript monorepo"
 
 Yesterday I finished migrating Cycle.js to a [monorepo](https://github.com/cyclejs/cyclejs). It was previously split up into multiple repositories, one for each package. I recommend a monorepo over separate repos if you have many packages that are under one project. Managing multiple repos isn't that fun. Multiple repos means multiple places to manage issues, manage issue labels (and making them consistent across repos), manage PRs, git hooks for conventions, etc.
 
+The first challenge was to merge all the repos in order to keep **all** commits. This [StackOverflow thread](http://stackoverflow.com/questions/277029/combining-multiple-git-repositories) helped.
+
 The options out there right now, as far as I know, are [Lerna](https://lernajs.io/), [Builder](http://formidable.com/open-source/builder/), and a custom setup. Which one is best? It depends on your situation.
 
 I tried both Lerna and Builder. They are decent, but don't add much value in my situation. Turns out a few custom bash scripts were the best for me. My case was: a small number of packages (about 10), and a rather homogenous structure for each package. I also wanted to have the simplest possible monorepo setup, with the least amount of magic as possible.
