@@ -27,15 +27,15 @@ function sum(arr) {
 
 The results of the poll were:
 
-- A massive 73% of people think it's pure
-- 19% consider it impure
+- A massive 74% of people think it's pure
+- 18% consider it impure
 - 8% are not sure
 
-It's understandable why people think it's pure: even though it uses mutation internally, given an array with values `[1, 2, 3]` as argument, you will always get `6` as output. Every. Single. Time.
+It's understandable why most people think it's pure: even though it uses mutation internally, given an array with values `[1, 2, 3]` as argument, you will always get `6` as output. Every. Single. Time.
 
-But it's also understandable why 19% of people thought it was impure: the body of the function uses impure expressions and statements with side effects. After all, I asked "Pure or impure?", not "is this **function** pure?".
+But it's also understandable why 18% of people thought it was impure: the body of the function uses impure expressions and statements with side effects. After all, I asked "Pure or impure?", not "is this **function** pure?".
 
-What's surprising is that both camps are wrong. Those unsure 8% were correct: it depends on runtime behavior. Just by reading the function, we cannot be sure. In fact, the 19% who think it's impure are "more correct" than the 73% percent that think it's pure, because there are cases where `sum` is impure.
+What's surprising is that both camps are wrong. Those unsure 8% were correct: it depends on runtime behavior. Just by reading the function, we cannot be sure. In fact, the 18% who think it's impure are "more correct" than the 74% percent that think it's pure, because there are cases where `sum` is impure.
 
 The code is deceitfully simple, and while we read it, as humans we naturally make assumptions. Here are a couple of assumptions that you made without probably realizing:
 
