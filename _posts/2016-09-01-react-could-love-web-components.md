@@ -12,7 +12,7 @@ React is a very popular library/framework at the moment, and React advocates mak
 - Web Components are cumbersome for building a deep component tree, React isn't
 - Web Components are not suitable for a Flux-like top-down data flow, React is
 
-The golden use case for WCs would be as primitive leaf components, like third party UI component libraries such as [Material UI](http://www.material-ui.com/#/) or [Elemental UI](elemental-ui.com/). These are not intermediate components in your component hierarchy.
+The golden use case for WCs would be as primitive leaf components, like third party UI component libraries such as [Material UI](http://www.material-ui.com/) or [Elemental UI](http://www.elemental-ui.com/). These are not intermediate components in your component hierarchy.
 
 Leaf components rarely (or never) need attributes that accept objects nor functions. Even in cases where the leaf component expects an object, you could serialize it, because the object probably shouldn't contain functions nor circular references.
 
