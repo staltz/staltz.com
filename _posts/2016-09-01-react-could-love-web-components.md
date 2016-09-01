@@ -23,7 +23,7 @@ Are Web Components unsuitable for Flux/Redux dispatching on user events?
 <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/csuwildcat">@csuwildcat</a> I still have no idea how to build a WC app with top-down data flow and without stuff like Polymer. Same for many people.</p>&mdash; Dan Abramov (@dan_abramov) <a href="https://twitter.com/dan_abramov/status/770642705298972673">August 30, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Not really. We don't need to build the whole app with Web Components. We can use them just as leaf components, and then hook them up with a Redux-like architecture. [Here is an example](http://jsbin.com/pudecikelo/edit?js,output) (runs only in Chrome, it's just a proof of concept quickly built) of how you could use a Web Component inside a React app, and the Web Component's `flipend` event would trigger a dispatch of an action:
+Not really. We don't need to build the whole app with Web Components. We can use them just as leaf components, and then hook them up with a Redux-like architecture. [Here is an example](http://jsbin.com/qilesihaca/edit?js,output) (runs only in Chrome, it's just a proof of concept quickly built) of how you could use a Web Component inside a React app, and the Web Component's `flipend` event would trigger a dispatch of an action:
 
 ```js
 window.addEventListener('WebComponentsReady', function () {
