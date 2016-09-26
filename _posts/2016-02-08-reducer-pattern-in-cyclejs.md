@@ -14,9 +14,9 @@ const setHighlightReducer$ = actions.setHighlight$
   })
 {% endhighlight %}
 
-This produces a stream of reducer functions, which we can then [merge all together](https://github.com/cyclejs/cyclejs/blob/198c3079584a17d2fd3cadcac87d5aa3ee330098/examples/autocomplete-search/src/app.js#L184-L189) to get just one stream of modifier functions.
+This produces a stream of reducer functions, which we can then [merge all together](https://github.com/cyclejs/cyclejs/blob/198c3079584a17d2fd3cadcac87d5aa3ee330098/examples/autocomplete-search/src/app.js#L184-L189) to get just one stream of reducer functions.
 
-The stream of modifier functions is then “reduced” with the [fold operator](https://github.com/cyclejs/cyclejs/blob/198c3079584a17d2fd3cadcac87d5aa3ee330098/examples/autocomplete-search/src/app.js#L204). This is how state is accumulated over time.
+The stream of reducer functions is then “reduced” with the [fold operator](https://github.com/cyclejs/cyclejs/blob/198c3079584a17d2fd3cadcac87d5aa3ee330098/examples/autocomplete-search/src/app.js#L204). This is how state is accumulated over time.
 
 {% highlight js %}
 reducer$.fold((acc, reducer) => reducer(acc), state)
