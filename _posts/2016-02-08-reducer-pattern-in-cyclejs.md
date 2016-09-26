@@ -5,21 +5,21 @@ title: "The reducer pattern in Cycle.js"
 
 The “reducer” pattern from [Redux](https://github.com/rackt/redux) (or the “update” pattern from the [Elm architecture](https://github.com/evancz/elm-architecture-tutorial)) is common also in Cycle.js, except there is no `switch`-`case` (or pattern matching block) because each reducer corresponds to one (and only one) action.
 
-See this [example code](https://github.com/cyclejs/cycle-examples/blob/master/autocomplete-search/src/app.js#L153-L156) where each action stream is being mapped to a “modifier” function (which is another name for “reducer”).
+See this [example code](https://github.com/cyclejs/cyclejs/blob/198c3079584a17d2fd3cadcac87d5aa3ee330098/examples/autocomplete-search/src/app.js#L144-L182) where each action stream is being mapped to a “reducer” function.
 
 {% highlight js %}
-const setHighlightMod$ = actions.setHighlight$
-  .map(highlighted => function (state) {
+const setHighlightReducer$ = actions.setHighlight$
+  .map(highlighted => function setHighlightReducer(state) {
     return state.set('highlighted', highlighted)
   })
 {% endhighlight %}
 
-This produces a stream of modifier functions, which we can then [merge all together](https://github.com/cyclejs/cycle-examples/blob/master/autocomplete-search/src/app.js#L179-L181) to get just one stream of modifier functions.
+This produces a stream of reducer functions, which we can then [merge all together](https://github.com/cyclejs/cyclejs/blob/198c3079584a17d2fd3cadcac87d5aa3ee330098/examples/autocomplete-search/src/app.js#L184-L189) to get just one stream of modifier functions.
 
-The stream of modifier functions is then “reduced” with the [scan operator](https://github.com/cyclejs/cycle-examples/blob/master/autocomplete-search/src/app.js#L195). This is how state is accumulated over time.
+The stream of modifier functions is then “reduced” with the [fold operator](https://github.com/cyclejs/cyclejs/blob/198c3079584a17d2fd3cadcac87d5aa3ee330098/examples/autocomplete-search/src/app.js#L204). This is how state is accumulated over time.
 
 {% highlight js %}
-mod$.startWith(state).scan((acc, mod) => mod(acc))
+reducer$.fold((acc, reducer) => reducer(acc), state)
 {% endhighlight %}
 
 The benefit is freedom from switch-case blocks, and a good semantic connection between reducer and action.
