@@ -6,6 +6,7 @@ url: "http://staltz.com"
 permalink: none
 
 excerpt_separator: "\n\n\n"
+exclude: ["signed_posts"]
 defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
 gems:
   - octopress-autoprefixer
