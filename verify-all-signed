@@ -1,0 +1,15 @@
+#!/bin/sh
+for file in _posts/*.md
+do
+  name=${file##*/}
+  if [ -f signed_posts/$name.asc ]; then
+    :
+  else
+    echo "Warning :("
+    echo "File _posts/$name is missing a signature file in signed_posts/"
+    exit 1
+  fi
+done
+echo "Okay :)"
+echo "All posts have signatures"
+exit 0

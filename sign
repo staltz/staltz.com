@@ -1,0 +1,3 @@
+#!/bin/sh
+keybase pgp sign -i $1 > signed_posts/$(basename $1).asc
+
