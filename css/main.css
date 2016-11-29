@@ -24,11 +24,11 @@ pre {
 }
 
 .header {
-  height: 300px;
+  height: 410px;
   background-image: url('../img/header_photo.jpg');
   background-size: cover;
   background-color: #598080;
-  background-position: center;
+  background-position: bottom;
 }
 .header-post {
   height: 100px;
