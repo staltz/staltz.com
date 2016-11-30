@@ -5,4 +5,5 @@ _site/
 
 # Editors
 .idea/
+.sublime-project/
 .vscode/
