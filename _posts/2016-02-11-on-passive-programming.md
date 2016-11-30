@@ -1,6 +1,7 @@
 ---
 layout: big-tweet
 title: "On the pains of Passive Programming"
+tags: [bigtweet]
 ---
 
 Having done a lot of Reactive Programming lately, I went back to doing a bit of Passive Programming in a React/Redux codebase. (Read what [Reactive vs Passive](http://cycle.js.org/observables.html#reactive-programming) means).

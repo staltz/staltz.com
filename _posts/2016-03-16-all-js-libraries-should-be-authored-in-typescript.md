@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "All JS libraries should be authored in TypeScript"
+tags: [blog]
 ---
 
 I am a JavaScript programmer, and I make some libraries. Recently, however, I've been writing [TypeScript](http://www.typescriptlang.org/) for [RxJS version 5](https://github.com/ReactiveX/RxJS) (used in [Angular 2](https://angular.io/) which is also authored in TypeScript), and I'm in the process of rewriting [Cycle.js](http://cycle.js.org) in TypeScript.

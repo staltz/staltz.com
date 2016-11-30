@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Some problems with React/Redux"
+tags: [blog]
 redirect_from:
   - /why-react-redux-is-an-inferior-paradigm.html
 ---

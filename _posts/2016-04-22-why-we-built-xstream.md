@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Why we built xstream"
+tags: [blog]
 ---
 
 For the past two years I have been using [RxJS](http://reactivex.io/rxjs/) extensively, in [Cycle.js](http://cycle.js.org/) and in other contexts. Recently, [TylorS](https://github.com/tylors) and I have decided to build a new reactive streams library comparable to RxJS, called [xstream](http://github.com/staltz/xstream).

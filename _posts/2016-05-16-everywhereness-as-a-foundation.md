@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Everywhereness as a foundation"
+tags: [blog]
 ---
 
 I have been building and using reactive programming tools for JavaScript, such as [Cycle.js](http://cycle.js.org/), [xstream](http://staltz.com/xstream/), and [RxJS](http://reactivex.io/rxjs/). I believe and teach that Observables or streams should be ubiquitous in a codebase.

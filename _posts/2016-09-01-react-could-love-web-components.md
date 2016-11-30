@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "React could love Web Components"
+tags: [blog]
 ---
 
 Recently Web Components have been punched in the face in the Twittersphere. It doesn't need to be like that. Web Components are nice and easy-going and humble and friendly. Web Components love you. Do you love them back?

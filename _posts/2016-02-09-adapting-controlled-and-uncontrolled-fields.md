@@ -1,6 +1,7 @@
 ---
 layout: big-tweet
 title: "Adapting Controlled and Uncontrolled fields in Cycle.js"
+tags: [bigtweet]
 ---
 
 Virtual DOM libraries like [React](http://facebook.github.io/react) and [virtual-dom](https://github.com/Matt-Esch/virtual-dom) provide a declarative API for describing elements as the output of a system. This API may be limited when it comes to form fields where you may want to *set* the value of an input field as an *assignment*, not as an attribute. This led to solutions like [“Controlled/Uncontrolled”](http://facebook.github.io/react/docs/forms.html#controlled-components) components, which can be done also in Cycle.js.

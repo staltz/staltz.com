@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "I won't use SemVer patch versions anymore"
+tags: [blog]
 ---
 
 So far, I believed in [SemVer](http://semver.org/). In a way, I still do, but I developed another interpretation of its rules. It turns out, there isn't a "strict SemVer", since the spec allows library authors to [use their best judgement when it comes breaking changes in patch versions](http://semver.org/#what-if-i-inadvertently-alter-the-public-api-in-a-way-that-is-not-compliant-with-the-version-number-change-ie-the-code-incorrectly-introduces-a-major-breaking-change-in-a-patch-release).

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Setting up a JavaScript monorepo"
+tags: [blog]
 ---
 
 Yesterday I finished migrating Cycle.js to a [monorepo](https://github.com/cyclejs/cyclejs). It was previously split up into multiple repositories, one for each package. I recommend a monorepo over separate repos if you have many packages that are under one project. Managing multiple repos isn't that fun. Multiple repos means multiple places to manage issues, manage issue labels (and making them consistent across repos), manage PRs, git hooks for conventions, etc.

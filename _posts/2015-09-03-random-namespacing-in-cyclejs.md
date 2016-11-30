@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Random namespacing in Cycle.js"
+tags: [blog]
 ---
 
 Regarding the new architecture for Cycle.js I've been promoting, [Nested Dialogues](http://staltz.com/unidirectional-user-interface-architectures.html#nested-dialogues), [Frederik Krautwald told me something](https://github.com/cyclejs/cycle-core/issues/167#issuecomment-136864542) that left me pondering:

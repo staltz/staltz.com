@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to debug RxJS code"
+tags: [blog]
 ---
 
 A common question from beginners learning RxJS is "how do I debug this?".

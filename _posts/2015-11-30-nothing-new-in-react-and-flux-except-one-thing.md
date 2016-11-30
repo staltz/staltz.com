@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Nothing new in React and Flux except one thing"
+tags: [blog]
 ---
 
 What is it that makes React so innovative and compelling? What is so revolutionary in React and Flux? Is it JSX that makes React unique? Is it components? Perhaps Flux with its Dispatcher, Stores, and Actions? Or is it something else?

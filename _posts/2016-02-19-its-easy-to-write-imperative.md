@@ -1,6 +1,7 @@
 ---
 layout: big-tweet
 title: "Imperative code is (too) easy to write"
+tags: [bigtweet]
 ---
 
 I've noticed how *imperative programming* is easier for programmers to write, compared to e.g. *functional programming*. The imperative mental model corresponds naturally to the programmer's intent: "I want the program to do _____". Code written are commands that the computer obeys without complaining (much). A single line of functional code is often harder to code, requiring an understanding of the full relationship between the entities involved.

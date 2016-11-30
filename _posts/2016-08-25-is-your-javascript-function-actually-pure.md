@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Is your JavaScript function actually pure?"
+tags: [blog]
 ---
 
 What does "pure function" mean in the context of JavaScript? In programming in general, purity is also known as "referential transparency", a fancy way of saying "*replacing an expression or function call with its result will never change the behavior of the program*" or a way of saying "*every time you pass the same inputs, you always get the same outputs*".

@@ -41,7 +41,9 @@ layout: blank
           <h2 id="blog" class="hr"><span class="hr">BLOG</span></h2>
           <p>
           {% for post in site.posts %}
+            {% if post.tags contains 'blog' %}
             <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%B" }})<br />
+            {% endif %}
           {% endfor %}
             <a href="http://futurice.com/blog/why-debugging-is-all-about-understanding">Why debugging is all about understanding</a> (2015-August)<br />
             <a href="https://medium.com/@andrestaltz/why-i-cannot-say-frp-but-i-just-did-d5ffaa23973b#.xym3mzpyn">Why I cannot say FRP but I just did</a> (2015-July)<br />
@@ -49,6 +51,9 @@ layout: blank
             <a href="http://futurice.com/blog/reactive-mvc-and-the-virtual-dom">Reactive MVC and the Virtual DOM</a> (2014-November)<br />
             <a href="http://futurice.com/blog/android-development-has-its-own-swift">Android development has its own Swift</a> (2014-July)<br />
             <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">The introduction to Reactive Programming you've been missing</a> (2014-July)
+          </p>
+          <p>
+            Also, check out these <a href="/big-tweets">"big tweets"</a>.
           </p>
 
           <h2 id="talks" class="hr"><span class="hr">TALKS</span></h2>

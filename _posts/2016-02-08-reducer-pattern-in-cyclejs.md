@@ -1,6 +1,7 @@
 ---
 layout: big-tweet
 title: "The reducer pattern in Cycle.js"
+tags: [bigtweet]
 ---
 
 The “reducer” pattern from [Redux](https://github.com/rackt/redux) (or the “update” pattern from the [Elm architecture](https://github.com/evancz/elm-architecture-tutorial)) is common also in Cycle.js, except there is no `switch`-`case` (or pattern matching block) because each reducer corresponds to one (and only one) action.

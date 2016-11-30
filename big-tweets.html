@@ -1,0 +1,14 @@
+---
+layout: other
+title: Big Tweets
+---
+<br />
+<p>
+The following resources are short blog posts. I call them "big tweets" because they are too large for a tweet, but too small to be considered blog posts. They are usually straight-to-the-point and just communicate a quick tip related to programming.
+</p>
+<p>
+{% for post in site.posts %}
+  {% if post.tags contains 'bigtweet' %}
+  <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%B" }})<br />
+  {% endif %}
+{% endfor %}
