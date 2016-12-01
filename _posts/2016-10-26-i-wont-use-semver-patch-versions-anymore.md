@@ -4,7 +4,7 @@ title: "I won't use SemVer patch versions anymore"
 tags: [blog]
 ---
 
-So far, I believed in [SemVer](http://semver.org/). In a way, I still do, but I developed another interpretation of its rules. It turns out, there isn't a "strict SemVer", since the spec allows library authors to [use their best judgement when it comes breaking changes in patch versions](http://semver.org/#what-if-i-inadvertently-alter-the-public-api-in-a-way-that-is-not-compliant-with-the-version-number-change-ie-the-code-incorrectly-introduces-a-major-breaking-change-in-a-patch-release).
+So far, I believed in [SemVer](http://semver.org/). In a way, I still do, but I developed another interpretation of its rules. It turns out, there isn't a "strict SemVer", since the spec allows library authors to [use their best judgement when it comes to breaking changes in patch versions](http://semver.org/#what-if-i-inadvertently-alter-the-public-api-in-a-way-that-is-not-compliant-with-the-version-number-change-ie-the-code-incorrectly-introduces-a-major-breaking-change-in-a-patch-release).
 
 Breaking changes in patch releases are the worst problem we experience with dependency upgrades. I thought library authors were to blame, until it happened to me too. I broke application code in production by releasing a new patch version of one of my libraries, which happened to contain a tiny breaking change. We released xstream [v6.4.1](https://github.com/staltz/xstream/blob/master/CHANGELOG.md#641-2016-09-28) with a bug fix to a helper function that happened to change its API usage for TypeScript users.
 
