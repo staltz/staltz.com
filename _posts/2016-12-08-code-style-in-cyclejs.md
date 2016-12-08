@@ -20,7 +20,7 @@ const view = state$ => {
 };
 ```
 
-Why? Because (1) it's not shorter (observe the total amount of characters), (2) it's not clearer, (3) the `view` function would be nameless and would appear in the call stack as an anonymous function.
+Why? Because (1) it's not shorter (observe the total amount of characters), (2) it's not clearer, (3) the `view` function (UPDATE: used to be) ~~is~~ nameless and would appear in the call stack as an anonymous function.
 
 **Don't destructure sources.**
 
@@ -38,7 +38,7 @@ function main({DOM}) {
 }
 ```
 
-Why? Because naming helps create an intuition about the nature of each entity. I've often heard people assuming that `DOM` is a stream or the actual DOM itself. In reality, it is a `DOMSource`, a complex object that can be queried with `select` and `events` to yield streams. This is often true for other drivers too, like HTTP. The nature of `sources.DOM` is: it is a DOMSource, something that helps you *read* from the DOM.
+Why? Because (1) you can pass sources to children more easily and (2) naming helps create an intuition about the nature of each entity. I've often heard people assuming that `DOM` is a stream or the actual DOM itself. In reality, it is a `DOMSource`, a complex object that can be queried with `select` and `events` to yield streams. This is often true for other drivers too, like HTTP. The nature of `sources.DOM` is: it is a DOMSource, something that helps you *read* from the DOM.
 
 For a similar reason, I suggest people to explicitly name the sinks object:
 
