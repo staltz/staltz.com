@@ -59,7 +59,7 @@ Even if you ignore type signatures, designing an API will anyway relate to types
 
 Don't let your library look alien. It should be easy for your library to interoperate easily with existing code and other libraries. For that, try keeping your library idiomatic with the language and the community. Reuse the standard library, follow the code style, use the language's power instead of reinventing the wheel. Again, the Principle of Least Surprise applies to this aspect as well.
 
-A disclaimer for JavaScript, however: it's a wild and diverse ecosystem, so there isn't always a notion of what is standard. JavaScript was also badly designed from its birth, so it often makes sense to be opionated on how to make the ecosystem better with bold ideas, but don't overdo it. Innovate one thing at a time.
+A disclaimer for JavaScript, however: it's a wild and diverse ecosystem, so there isn't always a notion of what is standard. JavaScript was also badly designed from its birth, so it often makes sense to be opinionated on how to make the ecosystem better with bold ideas, but don't overdo it. Innovate one thing at a time.
 
 For example, don't build your own linked list data structure if you can use Array (unless your library is exactly just a linked list). "Increment" the ecosystem, don't attempt to replace it.
 
