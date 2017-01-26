@@ -57,4 +57,4 @@ As a different topic, some of my measures to avoid privacy invasion are still cl
 
 The conclusion, for now, is the internet is pretty usable still without Google and Facebook. If you feel encouraged to do the same (or more) as me, your life will be pretty fine, don't worry. Something needs to be done about YouTube's dominance, though.
 
-On the other hande, I won't claim my measures are completely blocking out the control that internet giants have over my personal data. Probably there are holes in my measures. I'm pretty interested in discovering those additional measures, and improving as I go. The business of internet giants is to collect data about our lives. All I'm saying is my life is "none of your business".
+On the other hand, I won't claim my measures are completely blocking out the control that internet giants have over my personal data. Probably there are holes in my measures. I'm pretty interested in discovering those additional measures, and improving as I go. The business of internet giants is to collect data about our lives. All I'm saying is my life is "none of your business".
