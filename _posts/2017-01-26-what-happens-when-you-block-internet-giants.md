@@ -8,7 +8,7 @@ Some months ago I decided to put an end to how much internet giants such as Goog
 
 I started with the basic premise that "*I want to be in control of my data*". Sometimes that meant choosing when to interact with an internet giant and how much I feel like revealing to them. Most of times it meant not interacting with them at all. I don't want to let them be in full control of how much they can know about me. I don't want to be in autopilot mode.
 
-You could call me paranoid about privacy, but the basic principle I'm using is that personal information is (eventual) control over that person. For instance, if you know what grocery store a person visits daily, you are able to control some important aspects of that person's life. This was basically how german [Stasi](https://en.wikipedia.org/wiki/Stasi) operated. The germans are today one of the most privacy-aware people on Earth, for a reason. I'm not saying internet giants are doing the same, *yet*. All I'm saying is I believe I am the only one who should be in control over *my* data.
+You could call me paranoid about privacy, but the basic principle I'm using is that personal information is (eventual) control over that person. For instance, if you know what grocery store a person visits daily, you are able to control some important aspects of that person's life. This was basically how German [Stasi](https://en.wikipedia.org/wiki/Stasi) operated. The Germans are today one of the most privacy-aware people on Earth, for a reason. I'm not saying internet giants are doing the same, *yet*. All I'm saying is I believe I am the only one who should be in control over *my* data.
 
 Here are some measures I took a couple years ago:
 
@@ -24,7 +24,7 @@ As a search engine itself, I found myself using `!g` sometimes to fallback to Go
 
 I have deleted my Facebook account, and don't feel like going back to it not even a single bit. Being free from Facebook's addicting (algorithmically optimized) feed has created more time in my life. Socially, I get to interact with people the old fashion: actually remembering their birthdays and genuinely reaching out to them, meeting friends in person etc. I have less friends in quantity, but more friends in "quality", you could say.
 
-Facebook groups are another realm which I understand I miss. I am not able to connect with people of similar interests who hang out there. This may sound limiting, but the internet is so vast that you are anyway able to somehow find people of similar interests in other medium. Wikipedia, old fashioned forums, Twitter, Reddit, to mention a few.
+Facebook groups are another realm which I understand I miss. I am not able to connect with people of similar interests who hang out there. This may sound limiting, but the internet is so vast that you are anyway able to somehow find people of similar interests in other mediums: Wikipedia, old fashioned forums, Twitter, Reddit, to mention a few.
 
 Facebook events from friends are something else that may feel like a loss, but it is common to have friends directly inform me through IM or email. Also, having downloaded all of my personal Facebook data (which isn't that comprehensive as you would expect), I still have all my friend's email addresses.
 
