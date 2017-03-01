@@ -6,6 +6,8 @@
 body {
   background-color: white;
   font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 h1, h2, h3, h4 {
   font-family: 'Lora', serif;
@@ -24,11 +26,12 @@ pre {
 }
 
 .header {
-  height: 410px;
+  height: calc(100vh - 120px);
   background-image: url('../img/header_photo.jpg');
   background-size: cover;
   background-color: #598080;
-  background-position: bottom;
+  background-position-y: 90%;
+  background-position-x: 50%;
 }
 .header-post {
   height: 100px;
@@ -63,6 +66,42 @@ pre {
 .centered {
   text-align: center;
 }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 100px;
+}
+@media (min-width: 615px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+.nav-item {
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #f1f3f5;
+  color: #495057;
+  padding: 12px;
+  min-width: 80px;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+.nav-item:hover, .nav-item:active {
+  border-bottom: 2px solid rgba(0,0,0,0.3);
+  margin-top: -2px;
+}
+
 .name-title {
   color: #444;
 }
@@ -74,8 +113,7 @@ a.name-title {
 a.name-title:hover {
   text-decoration: none;
   color: #444;
-  border-bottom: 1px dashed #444;
-  cursor: help;
+  border-bottom: 1px solid #444;
 }
 .name-subtitle {
   color: #999;
@@ -204,7 +242,7 @@ span.hr {
 }
 ul.horizontal {
   width: 100%;
-  max-width: 300px;
+  max-width: 352px;
   display: flex;
   padding: 0;
   margin: 0 auto;
@@ -222,10 +260,12 @@ ul.horizontal li a {
   font-size: 20px;
   color: white;
   text-decoration: none;
+  border-bottom: 2px solid white;
 }
 ul.horizontal li a:hover, ul.horizontal li a:active {
   text-decoration: none;
-  border-bottom: 4px solid rgba(0,0,0,0.3);
+  border-bottom: 2px solid rgba(0,0,0,0.3);
+  margin-top: -2px;
 }
 .twitter-bg {
   background-color: #33CCFF;
@@ -245,6 +285,9 @@ ul.horizontal li a:hover, ul.horizontal li a:active {
 .email-bg {
   background-color: #888;
 }
+.codementor-bg {
+  background-color: #003648;
+}
 .post img {
   width: 100%;
   margin: 2em 0;
@@ -263,6 +306,7 @@ ul.horizontal li a:hover, ul.horizontal li a:active {
 }
 .footer p {
   font-size: 14px;
+  text-align: center;
 }
 span.dot {
   margin: 0 5px;

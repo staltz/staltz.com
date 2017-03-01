@@ -6,9 +6,8 @@
     <title>André Staltz</title>
     <meta name="description" content="User Interface Programmer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="pgpkey" type="application/pgp-keys" href="http://staltz.com/pgp.asc">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/github.css" rel="stylesheet">
     {% feed_meta %}
@@ -16,16 +15,12 @@
   </head>
   <body>
 {{ content }}
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-lg-offset-3">
-            <p><a href="https://github.com/staltz/staltz.github.io" target="_blank">Source code</a>
-            </p>
-          </div>
-        </div>
+    {% unless page.tags contains 'nofooter' %}
+      <div class="footer">
+        <p><a href="https://github.com/staltz/staltz.github.io" target="_blank">Source code</a>
+        </p>
       </div>
-    </div>
+    {% endunless %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="/js/bootstrap.min.js"></script>

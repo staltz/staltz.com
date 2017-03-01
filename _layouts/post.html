@@ -6,8 +6,7 @@
     <title>André Staltz{% if page.title %} - {{ page.title }}{% endif %}</title>
     <meta name="description" content="User Interface Programmer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/github.css" rel="stylesheet">
     <script src="/js/modernizr-2.6.1.min.js"></script>
@@ -16,33 +15,23 @@
     <div class="header-post"></div>
     <div class="avatar"></div>
     <div class="container post">
-      <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
-          <div class="centered">
-            <h2 class="name-title"><a href="/">André Staltz</a></h2>
-            <h2 class="post-title">{{ page.title }}</h3>
-            <h3 class="post-date">{{ page.date | date_to_string }}</h3>
-          </div>
-{{ content }}
-          <p>
-          If you liked this article, consider sharing <a href="https://twitter.com/intent/tweet?original_referer={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;text={{ page.title | uri_escape }}&amp;tw_p=tweetbutton&amp;url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;via=andrestaltz" rel="nofollow" target="_blank" title="tweeting">(tweeting)<span style="text-decoration: underline"></a> it to your followers.
-          </p>
-          <p class="verify-in-keybase">
-            You can make sure that the author wrote this post by copy-pasting <a href="https://raw.githubusercontent.com/staltz/staltz.github.io/master/signed_posts/{{ page.path | remove_first: '_posts/' }}.asc">this signature</a> into <a href="https://keybase.io/verify">this Keybase page</a>.
-          </p>
-        </div>
+      <div class="centered">
+        <h2 class="name-title"><a href="/">André Staltz</a></h2>
+        <h2 class="post-title">{{ page.title }}</h3>
+        <h3 class="post-date">{{ page.date | date_to_string }}</h3>
       </div>
+{{ content }}
+      <p>
+      If you liked this article, consider sharing <a href="https://twitter.com/intent/tweet?original_referer={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;text={{ page.title | uri_escape }}&amp;tw_p=tweetbutton&amp;url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;via=andrestaltz" rel="nofollow" target="_blank" title="tweeting">(tweeting)<span style="text-decoration: underline"></a> it to your followers.
+      </p>
+      <p class="verify-in-keybase">
+        You can make sure that the author wrote this post by copy-pasting <a href="https://raw.githubusercontent.com/staltz/staltz.github.io/master/signed_posts/{{ page.path | remove_first: '_posts/' }}.asc">this signature</a> into <a href="https://keybase.io/verify">this Keybase page</a>.
+      </p>
     </div>
     <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-lg-offset-3">
-            <p><a href="/">Back home</a></p>
-            <p><a href="https://github.com/staltz/staltz.github.io" target="_blank">Source code</a>
-            </p>
-          </div>
-        </div>
-      </div>
+      <p><a href="/">Back home</a></p>
+      <p><a href="https://github.com/staltz/staltz.github.io" target="_blank">Source code</a>
+      </p>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>

@@ -1,104 +1,33 @@
 ---
 layout: blank
+tags: [nofooter]
 ---
     <div class="header"></div>
     <div class="avatar"></div>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
 
-          <div class="centered">
-            <h2 class="name-title"><a href="#name" id="link-name-title" data-toggle="tooltip" title="Real name?" class="name-title">André Staltz</a></h2>
-            <h3 class="name-subtitle">User Interface Programmer</h3>
-          </div>
-
-          <p>Hi, I'm a user interface programmer and reactive programming expert. My passion is to pull ideas from the future and realize them in the present.</p>
-
-          <h2 id="about-me" class="hr"><span class="hr">ABOUT ME</span></h2>
-          <p>I come from Brazil, but never felt like a true Brazilian. Now, I live in Finland, where it's nice and cold. The Finnish culture also matches my personality well.</p>
-          <p>I currently work as a Senior Web and Mobile Developer at
-          <a href="http://www.futurice.com" target="_blank">Futurice</a>.
-          </p>
-          <p>My <em>thing</em> is highly interactive user interfaces. I want to make great ideas become reality, with obsessive attention to detail.</p>
-          <p>I'm enthusiastic about reactive programming, JavaScript, functional programming, and the decentralized web.
-          I have authored the <a href="https://cycle.js.org">Cycle.js</a> framework, and have been a core contributor to <a href="http://reactivex.io">RxJS</a>.
-          </p>
-
-          <h2 id="find-me" class="hr"><span class="hr">FIND ME</span></h2>
-          <ul class="horizontal">
-            <li><a href="http://www.twitter.com/andrestaltz" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li><a href="http://www.github.com/staltz" class="github-bg"><i class="fa fa-github"></i></a>
-            </li>
-            <li><a href="mailto:andre@staltz.com" class="email-bg"><i class="fa fa-envelope"></i></a>
-            </li>
-            <li><a href="http://www.linkedin.com/in/andrestaltz" class="linkedin-bg"><i class="fa fa-linkedin"></i></a>
-            </li>
-            <li><a href="http://www.stackoverflow.com/users/315752/staltz" class="stackexchange-bg"><i class="fa fa-stack-overflow"></i></a>
-            </li>
-          </ul>
-
-          <h2 id="blog" class="hr"><span class="hr">BLOG</span></h2>
-          <p>
-          {% for post in site.posts %}
-            {% if post.tags contains 'blog' %}
-            <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%B" }})<br />
-            {% endif %}
-          {% endfor %}
-            <a href="http://futurice.com/blog/why-debugging-is-all-about-understanding">Why debugging is all about understanding</a> (2015-August)<br />
-            <a href="https://medium.com/@andrestaltz/why-i-cannot-say-frp-but-i-just-did-d5ffaa23973b#.xym3mzpyn">Why I cannot say FRP but I just did</a> (2015-July)<br />
-            <a href="http://futurice.com/blog/best-practices-mobile">Sharing best practices for Android, iOS, and Windows apps</a> (2015-April)<br />
-            <a href="http://futurice.com/blog/reactive-mvc-and-the-virtual-dom">Reactive MVC and the Virtual DOM</a> (2014-November)<br />
-            <a href="http://futurice.com/blog/android-development-has-its-own-swift">Android development has its own Swift</a> (2014-July)<br />
-            <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">The introduction to Reactive Programming you've been missing</a> (2014-July)
-          </p>
-          <p>
-            Also, check out these <a href="/big-tweets">"big tweets"</a>.
-          </p>
-
-          <h2 id="talks" class="hr"><span class="hr">TALKS</span></h2>
-          <p>
-            <a href="https://www.youtube.com/watch?v=uQ1zhJHclvs">You will learn RxJS</a> (ng-europe, Paris 2016)<br />
-            <a href="https://www.youtube.com/watch?v=Tkjg179M-Nc">The Return of Stream I/O</a> (GOTO, Copenhagen 2016)<br />
-            <a href="https://www.youtube.com/watch?v=R-GzJgEccEQ">See the data flowing through your app</a> (Full Stack Fest, Barcelona 2016)<br />
-            <a href="https://www.youtube.com/watch?v=v68ppDlvHqs">Dynamics of change: why reactivity matters</a> (PolyConf, Poznan 2016)<br />
-            <a href="https://vimeo.com/168652278">Unidirectional data flow architectures</a> (At The Frontend, Copenhagen 2016)<br />
-            <a href="https://www.youtube.com/watch?v=1ToJ7cxb1R8">Brains as building blocks</a> (CycleConf, Copenhagen 2016)<br />
-            <a href="https://www.youtube.com/watch?v=Rj8ZTRVka4E">Cycle.js was built to solve problems</a> (Frontend.fi, Helsinki 2016)<br />
-            <a href="https://www.youtube.com/watch?v=BfZpr0USIi4">The whole future declared in a var</a> (dotJS, Paris 2015)<br />
-            <a href="https://www.youtube.com/watch?v=uNZnftSksYg">Cycle.js and functional reactive user interfaces</a> (ReactiveConf, Bratislava 2015)<br />
-            <a href="http://www.ustream.tv/recorded/64104885">How Reactive Programming can help reduce code spaghetti</a> (MLOC.js, Budapest 2015)<br />
-            <a href="https://www.youtube.com/watch?v=1zj7M1LnJV4">What if the user were a function?</a> (JSConf Budapest 2015)<br />
-          </p>
-
-          <h2 id="extras" class="hr"><span class="hr">EXTRAS</span></h2>
-          <p><a href="http://users.ics.aalto.fi/desoua1/" target="_blank">I'm MSc</a> in Computer Science, and for my
-          <a href="http://users.ics.aalto.fi/desoua1/HAcid_Thesis.pdf" target="_blank">Master's Thesis</a> I developed
-          <a href="https://bitbucket.org/staltz/hacid/wiki/Home" target="_blank">HAcid</a>, a Java client library that enables ACID transactions on
-          <a href="http://hbase.apache.org/" target="_blank">HBase</a>. In Brazil I graduated BSc in Computational Mathematics at
-          <a href="https://www.ufmg.br/english/" target="_blank">UFMG</a>, where I got to do research on Computational Fluid Dynamics and also
-          <a href="http://www.sciencedirect.com/science/article/pii/S1571065310000041" target="_blank">Operations Research</a>.
-          </p>
-
-          <p>I started programming by making games. With my friend
-          <a href="http://glauberkotaki.com" target="_blank">Glauber Kotaki</a> (artist for Rogue Legacy) I've made some games such as <a href="http://www.indiedb.com/games/cold-tension" target="_blank">Cold Tension</a>, and by myself I've made
-          <a href="http://www.kongregate.com/games/STALTZ/rgblend" target="_blank">RGBlend</a>, a color puzzle game.
-          </p>
-
-          <p>I'm an acoustic guitarist and a composer. I listen to different
-          genres, but mostly instrumental music. Check out my
-          <a href="http://www.youtube.com/playlist?list=PL24A51E95B3F5E4D2" target="_blank">acoustic songs recorded on video</a>. In 2004-2006 I recorded a progressive alternative rock/metal album called
-          <a href="https://soundcloud.com/andrestaltz/sets/o-vazio-tem-um-nome" target="_blank"><em>O vazio tem um nome</em></a>.
-          You can find other compositions at
-          <a href="http://soundcloud.com/andrestaltz" target="_blank">Soundcloud</a>.
-          </p>
-
-          <h2 id="name" class="hr"><span class="hr">MY NAME</span></h2>
-          <p><em>Staltz</em> is just a nickname I use on the web since 2004. My real
-          name is <strong>André Medeiros</strong>, but I try to avoid it
-          because it's
-          <a href="https://www.google.com/search?q=andré+medeiros" target="_blank">disappointingly unoriginal</a>.
-          </p>
-        </div>
+      <div class="centered">
+        <h2 class="name-title"><a href="/" class="name-title">André Staltz</a></h2>
+        <h3 class="name-subtitle">Open Source Hacker</h3>
       </div>
+
+      <p>Hi, I'm a programmer and I spend most of my time building transparent software. My passion is to pull ideas from the future and realize them in the present.</p>
+
+      <p>In particular, my areas of focus are: user interfaces, reactive programming, JavaScript, and peer-to-peer networks.</p>
+
+      <div class="nav">
+        <a class="nav-item" href="/about.html">About me</a>
+        <a class="nav-item" href="/blog.html">Blog</a>
+        <a class="nav-item" href="/hire.html">Hire me</a>
+      </div>
+
+      <ul class="horizontal">
+        <li><a href="mailto:andre@staltz.com" class="email-bg"><i class="fa fa-envelope"></i></a></li>
+        <li><a href="http://www.github.com/staltz" class="github-bg"><i class="fa fa-github"></i></a></li>
+        <li><a href="http://www.twitter.com/andrestaltz" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="http://www.stackoverflow.com/users/315752/staltz" class="stackexchange-bg"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a href="https://www.codementor.io/staltz" class="codementor-bg"><i class="fa fa-laptop"></i></a></li>
+        <li><a href="http://www.linkedin.com/in/andrestaltz" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+
     </div>

@@ -1,0 +1,55 @@
+---
+layout: blank
+---
+    <div class="header-post"></div>
+    <div class="avatar"></div>
+    <div class="container">
+
+      <div class="centered">
+        <h2 class="name-title"><a href="/" class="name-title">André Staltz</a></h2>
+      </div>
+
+      <h2 id="blog" class="hr"><span class="hr">BLOG</span></h2>
+      <p>
+      {% for post in site.posts %}
+        {% if post.tags contains 'blog' %}
+        <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%B" }})<br />
+        {% endif %}
+      {% endfor %}
+        <a href="http://futurice.com/blog/why-debugging-is-all-about-understanding">Why debugging is all about understanding</a> (2015-August)<br />
+        <a href="https://medium.com/@andrestaltz/why-i-cannot-say-frp-but-i-just-did-d5ffaa23973b#.xym3mzpyn">Why I cannot say FRP but I just did</a> (2015-July)<br />
+        <a href="http://futurice.com/blog/best-practices-mobile">Sharing best practices for Android, iOS, and Windows apps</a> (2015-April)<br />
+        <a href="http://futurice.com/blog/reactive-mvc-and-the-virtual-dom">Reactive MVC and the Virtual DOM</a> (2014-November)<br />
+        <a href="http://futurice.com/blog/android-development-has-its-own-swift">Android development has its own Swift</a> (2014-July)<br />
+        <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">The introduction to Reactive Programming you've been missing</a> (2014-July)
+      </p>
+      <p>
+        Also, check out these <a href="/big-tweets">"big tweets"</a>.
+      </p>
+
+      <h2 id="talks" class="hr"><span class="hr">TALKS</span></h2>
+      <p>
+        <a href="https://www.youtube.com/watch?v=uQ1zhJHclvs">You will learn RxJS</a> (ng-europe, Paris 2016)<br />
+        <a href="https://www.youtube.com/watch?v=Tkjg179M-Nc">The Return of Stream I/O</a> (GOTO, Copenhagen 2016)<br />
+        <a href="https://www.youtube.com/watch?v=R-GzJgEccEQ">See the data flowing through your app</a> (Full Stack Fest, Barcelona 2016)<br />
+        <a href="https://www.youtube.com/watch?v=v68ppDlvHqs">Dynamics of change: why reactivity matters</a> (PolyConf, Poznan 2016)<br />
+        <a href="https://vimeo.com/168652278">Unidirectional data flow architectures</a> (At The Frontend, Copenhagen 2016)<br />
+        <a href="https://www.youtube.com/watch?v=1ToJ7cxb1R8">Brains as building blocks</a> (CycleConf, Copenhagen 2016)<br />
+        <a href="https://www.youtube.com/watch?v=Rj8ZTRVka4E">Cycle.js was built to solve problems</a> (Frontend.fi, Helsinki 2016)<br />
+        <a href="https://www.youtube.com/watch?v=BfZpr0USIi4">The whole future declared in a var</a> (dotJS, Paris 2015)<br />
+        <a href="https://www.youtube.com/watch?v=uNZnftSksYg">Cycle.js and functional reactive user interfaces</a> (ReactiveConf, Bratislava 2015)<br />
+        <a href="http://www.ustream.tv/recorded/64104885">How Reactive Programming can help reduce code spaghetti</a> (MLOC.js, Budapest 2015)<br />
+        <a href="https://www.youtube.com/watch?v=1zj7M1LnJV4">What if the user were a function?</a> (JSConf Budapest 2015)<br />
+      </p>
+
+      <h2 id="find-me" class="hr"><span class="hr">FIND ME</span></h2>
+      <ul class="horizontal">
+        <li><a href="mailto:andre@staltz.com" class="email-bg"><i class="fa fa-envelope"></i></a></li>
+        <li><a href="http://www.github.com/staltz" class="github-bg"><i class="fa fa-github"></i></a></li>
+        <li><a href="http://www.twitter.com/andrestaltz" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="http://www.stackoverflow.com/users/315752/staltz" class="stackexchange-bg"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a href="https://www.codementor.io/staltz" class="codementor-bg"><i class="fa fa-laptop"></i></a></li>
+        <li><a href="http://www.linkedin.com/in/andrestaltz" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+
+    </div>
