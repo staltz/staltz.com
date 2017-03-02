@@ -8,7 +8,7 @@ It is the last day of my employment at Futurice, and my first day as a self-empl
 
 I joined Futurice in 2013 as a Web and Mobile Developer. At that time, I had less than a hundred Twitter followers and had never heard of reactive programming. Gradually, I started being exposed to RxJava for Android development, and began my journey learning Rx Observables. I learned a lot at Futurice, and had absolutely brilliant peers who inspired and challenged me.
 
-As I learned, I started teaching others my findings. I wrote [The introduction to reactive programming](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754), then built [RxMarbles](http://rxmarbles.com/) to help visualize how some RxJS APIs worked. In the subsequent months and years, I built [Cycle.js](http://cycle.js.org/) and spoke at many conferences, all the while basing my open source developments on insights gathered at work in Futurice. It is easy to get lost in open source development as an end instead of a mean, that's why I find it very important that time and time again I deliver real software to real customers. It helps to validate the reliability of my open source libraries, and helps to stay connected to real problems that users experience.
+As I learned, I started teaching others my findings. I wrote [The introduction to reactive programming](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754), then built [RxMarbles](http://rxmarbles.com/) to help visualize how some RxJS APIs worked. In the subsequent months and years, I built [Cycle.js](http://cycle.js.org/) and spoke at many conferences, all the while basing my open source developments on insights gathered at work in Futurice. It is easy to get lost in open source development as an end instead of a means, that's why I find it very important that time and time again I deliver real software to real customers. It helps to validate the reliability of my open source libraries, and helps to stay connected to real problems that users experience.
 
 I was ready to indefinitely continue this recipe of splitting my time between open source and customer projects, until I was woken up by a pressing problem.
 
@@ -18,7 +18,7 @@ We are running out of time before all our interpersonal communications are monop
 
 We do not yet live in a dark future where all our online communications are owned by one company whose business is to use your personal life as commodity for advertisers and governments. We are not quite there yet. We still have net neutrality, we can visit any website we wish. We can still host a website from any computer and anyone else can visit it. We don't yet visit our friends through a 3D virtual world where every eye movement and hand wave is logged for analytics. We do not yet get personalized and intelligent answers from Google for those questions we only reserve for our closest friends and family who know us so well. We don't live in such world.
 
-But we're accelerating towards it. Maybe it's a matter of ten years. Maybe three. Far from being conspiracy, those companies are reportedly pursuing such future, and they aren't even shy about it.
+But we're accelerating towards it. Maybe it's a matter of ten years. Maybe three. Far from being conspiracy, those companies are reportedly pursuing such a future, and they aren't even shy about it.
 
 <h2 id="whats-next" class="hr"><span class="hr">WHAT'S NEXT</span></h2>
 
