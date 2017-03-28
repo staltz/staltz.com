@@ -53,13 +53,13 @@ And there isn't much we can do to fix that, because cold streams would be necess
 Most reactive stream libraries for JavaScript nowadays support some interoperability with the ES Observable proposal. This means you can do this:
 
 ```javascript
-const timer$ = Rx.Observable.timer(0, 1000);
-const message$ = xs.from(timer$).map(i => '' + i + ' seconds have passed');
+const timerObs = Rx.Observable.timer(0, 1000);
+const message$ = xs.from(timerObs).map(i => 'Seconds passed: ' + i);
 ```
 
 Take a look at that. We started with an RxJS Observable and we ended up with an xstream Stream. This means you can snowboard on cold RxJS mountains then switch to surf in the hot beaches of xstream. Usually with RxJS, in order to surf in the hot beaches, you do something like `.share()` or `.publish().refCount()`. But, if you apply operators *after* that, you will go back to the cold world, but it's still somewhat based on a hot thing. Some people call these "lukewarm" Observables, which is a term that gives me allergic reactions. Anyway, the point here is that RxJS strongly gravitates back to cold, even after you make something become hot.
 
-xstream on the other hand strongly gravitates to hot. So they can easily compliment each other. You can operate purely in the cold world, then switch **permanently** to hot by converting to xstream. You cannot do that with RxJS (unlesss through some creative use of the [Lift Architecture](https://github.com/ReactiveX/rxjs/blob/3e9d5295f118c29193f88ea825902ac359901119/src/Observable.ts#L60-L72)). So these two libraries complement each other actually quite well.
+xstream on the other hand strongly gravitates to hot. So they can easily compliment each other. You can operate purely in the cold world, then switch **permanently** to hot by converting to xstream. You cannot do that with RxJS (unless through some creative use of the [Lift Architecture](https://github.com/ReactiveX/rxjs/blob/3e9d5295f118c29193f88ea825902ac359901119/src/Observable.ts#L60-L72)). So these two libraries complement each other actually quite well.
 
 To give an example, we could solve that fold corner case in RxJS, then switch permanently to xstream.
 
