@@ -168,15 +168,27 @@ a.name-title:hover {
 
 .big-tweet-name-part {
     margin-left: 20px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    height: 80px;
+
 }
 
 .big-tweet-name {
-    margin-top: 0;
+    margin: 0;
     display: block;
 }
 
 .big-tweet-handle, .big-tweet-date {
     display: inline-block;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
     color: #888;
 }
