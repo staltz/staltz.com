@@ -8,7 +8,7 @@ tags: [blog]
 
 [![Dominic Tarr](/img/dominic2.jpg)](/img/dominic2.jpg)
 
-Dominic is often offline, but he's still able to use a social network to communicate with his friends such as James Halliday (a.k.a. *substack*), who is also often offline. James has also [authored hundreds](https://www.npmjs.com/~substack) of npm modules, such as [Browserify](https://www.npmjs.com/package/browserify), and is building a shack with his partnes Marina on top of 300-year old lava flows in Hawaii.
+Dominic is often offline, but he's still able to use a social network to communicate with his friends such as James Halliday (a.k.a. *substack*), who is also often offline. James has also [authored hundreds](https://www.npmjs.com/~substack) of npm modules, such as [Browserify](https://www.npmjs.com/package/browserify), and is building a shack with his partner Marina on top of 300-year old lava flows in Hawaii.
 
 [![James Halliday](/img/substack.jpg)](/img/substack.jpg)
 
