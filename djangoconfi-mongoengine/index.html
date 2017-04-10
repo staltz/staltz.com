@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Using MongoDB as your primary Django database</title>
+
+		<meta name="description" content="Using MongoDB as your primary Django database">
+		<meta name="author" content="Andre Medeiros">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/iroquote.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai_sublime.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+	
+		
+
+		<div class="reveal">
+			<div class="background-texture"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h2>Using<br /><strong>MongoDB</strong><br />as your primary<br /><strong>Django database</strong></h2>
+					<p>
+						<small>By <a href="http://about.me/andrestaltz">Andre Medeiros</a> at DjangoCon Finland 2013</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Who?</h2>
+					<br />
+					<p><strong>Andre Medeiros</strong></p>
+					<p>
+						Founder at <a href="http://www.iroquote.com">Iroquote.com</a><br /><small>Next generation discussion forums</small>
+					</p>
+					<p>
+						<a href="http://twitter.com/andrestaltz">@andrestaltz</a>
+					</p>
+					<p>
+						Brazilian that doesn't play soccer
+					</p>
+					<p>
+						M.Sc. from <a href="http://www.aalto.fi/en/">Aalto University</a>
+					</p>
+				</section>
+				
+				<section data-state="mongodb-style">
+					<img height="250" width="750" src="img/logo_mongodb_ondark.png" alt="MongoDB logo">
+					<div class="fragment roll-in">
+						<h3>It's just a JSON datastore</h3>
+						<pre><code data-trim class="javascript">
+fooman = {"name" : "Foo", "age" : 25};
+db.users.save(fooman);
+						</code></pre>
+					</div>
+				</section>
+				
+				<section>
+					<h2>MongoDB is <br />Agile and Scalable</h2>
+					<ul>
+						<li>Dynamic schemas</li>
+						<li>Index on any attribute</li>
+						<li>Auto-sharding</li>
+					</ul>
+					<br />
+					<br />
+					<div class="fragment">
+						&rarr; Popular NoSQL database
+						<br />
+						<br />
+						<img width="615" src="img/brands_w.png" alt="Logos of Foursquare, Forbes, Flowdock, IGN, Intuit, Sourceforge, and Trello">
+					</div>
+				</section>
+				
+					<section>
+						<h2>Why MongoDB for Django?</h2>
+						<h3><strong>The &ldquo;pythonic database&rdquo;</strong></h3>
+						<br />
+						dict ~ JSON
+						<pre><code data-trim class="python">
+# Python
+person = {
+	'name': "John Doe", 
+	'skills': ["Javascript", "CSS", "HTML"],
+	'work': None
+}
+						</code></pre>
+						<pre><code data-trim class="javascript">
+// Javascript
+person = {
+	"name" : "John Doe", 
+	"skills" : ["Javascript", "CSS", "HTML"],
+	"work" : null
+};
+						</code></pre>
+					</section>
+					<section>
+						<blockquote>
+							Writing Python is fun, and keeping everything in Python limits the number of times your brain has to do a "context switch." It helps productivity if you keep yourself in a single programming environment/mentality for as long as possible.
+						</blockquote>
+						&mdash;<a href="http://www.djangobook.com/en/2.0/chapter05.html#defining-models-in-python">Djangobook.com</a>
+					</section>
+					<section>
+						MongoDB is meant for rapid and agile web development
+						<br />
+						(say bye to migrations)
+						<br />
+						<br />
+						<blockquote>
+							If MongoDB had existed 10 years ago the vast majority of data used to drive modern web applications would be stored in MongoDB and not a relational database.
+						</blockquote>
+						&mdash;Will Shulman, CEO & Co-founder of <a href="http://www.mongolab.com">MongoLab</a>
+					</section>
+				
+				<section>
+					<h2>Real world example</h2>
+					Comments and tags<br />embedded into discussion document
+					<pre><code data-trim class="javascript">
+{
+	"_id" : ObjectId("5500165de50c050005e4b29f"),
+	"title" : "Using MongoDB as your primary Django database",
+	"message" : "This presentation introduces MongoDB to Django de...",
+	"author" : ObjectId("5182953ba50c051575e4b29c"),
+	"creation_date" : ISODate("2013-05-21T12:44:31.408Z"),
+	"tags" : ["django","python","mongodb","mongoengine","nosql"],
+	"comments" : [
+		{
+			"author" :  ObjectId("50c90b3128650a004200961a"),
+			"message" : "Nice, I didn't know this was possible."
+		}
+	],
+}
+						</code></pre>
+				</section>
+				
+				<section data-state="django-style">
+					<h2><img src="img/django.png" style="margin-bottom: -0.6em;">with MongoDB</h2>
+					<br />
+					<p>
+						At the core of Django is its ORM
+					</p>
+					<br />
+					<p>
+						<strong><a style="font-size:150%;" href="http://mongoengine.org/">MongoEngine</a></strong><br /> is an Object-Document Mapper made for MongoDB, following Django's ORM style.
+					</p>
+					<a href="https://github.com/MongoEngine/mongoengine">https://github.com/MongoEngine/mongoengine</a>
+					<pre><code data-trim>
+pip install mongoengine==0.8.0
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>MongoEngine model</h2>
+					<br />
+					<strong>yourproject/models.py</strong>
+					<pre><code data-trim class="python">
+from mongoengine import *
+
+class Choice(EmbeddedDocument):
+    choice_text = StringField(max_length=200)
+    votes = IntField(default=0)
+
+class Poll(Document):
+    question = StringField(max_length=200)
+    pub_date = DateTimeField(help_text='date published')
+    choices = ListField(EmbeddedDocumentField(Choice))
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>Translated to MongoDB...</h2>
+					<br />
+					<pre><code data-trim class="javascript">
+{
+	"_id" : ObjectId("5483165de50c050005e4b29f"),
+	"question" : "What's up?",
+	"pub_date" :  ISODate("2013-04-14T11:06:21.922Z"),
+	"choices" : [
+		{
+			"choice_text" : "Not much",
+			"votes" : 0
+		},
+		{
+			"choice_text" : "Just hacking again",
+			"votes" : 1
+		}
+	],
+}
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>Querying and updating</h2>
+					<br />
+					<strong>yourproject/views.py</strong>
+					<pre><code data-trim class="python">
+from yourproject.models import Poll, Choice
+
+poll = Poll.objects(question__contains="What").first()
+choice = Choice(choice_text="I'm at DjangoCon.fi", votes=23)
+poll.choices.append(choice)
+poll.save()
+
+print poll.question
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>Setting indexes</h2>
+					<br />
+					<strong>yourproject/models.py</strong>
+					<pre><code data-trim class="python">
+class Poll(Document):
+	question = StringField(max_length=200)
+	pub_date = DateTimeField(help_text='date published')
+	choices = ListField(EmbeddedDocumentField(Choice))
+
+	meta = {
+		'indexes': [
+			'question', 
+			('pub_date', '+question')
+		]
+	}
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>The fun side</h2>
+					<br />
+					No <code>python manage.py syncdb</code>
+					<br />
+					No database migrations
+					<br />
+					Freedom to hack
+					<br />
+					<br />
+					<img src="img/breakdancing.gif">
+				</section>
+				
+				<section>
+					<h2>The painful side</h2>
+					<br />
+					Making Django ignore its<br /> relational database components
+					<br />
+					<br />
+					<img src="img/ignored.gif" width="400">
+				</section>
+				
+				<section>
+					<h2>Django, forget your databases</h2>
+					<br />
+					<strong>yourproject/settings.py</strong>
+					<pre><code data-trim class="python">
+import mongoengine
+
+DATABASES = {
+	'default': {
+		'ENGINE': '',
+	},
+}
+
+SESSION_ENGINE = 'mongoengine.django.sessions' # optional
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>Connect to MongoDB</h2>
+					<br />
+					<strong>yourproject/settings.py</strong>
+					<pre><code data-trim class="python">
+_MONGODB_USER = 'mongouser'
+_MONGODB_PASSWD = 'password'
+_MONGODB_HOST = 'thehost'
+_MONGODB_NAME = 'thedb'
+_MONGODB_DATABASE_HOST = \
+	'mongodb://%s:%s@%s/%s' \
+	% (_MONGODB_USER, _MONGODB_PASSWD, _MONGODB_HOST, _MONGODB_NAME)
+
+mongoengine.connect(_MONGODB_NAME, host=_MONGODB_DATABASE_HOST)
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>Use MongoEngine's User</h2>
+					<br />
+					<strong>yourproject/settings.py</strong>
+					<pre><code data-trim class="python">
+AUTHENTICATION_BACKENDS = (
+	'mongoengine.django.auth.MongoEngineBackend',
+)
+					</code></pre>
+					<br />
+					<strong>yourproject/views.py</strong>
+					<pre><code data-trim class="python">
+import mongoengine
+
+# ...
+
+user = authenticate(username=username, password=password)
+assert isinstance(user, mongoengine.django.auth.User)
+					</code></pre>
+				</section>
+				
+					<section>
+						<h2>Hack the test runner</h2>
+						<br />
+						<strong>yourproject/tests.py</strong>
+						<pre><code data-trim class="python">
+from django.test.simple import DjangoTestSuiteRunner
+from django.test import TestCase
+
+class NoSQLTestRunner(DjangoTestSuiteRunner):
+	def setup_databases(self):
+		pass
+	def teardown_databases(self, *args):
+		pass
+
+class NoSQLTestCase(TestCase):
+	def _fixture_setup(self):
+		pass
+	def _fixture_teardown(self):
+		pass
+						</code></pre>
+						<br />
+						<strong>yourproject/settings.py</strong>
+						<pre><code data-trim class="python">
+TEST_RUNNER = 'yourproject.tests.NoSQLTestRunner'
+						</code></pre>
+					</section>
+					<section>
+						<h2>Or use Mongorunner</h2>
+						<br />
+						<a href="https://github.com/xintron/django-mongorunner">https://github.com/xintron/django-mongorunner</a>
+					</section>
+				
+				<section>
+					<h2>MongoEngine is good</h2>
+					<br />
+					<ul style="font-size:110%; line-height:150%;">
+						<li>Maintained and updated constantly by 10gen</li>
+						<li>Solid and works like Django's ORM</li>
+						<li>A replaceable component in Django</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Alternative to MongoEngine</h2>
+					<br />
+					<a style="font-size:150%;" href="http://www.django-nonrel.org">django-nonrel</a>
+					<br />
+					Forked from Django 1.3
+					<br />
+					Supports MongoDB and Google App Engine
+				</section>
+				
+				<section data-state="ouch">
+					<h2>When <strong>NOT</strong> to use MongoDB</h2>
+					<br />
+					<ul style="font-size:110%; line-height:150%">
+						<li>You need ACID transactions</li>
+						<li>You have a stable SQL database in production</li>
+						<li>You need the most stable RDBMS you can get</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Consider MongoDB when...</h2>
+					<br />
+					<ul style="font-size:110%; line-height:150%">
+						<li>You are starting a project with design freedom</li>
+						<li>Your app has an evolving data schema</li>
+						<li>Your want auto-sharding on a simple schema</li>
+						<li>Your app has plenty of geospatial data</li>
+						<li>You have high-volume traffic</li>
+						<li>Your app works around a RESTful JSON API</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Thank you</h2>
+					<br />
+					<strong>Questions?</strong>
+					<br />
+					<br />
+					<br />
+					<small>Share</small> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://staltz.github.io/djangoconfi-mongoengine" data-text="Using @MongoDB as your primary @djangoproject database" data-via="andrestaltz">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: true,
+				center: true,
+				theme: 'iroquote', // available themes are in /css/theme
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'slow', // default/fast/slow
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { 
+						hljs.initHighlightingOnLoad(); hljs.tabReplace = '    '; } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
