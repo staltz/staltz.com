@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>The Past, Present, and Future of Cycle.js - CycleConf 2017</title>
+    <meta name="description" content="The Past, Present, and Future of Cycle.js - CycleConf 2017" />
+    <meta name="author" content="Andre Staltz" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="css/atom-one-dark.css">
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+
+    Now that's the core element used by impress.js.
+
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
+    right around the corner of this tag ;)
+
+-->
+<div id="impress" data-transition-duration="1100">
+
+    <div class="step" data-x="0" data-y="65" data-scale="30">
+        <img src="img/paths.svg" style="width:100%">
+        <h1 style="margin-top:-440px;position:absolute;">The Past, Present,<br />and Future of Cycle.js</h1>
+        <h5 style="margin-top:-240px;position:absolute;color:#9fa7c7;">@andrestaltz</h5>
+        <div style="
+            background-color: #C6FC93;
+            border-radius: 20px;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 148px;
+            left: 544px;
+        "></div>
+    </div>
+
+    <div class="step" data-x="-11840" data-y="45" data-scale="1.2">
+        <div style="
+            background-color: #F3FC93;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -95px;
+        "></div>
+        <h2>Spring 2014</h2>
+        <span>Learned RxJava for Android</span>
+    </div>
+
+    <div class="step" data-x="-11100" data-y="45" data-scale="1.2">
+        <div style="
+            background-color: #F3FC93;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -95px;
+        "></div>
+        <h2>Summer 2014</h2>
+        <span>rxmarbles.com</span>
+    </div>
+
+    <div class="step" data-x="-11100" data-y="570" data-scale="1.2">
+        <pre><code class="coffeescript">React = require 'react'
+Rx = require 'rx'
+Marble = require 'rxmarbles/views/marble'
+
+#
+# Renders a stream meant as an input to the play interaction
+#
+InputStream = React.createClass({
+  getInitialState: ->
+    return { serializedStream: [{timestamp: -1}] }
+
+  componentWillMount: ->
+    this.props.stream
+      .subscribe((serializedStream) =>
+        this.setState({serializedStream: serializedStream})
+      )
+
+  render: ->
+    marbles = [Marble({item: i}) for i in this.state.serializedStream]
+    return (
+      React.DOM.ul(null, marbles)
+    )
+})
+
+module.exports = InputStream</code></pre>
+    </div>
+
+    <div class="step" data-x="-11100" data-y="1250" data-scale="1.2">
+      <img src="img/replace-react.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-11100" data-y="1800" data-scale="1.2">
+        <pre><code class="coffeescript">#
+# Util functions for rendering to the DOM.
+#
+
+module.exports = {
+  renderObservableDOMElement: (elementStream) ->
+    wrapper = document.createElement("div")
+    elementStream.subscribe((thing) ->
+      wrapper.innerHTML = ""
+      if Array.isArray(thing)
+        for element in thing
+          wrapper.appendChild(element)
+      else if thing instanceof Element
+        wrapper.appendChild(thing)
+      return true
+    )
+    return wrapper
+}
+</code></pre>
+    </div>
+
+    <div class="step" data-x="-11100" data-y="2280" data-scale="1.2">
+      <img src="img/virtual-dom.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-11100" data-y="2770" data-scale="1.2">
+      <img src="img/omvc.jpeg" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-11100" data-y="3350" data-scale="1.2">
+      <img src="img/commit-omvc.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-11100" data-y="3700" data-scale="1.2">
+        <pre><code class="coffeescript">#
+# Important Model-View-Interpreter binding function.
+#
+module.exports = (model, view, interpreter) ->
+  view.observe(model)
+  interpreter.observe(view)
+  model.observe(interpreter)
+</code></pre>
+    </div>
+
+    <div class="step" data-x="-11100" data-y="4160" data-scale="1.2">
+      <img src="img/futublog-mvi.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-11100" data-y="4880" data-scale="1.2">
+      <img src="img/mvi-renderer.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-11100" data-y="5400" data-scale="1.2">
+      <i>"Model-View-Intent might evolve into a framework, or might not require enough boilerplate to justify a framework."</i>
+    </div>
+
+    <div class="step" data-x="-9800" data-y="45" data-scale="1.2">
+        <div style="
+            background-color: #F3FC93;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -95px;
+        "></div>
+        <h2>November 2014</h2>
+        <span>Initial commit</span>
+    </div>
+
+    <div class="step" data-x="-9800" data-y="370" data-scale="1.2">
+      <ul>
+        <li>"I know I can use this MVI structure to build stuff"</li>
+        <li>"I have a feeling I can use Observables everywhere"</li>
+        <li>"I think we can do without `this`, without classes"</li>
+        <li>"I think performance will be pretty okay, but let's see"</li>
+      </ul>
+    </div>
+
+    <div class="step" data-x="-9800" data-y="800" data-scale="1.2">
+      <h1>Movie.js</h1>
+      <h1>Muovi</h1>
+      <h1>Cycle.js</h1>
+    </div>
+
+    <div class="step" data-x="-9800" data-y="1300" data-scale="1.2">
+      <span>Open source collaboration starts...</span>
+    </div>
+
+    <div class="step" data-x="-8600" data-y="45" data-scale="1.2">
+        <div style="
+            background-color: #F3FC93;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -95px;
+        "></div>
+        <h2>January 2015</h2>
+        <span>Boilerplate reduction</span>
+    </div>
+
+    <div class="step" data-x="-8600" data-y="570" data-scale="1.2">
+        <pre><code class="javascript">var HelloView = Cycle.createView(['name$'], function (model) {
+  return {
+    vtree$: model.name$
+      .map(function (name) {
+        return h('div', {}, [
+          h('label', 'Name:'),
+          h('input', {
+            'attributes': {'type': 'text'},
+            'ev-input': 'inputText$'
+          }),
+          h('hr'),
+          h('h1', 'Hello ' + name)
+        ]);
+      }),
+    events: ['inputText$']
+  }
+})
+
+var HelloIntent = Cycle.createIntent(['inputText$'], function (view) {
+  return {
+    changeName$: view.inputText$.map(function (ev) { return ev.target.value })
+  }
+})</code></pre>
+    </div>
+
+    <div class="step" data-x="-8600" data-y="1260" data-scale="1.2">
+      <img src="img/boilerplate-reduction1.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-8600" data-y="1900" data-scale="1.2">
+      <img src="img/boilerplate-reduction2.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-8600" data-y="2670" data-scale="1.2">
+      <pre><code class="javascript">var HelloView = Cycle.createView(function (model) {
+  return {
+    vtree$: model.get('name$')
+      .map(function (name) {
+        return h('div', {}, [
+          h('label', 'Name:'),
+          h('input', {
+            'attributes': {'type': 'text'},
+            'ev-input': 'inputText$'
+          }),
+          h('h1', 'Hello ' + name)
+        ])
+      })
+  }
+})
+
+var HelloIntent = Cycle.createIntent(function (view) {
+  return {
+    changeName$: view.get('inputText$').map(function (ev) { return ev.target.value })
+  }
+})</code></pre>
+    </div>
+
+    <div class="step" data-x="-7150" data-y="45" data-scale="1.2">
+        <div style="
+            background-color: #F3FC93;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -95px;
+        "></div>
+        <h2>February 2015</h2>
+        <span><code>select('.button').events('click')</code></span>
+    </div>
+
+    <div class="step" data-x="-7150" data-y="600" data-scale="1.2">
+      <img src="img/select-events1.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-7150" data-y="1500" data-scale="1.2">
+      <img src="img/select-events2.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-7150" data-y="2380" data-scale="1.2">
+      <img src="img/select-events3.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-7150" data-y="3100" data-scale="1.2">
+      <pre><code class="javascript">var View = Cycle.createView(Model =>
+  ({
+    vtree$: Model.get('name$').map(name =>
+      h('div', [
+        h('label', 'Name:'),
+        h('input.field', {attributes: {type: 'text'}}),
+        h('h1', 'Hello ' + name)
+      ])
+    )
+  })
+)
+
+var User = Cycle.createDOMUser('.js-container')
+
+var Intent = Cycle.createIntent(User =>
+  ({changeName$: User.event$('.field', 'input').map(ev => ev.target.value)})
+)</code></pre>
+    </div>
+
+    <div class="step" data-x="-5700" data-y="45" data-scale="1.2">
+        <div style="
+            background-color: #F3FC93;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -95px;
+        "></div>
+        <h2>May 2015</h2>
+        <span>Just functions</span>
+    </div>
+
+    <div class="step" data-x="-5700" data-y="560" data-scale="1.2">
+      <img src="img/ph200.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-5700" data-y="1300" data-scale="1.2">
+      <pre><code class="javascript" style="font-size:30px">let x = computer(human(x))</code></pre>
+    </div>
+
+    <div class="step" data-x="-5700" data-y="1800" data-scale="1.2">
+      <h4>Before</h4>
+      <pre><code class="javascript">let bar$ = Cycle.createStream(foo$ => foo$.delay(500).map(foo => 'Hello ' + foo))
+// ...
+bar$.inject(foo$)</code></pre>
+      <h4 style="margin-top:60px">After</h4>
+      <pre><code class="javascript">let bar$ = foo$.delay(500).map(foo => 'Hello ' + foo))</code></pre>
+    </div>
+
+    <div class="step" data-x="-5700" data-y="2600" data-scale="1.2">
+      <img src="img/jsconfbp.jpg" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-4401" data-y="45" data-scale="1.2">
+        <div style="
+            background-color: #F3FC93;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -95px;
+        "></div>
+        <h2>June 2015</h2>
+        <span>Drivers</span>
+    </div>
+
+    <div class="step" data-x="-4401" data-y="600" data-scale="1.2">
+      <i>Oleg Grenrus: "Why just DOM? Generalize it"</i>
+      <img src="img/oleg-draft.png" style="width:50%">
+    </div>
+
+    <div class="step" data-x="-4401" data-y="1400" data-scale="1.2">
+      <span>"...you can now externalize side effects from the app"</span>
+      <h4>Before</h4>
+      <pre><code class="javascript">function computer(interactions) {
+  return interactions.get(selector, type).flatMap( /* to vtree observable */ );
+}</code></pre>
+      <h4 style="margin-top:60px">After</h4>
+      <pre><code class="javascript">function main(drivers) {
+  var vtree$ = drivers.get('DOM', selector, type).flatMap( /* to vtree observable */ );
+  return {
+    DOM: vtree$,
+    driverFoo: // some observable...
+    driverBar: // another observable...
+  };
+}</code></pre>
+    </div>
+
+    <div class="step" data-x="-3001" data-y="45" data-scale="1.2">
+        <div style="
+            background-color: #F3FC93;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -95px;
+        "></div>
+        <h2>July 2015</h2>
+        <span>v1.0</span>
+    </div>
+
+    <div class="step" data-x="-3001" data-y="320" data-scale="1.2">
+      <h3>+ Tylor Steinberger</h3>
+      <h3>+ Frederik Krautwald</h3>
+    </div>
+
+    <div class="step" data-x="-3001" data-y="800" data-scale="1.2">
+      <pre><code class="javascript" style="font-size:30px">sinks = main(sources)</code></pre>
+      <h3 style="margin: 30px 0">...</h3>
+      <pre><code class="javascript" style="font-size:30px">sinks = Button(sources)</code></pre>
+    </div>
+
+    <div class="step" data-x="-3001" data-y="1600" data-scale="1.2">
+      <h3 style="margin-bottom:30px">Nested Dialogues</h3>
+      <img src="img/nested-dialogues.jpg" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-1502" data-y="45" data-scale="1.2">
+        <div style="
+            background-color: #F3FC93;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -95px;
+        "></div>
+        <h2>December 2015</h2>
+        <span>Cycle Nested</span>
+    </div>
+
+    <div class="step" data-x="-1502" data-y="650" data-scale="1.2">
+      <h3 style="margin-bottom:30px">Scopes</h3>
+      <img src="img/scopes.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-1502" data-y="1500" data-scale="1.2">
+      <img src="img/scoping-issue.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="-1502" data-y="2100" data-scale="1.2">
+      <h3 style="margin: 30px 0">After 110 comments ...</h3>
+      <pre><code class="javascript" style="font-size:60px">@cycle/isolate</code></pre>
+    </div>
+
+    <div class="step" data-x="-1502" data-y="2600" data-scale="1.2">
+      <h4 style="margin-bottom:40px">Motorcycle.js with most.js</h4>
+      <h4 style="margin-bottom:40px">RxJS v5 in development</h4>
+      <h4 style="margin-bottom:40px">How do we accomodate these?</h4>
+    </div>
+
+    <div class="step" data-x="3" data-y="45" data-scale="1.2">
+        <div style="
+            background-color: #F3FC93;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -95px;
+        "></div>
+        <h2>May 2016</h2>
+        <span>Cycle Diversity + xstream</span>
+    </div>
+
+    <div class="step" data-x="3" data-y="700" data-scale="1.2">
+      <h4 style="margin-bottom:0px">Launched in CycleConf! 🎉</h4>
+      <img src="img/cycleconf16.jpg" style="width:100%">
+    </div>
+
+    <div class="step" data-x="3" data-y="1700" data-scale="1.2">
+      <img src="img/cemturan-collab.jpg" style="width:100%">
+    </div>
+
+    <div class="step" data-x="3" data-y="2600" data-scale="1.2">
+      <img src="img/devtool.png" style="width:100%">
+    </div>
+
+    <div class="step" data-x="3" data-y="3200" data-scale="1.2">
+      <h3 style="margin: 30px 0">ES Observable proposal</h3>
+      <h3 style="margin: 30px 0">Supported in RxJS v5, most.js, xstream</h3>
+    </div>
+
+    <div class="step" data-x="1307" data-y="45" data-scale="1.2">
+        <div style="
+            background-color: #F3FC93;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -95px;
+        "></div>
+        <h2>February 2017</h2>
+        <span>Cycle Unified</span>
+    </div>
+
+    <div class="step" data-x="-5500" data-y="2000" data-z="-100" data-rotate-x="40" data-scale="11.8">
+      <h2 style="margin-top: 450px; text-align: center; font-size:60px">Past</h2>
+    </div>
+
+    <div class="step" data-x="3103" data-y="1350" data-scale="7">
+      <h2 style="text-align:center; margin-bottom: 30px">Today</h2>
+      <h5 style="text-align:center">GitHub 6400 ⭐️</h5>
+      <h5 style="text-align:center">Gitter 1180 👤</h5>
+      <h5 style="text-align:center">CycleConf 2017 🇸🇪</h5>
+      <h5 style="text-align:center">create-cycle-app</h5>
+      <h5 style="text-align:center">Cycle Time</h5>
+    </div>
+
+    <div class="step" data-x="9005" data-y="0" data-scale="11">
+    </div>
+
+    <div class="step" data-x="10153" data-y="4100" data-scale="5">
+      <h2 style="text-align:right; margin-bottom: 30px">Conservative scenario</h2>
+      <h5 style="text-align:right;">Basic maintenance</h5>
+      <h5 style="text-align:right;">Bug fixing</h5>
+    </div>
+
+    <div class="step" data-x="10153" data-y="800" data-scale="5">
+      <h2 style="text-align:right; margin-bottom: 30px">Integrations scenario</h2>
+      <h5 style="text-align:right;">Web Components</h5>
+      <h5 style="text-align:right;">Better docs (snabbdom hooks)</h5>
+      <h5 style="text-align:right;">Better testing tools (Cycle Time)</h5>
+      <h5 style="text-align:right;">React Native (ongoing)</h5>
+      <h5 style="text-align:right;">React integration</h5>
+    </div>
+
+    <div class="step" data-x="10153" data-y="-2600" data-scale="5">
+      <h2 style="text-align:right; margin-bottom: 30px">Dataflow tools<br />scenario</h2>
+      <h5 style="text-align:right;">Cycle.js DevTool as an IDE</h5>
+      <h5 style="text-align:right;">Push-pull FRP</h5>
+      <h5 style="text-align:right;">What would be a better host language?</h5>
+      <h5 style="text-align:right;">What would a CycleLang look like?</h5>
+    </div>
+
+    <div class="step" data-x="12000" data-y="-200" data-z="0" data-rotate-y="40" data-scale="16">
+      <h5 style="text-align:right; margin-bottom: 40px;">Help us build the future</h5>
+      <h5 style="text-align:right;"><a href="https://opencollective.com/cyclejs">opencollective.com/cyclejs</a></h5>
+      <h5 style="text-align:right; margin-top: 40px;">Thanks for the past!</h5>
+    </div>
+
+</div>
+
+<script src="js/impress.js"></script>
+<!--<script src="js/live.js"></script>-->
+<script>impress().init();</script>
+</body>
+</html>
