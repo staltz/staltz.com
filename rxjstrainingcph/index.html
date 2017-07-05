@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="RxJS Training in Copenhagen by Andre Staltz" />
+  <title>RxJS Training in Copenhagen by Andre Staltz</title>
+  <link rel="stylesheet" type="text/css" href='https://css.tito.io/v1.1' />
+
+  <script src='https://js.tito.io/v1' async></script>
+  <style>
+    body {
+      color: #212529;
+      font-family: "Source Sans Pro", "Helvetica Neue", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 0;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .has-bg {
+      padding-top: 3em;
+      max-height: 36em;
+      min-height: 100vh;
+      box-sizing: border-box;
+      background-size: cover;
+      background-position-y: 90%;
+      background-position-x: 50%;
+      color: white;
+    }
+
+    .hero {
+      background-color: #6D2AD9;
+      background-image: url("img/hero-bg2.jpeg");
+      background-position-x: 42%;
+      font-weight: 900;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .hero h1,
+    .hero h2 {
+      margin: 10px 0;
+      text-shadow: 0px 1px #3f1186;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+    }
+
+    .hero h2 {
+      font-size: 1.5em;
+    }
+
+    .join {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #F61790;
+      border-radius: 2px;
+      border-bottom: 3px solid #b51b6e;
+      color: white;
+      font-size: 25px;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      margin-top: 5em;
+      margin-bottom: 1em;
+    }
+
+    section {
+      margin: 4em 15px;
+    }
+
+    section.dark {
+      margin: 0;
+      padding: 4em 15px;
+      background-color: #212529;
+      color: #b5bdc6;
+    }
+
+    section>* {
+      margin: 0 auto;
+    }
+
+    section>h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    #register{
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    section>h3 {
+      text-align: center;
+    }
+
+    p,
+    blockquote {
+      margin-bottom: 5px;
+      max-width: 620px;
+      line-height: 26px;
+      font-size: 18px;
+    }
+
+    blockquote {
+      border-left: 5px solid #ccc;
+      padding-left: 20px;
+      margin-top: 30px;
+      color: #505050;
+    }
+
+    strong {
+      font-weight: 900;
+    }
+
+    ul {
+      margin: 16px auto;
+      padding-left: 20px;
+      max-width: 620px;
+      box-sizing: border-box;
+      list-style-type: square;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .instructor {
+      background-color: #1b141b;
+      background-image: url("img/hero-high.jpeg");
+      min-height: 25em;
+      max-height: 60vw;
+      background-position-y: 36%;
+      background-position-x: 11%;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .associate {
+      background-image: url("img/aron-high.jpg");
+      background-position-x: 81%;
+    }
+
+    .instructor>h1 {
+      font-weight: 900;
+      text-align: center;
+      font-style: italic;
+      text-shadow: 0 1px black;
+    }
+
+    .map {
+      background-color: #1b141b;
+      background-image: url("img/map.jpeg");
+      min-height: 25em;
+      max-height: 80vw;
+      background-position-y: 30%;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .centered {
+      text-align: center;
+    }
+    @media screen and (max-width: 640px) {
+      .instructor {
+        justify-content: flex-end;
+      }
+      .instructor h1 {
+        text-align: right;
+        float: right;
+      }
+      .instructor.associate {
+        justify-content: flex-start;
+      }
+      .instructor.associate h1 {
+        text-align: left;
+        float: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero has-bg">
+    <h1><img src="img/rxlogo.png" width="70" height="70" style="transform: translateY(14px) translateX(-9px)"> RxJS Training</h1>
+    <h2>Copenhagen – Oct 10th, 11th</h2>
+    <h2>with Andre Staltz</h2>
+    <a class="join" href="#register">Register</a>
+  </div>
+
+  <section>
+    <p><strong>Come learn the fundamental concepts behind
+      <a href="http://reactivex.io/rxjs">RxJS</a></strong> (or Rx in other languages) and gain confidence programming with
+      reactive Observables.
+      <a href="http://reactivex.io">Rx</a> is a cross-platform library for handling asynchronous programming and user interfaces.
+      In this one-day training workshop,
+      <a href="https://staltz.com">Andre Staltz</a> will guide you through lectures and exercises. Expect to see Rx concepts
+      demystified, practice with exercises, make questions, and gain confidence with the tools.</p>
+  </section>
+
+  <section>
+    <h1>What you will learn</h1>
+    <p>This is a 1-day training workshop that will cover the following topics, with lectures and exercises:</p>
+    <ul>
+      <li>Reactive programming fundamentals</li>
+      <li>Observable, Observer, Subscription</li>
+      <li>Converting things to Observables</li>
+      <li>Basic operators</li>
+      <li>Debugging techniques</li>
+      <li>Subjects and multicast</li>
+      <li>Observables of Observables</li>
+    </ul>
+  </section>
+
+  <div class="instructor has-bg">
+    <h1>Your instructor<br />Andre Staltz</h1>
+  </div>
+
+  <section>
+    <p>You will be taught by <a href="https://staltz.com">Andre 'Staltz' Medeiros</a>, an expert in Rx who has:</p>
+    <ul>
+      <li>Delivered frontend and mobile apps in production with RxJS and RxJava</li>
+      <li>Been a <a href="https://github.com/ReactiveX/rxjs/graphs/contributors">core contributor</a> to RxJS</li>
+      <li>Given <a href="https://staltz.com/blog.html#talks">conference talks</a> on reactive programming and RxJS</li>
+      <li>Taught RxJS through <a href="https://egghead.io/instructors/andre-staltz">online courses</a></li>
+      <li>Authored a <a href="https://github.com/staltz/xstream/">reactive streams library</a> and the <a href="https://cycle.js.org">Cycle.js</a>        framework</li>
+      <li>Written <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">blog posts</a> on RxJS since 2014</li>
+    </ul>
+    <blockquote>
+      Content was perfect for my needs as I was looking for just to get confidence in using RxJS. I really liked how André presented
+      the stuff and there were good amount of exercises. (Workshop participant in Helsinki)
+    </blockquote>
+    <blockquote>
+      Andre was extremely patient, very respectful, and extremely insightful. He helped me understand how to think reactively,
+      and although we were short for time, he pointed me in the right direction for where to go next. I would 100% recommend
+      to anybody who needs help with Rx. (<a href="https://www.codementor.io/staltz">Raimondo on Codementor</a>)
+    </blockquote>
+  </section>
+
+  <div class="instructor associate has-bg">
+    <h1>and associate<br />Aron Allen</h1>
+  </div>
+
+  <section>
+    <p>
+      <a href="https://aronallen.com">Aron Allen</a>, a local Rx expert will be active during the exercises making sure that everyone gets hands on help.
+    </p>
+    <p>
+      Learning Rx can be quite different from what you are used to, and for Aron it was a journey to get comfortable with the techniques.
+      Now he is quite proficient in thinking reactively and wants to help others see the light.
+    </p>
+    <p>
+      Aron works as a freelance web applications developer in Copenhagen and uses functional reactive programming on a daily basis.
+    </p>
+    <p>
+      He also has a heart for bringing together the Cycle.js community once a year, and helped organize both <a href="http://cycleconf.com">CycleConf</a>      2016 and 2017.
+    </p>
+  </section>
+
+  <section>
+    <h1>Schedule</h1>
+    <ul>
+      <li><strong>9:00</strong> Sign up and breakfast</li>
+      <li><strong>9:30</strong> Workshop part I</li>
+      <li><strong>12:00</strong> Lunch break</li>
+      <li><strong>13:00</strong> Workshop part II</li>
+      <li><strong>15:00</strong> Afternoon coffee break</li>
+      <li><strong>15:30</strong> Workshop part III</li>
+      <li><strong>17:00</strong> Day ends</li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>Required knowledge</h1>
+
+    <p>No prior knowledge of Rx is required. For those of you who have used Rx, this training may not be for you if you are
+      expecting advanced topics. The rule of thumb is, join if you would like to feel comfortable and confident programming
+      with Rx.</p>
+    <p>This course is for you if:</p>
+
+    <ul>
+      <li>You have basic knowledge in programming in OOP and user interfaces</li>
+      <li>You work with user interfaces for the web (JavaScript) or for Android or iOS</li>
+      <li>You have heard of Rx or used it but are not fully familiar or comfortable with it</li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>What you will need</h1>
+
+    <p><strong>Please bring your own laptop</strong> as the day will involve hands-on practicing through programming exercises.
+      No special software is needed, as the browser suffices for the exercises.</p>
+  </section>
+
+  <div class="map has-bg">
+    <h1>Location:</h1>
+    <h2>Rainmaking Loft<br />Danneskiold-Samsøes Allé 41<br />Copenhagen</h2>
+  </div>
+
+  <section>
+    <h1>Price</h1>
+    <p>Enrol at the price of <strong>4845 DKK</strong> excluding VAT, which includes:</p>
+    <ul>
+      <li>One full day of training at Rainmaking Loft</li>
+      <li>Light breakfast</li>
+      <li>Lunch</li>
+      <li>Afternoon coffee break</li>
+      <li>Post-training support by email for one week from Andre and Aron</li>
+    </ul>
+    <p>Note: the training on day 11th is exactly the same as on day 10th. You only need to attend one of these two.</p>
+  </section>
+
+  <section id="register">
+    <tito-widget event="nyborg-allen-consulting/rx-workshop-copenhagen-fall-2017"></tito-widget>
+  </section>
+
+  <section class="dark">
+    <h3>Terms & Conditions</h3>
+    <ul>
+      <li>The course is organized and hosted by <a href="nyborgallen.consulting">Nyborg Allen Consulting</a></li>
+      <li>All sales are final meaning no refunds.</li>
+      <li>You may freely transfer an enrolment to another person anytime before the workshop begins.</li>
+      <li>We reserve the right to cancel the course in case of force-majeure.</li>
+      <li>We reserve the right to cancel a course three weeks prior if there are less than 10 participants that day.</li>
+      <li>In case of cancellation enrolments will be fully refunded.</li>
+      <li>For any further questions please contact <a href="mailto:aron@nyborgallen.consulting">us</a></li>
+    </ul>
+    </p>
+  </section>
+
+  <link rel="stylesheet" href="fonts.css" />
+</body>
+
+</html>
