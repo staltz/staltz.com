@@ -166,12 +166,30 @@
 
     .map {
       background-color: #1b141b;
-      background-image: url("img/map.jpeg");
+      background-image: url("img/map1.jpeg");
+      background-size: cover;
       min-height: 25em;
       max-height: 80vw;
-      background-position-y: 30%;
+      background-position-x: 50%;
+      background-position-y: 50%;
       text-align: center;
       padding: 1em;
+      position: relative;
+    }
+
+    .map::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      min-height: 25em;
+      max-height: 80vw;
+      background-image: url("img/map2.png");
+      background-size: cover;
+      background-position-x: 50%;
+      background-position-y: 50%;
     }
 
     .centered {
@@ -200,7 +218,7 @@
   <img src="img/preview.jpg" width="1" height="1" style="display:none;">
   <div class="hero has-bg">
     <h1><img src="img/rxlogo.png" width="70" height="70" style="transform: translateY(14px) translateX(-9px)"> RxJS Training</h1>
-    <h2>Copenhagen – Oct 10th, 11th</h2>
+    <h2>Copenhagen – Oct 11th</h2>
     <h2>with Andre Staltz</h2>
     <a class="join" href="#register">Register</a>
   </div>
@@ -270,12 +288,12 @@
       Aron works as a freelance web applications developer in Copenhagen and uses functional reactive programming on a daily basis.
     </p>
     <p>
-      He also has a heart for bringing together the Cycle.js community once a year, and helped organize both <a href="http://cycleconf.com">CycleConf</a>      2016 and 2017.
+      He also has a heart for bringing together the Cycle.js community once a year, and helped organize both <a href="http://cycleconf.com">CycleConf</a> 2016 and 2017.
     </p>
   </section>
 
   <section>
-    <h1>Schedule</h1>
+    <h1>Schedule on Oct 11th</h1>
     <ul>
       <li><strong>9:00</strong> Sign up and breakfast</li>
       <li><strong>9:30</strong> Workshop part I</li>
@@ -311,7 +329,7 @@
 
   <div class="map has-bg">
     <h1>Location:</h1>
-    <h2>Rainmaking Loft<br />Danneskiold-Samsøes Allé 41<br />Copenhagen</h2>
+    <h2><a href="https://mbkkursuslokaler.dk/">MBK Kursuslokaler</a><br />Pilestræde 61, 1112 København K<br />Copenhagen</h2>
   </div>
 
   <section>
@@ -324,7 +342,6 @@
       <li>Afternoon coffee break</li>
       <li>Post-training support by email for one week from Andre and Aron</li>
     </ul>
-    <p>Note: the training on day 11th is exactly the same as on day 10th. You only need to attend one of these two.</p>
   </section>
 
   <section id="register">
