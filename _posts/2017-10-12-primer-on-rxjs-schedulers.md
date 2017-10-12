@@ -39,16 +39,15 @@ The `1 + 10` combination never took place. The reason why this happens is becaus
 In the case of ambiguity, we should be able to describe how order the emission of events should go. That's what schedulers are for. By default, RxJS uses the so-called *recursive scheduler*. Here is how it would work under the hood:
 
 1. `c$` is subscribed
-2. combineLatest's output Observable is subscribed
-3. combineLatest's first input, `a$`, is subscribed
-4. `a$` emits `1`
-5. combineLatest stores `1` as the latest value for `a$`
-6. `a$` emits `2`
-7. combineLatest stores `2` as the latest value for `a$`
-8. combineLatest's second input, `b$`, is subscribed
-9. `b$` emits `10`
-10. combineLatest stores `10` as the latest value for `b$`
-11. combineLatest now has values from `a$` and `b$`, so it emits `2 + 10`
+2. combineLatest's first input, `a$`, is subscribed
+3. `a$` emits `1`
+4. combineLatest stores `1` as the latest value for `a$`
+5. `a$` emits `2`
+6. combineLatest stores `2` as the latest value for `a$`
+7. combineLatest's second input, `b$`, is subscribed
+8. `b$` emits `10`
+9. combineLatest stores `10` as the latest value for `b$`
+10. combineLatest now has values from `a$` and `b$`, so it emits `2 + 10`
 
 Notice that the order of emissions was `1`, `2`, `10`. The interesting part is that `a$` events are sent as quickly as possible, before `b$` got subscribed to. RxJS uses this scheduler by default for two reasons:
 
@@ -77,17 +76,16 @@ The second argument for `from` is a scheduler to customize the emission of event
 Because this is the ordering:
 
 1. `c$` is subscribed
-2. combineLatest's output Observable is subscribed
-3. combineLatest's first input, `a$`, is subscribed
-4. **combineLatest's second input, `b$`, is subscribed**
-5. `b$` emits `10`
-6. combineLatest stores `10` as the latest value for `b$`
-7. `a$` emits `1`
-8. combineLatest stores `1` as the latest value for `a$`
-9. combineLatest now has values from `a$` and `b$`, so it emits `1 + 10`
-10. `a$` emits `2`
-11. combineLatest stores `2` as the latest value for `a$`
-12. combineLatest emits `2 + 10`
+2. combineLatest's first input, `a$`, is subscribed
+3. **combineLatest's second input, `b$`, is subscribed**
+4. `b$` emits `10`
+5. combineLatest stores `10` as the latest value for `b$`
+6. `a$` emits `1`
+7. combineLatest stores `1` as the latest value for `a$`
+8. combineLatest now has values from `a$` and `b$`, so it emits `1 + 10`
+9. `a$` emits `2`
+10. combineLatest stores `2` as the latest value for `a$`
+11. combineLatest emits `2 + 10`
 
 The order of emissions was `10`, `1`, `2`. To get a different ordering of emissions, we can customize the scheduler for `b$` too:
 
@@ -104,17 +102,16 @@ The order of emissions was `10`, `1`, `2`. To get a different ordering of emissi
 Now the order of emissions is `1`, `10`, `2` because this happened:
 
 1. `c$` is subscribed
-2. combineLatest's output Observable is subscribed
-3. combineLatest's first input, `a$`, is subscribed
-4. combineLatest's second input, `b$`, is subscribed
-7. `a$` emits `1`
-8. combineLatest stores `1` as the latest value for `a$`
-5. `b$` emits `10`
-6. combineLatest stores `10` as the latest value for `b$`
-9. combineLatest now has values from `a$` and `b$`, so it emits `1 + 10`
-10. `a$` emits `2`
-11. combineLatest stores `2` as the latest value for `a$`
-12. combineLatest emits `2 + 10`
+2. combineLatest's first input, `a$`, is subscribed
+3. combineLatest's second input, `b$`, is subscribed
+4. `a$` emits `1`
+5. combineLatest stores `1` as the latest value for `a$`
+6. `b$` emits `10`
+7. combineLatest stores `10` as the latest value for `b$`
+8. combineLatest now has values from `a$` and `b$`, so it emits `1 + 10`
+9. `a$` emits `2`
+10. combineLatest stores `2` as the latest value for `a$`
+11. combineLatest emits `2 + 10`
 
 Schedulers are also used for making emissions happen faster, while maintaining the same ordering. For instance, there is a TestScheduler in RxJS which allows `Observable.interval(1000).take(10)` to run synchronously when subscribed, instead of taking 10 seconds to complete:
 
