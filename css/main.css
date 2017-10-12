@@ -366,6 +366,9 @@ ul.horizontal li a:hover, ul.horizontal li a:active {
   width: 100%;
   margin: 2em 0;
 }
+.post ol li {
+  margin: 10px 0;
+}
 .footer {
   margin-top: 60px;
   background-color: #EEE;
