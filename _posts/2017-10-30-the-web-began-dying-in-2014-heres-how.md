@@ -32,7 +32,7 @@ From where do media sites get their traffic? Prior to 2014, Search Engine Optimi
 
 The relationship between media sites and the two tech giants is [difficult](https://www.theverge.com/2017/7/10/15948196). In 2014, FB built Facebook Paper as an attempt to have a larger control over news consumption. Their tactic failed, but their strategy persisted through different means such as Facebook Instant Articles. The media, being dependent on social traffic and threatened by the social behemoth, reacted. They [pulled out support for Instant Articles](https://www.theverge.com/2017/4/16/15314210).
 
-Meanwhile, GOOG notices how its Search traffic hadn't improved, while Facebook had picked up steam, so GOOG launches their Instant Articles alternative called Amplified Mobile Pages (AMP) and proactively starts serving articles from GOOG servers instead of directing traffic to media sites. The press reacts similarly to how they did for FB: reported bold stories about the Search behemoth's thirst for control over news consumption.
+Meanwhile, GOOG notices how its Search traffic hadn't improved, while Facebook had picked up steam, so GOOG launches their Instant Articles alternative called Accelerated Mobile Pages (AMP) and proactively starts serving articles from GOOG servers instead of directing traffic to media sites. The press reacts similarly to how they did for FB: reported bold stories about the Search behemoth's thirst for control over news consumption.
 
 > *GOOG and FB ceased competing directly, focusing on what they do best instead.*
 
