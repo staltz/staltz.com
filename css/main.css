@@ -72,7 +72,7 @@ body {
   margin: 0;
 }
 h1, h2, h3, h4 {
-  font-family: 'Lora', serif;
+  font-family: 'Roboto Condensed', serif;
 }
 p, ul {
   font-size: 16px;
@@ -336,6 +336,17 @@ ul.horizontal li a {
   text-decoration: none;
   border-bottom: 2px solid white;
 }
+blockquote {
+  display: block;
+  padding-left: 1.5em;
+  padding-right: 1em;
+  padding-top: 21px;
+  padding-bottom: 1px;
+  margin: 1.5em 0;
+  border-left: 4px solid #DDD;
+  background-color: #EEE;
+  color: #333;
+}
 ul.horizontal li a:hover, ul.horizontal li a:active {
   text-decoration: none;
   border-bottom: 2px solid rgba(0,0,0,0.3);
@@ -368,6 +379,10 @@ ul.horizontal li a:hover, ul.horizontal li a:active {
 }
 .post ol li {
   margin: 10px 0;
+}
+.post h2:not(.name-title) {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 .footer {
   margin-top: 60px;
