@@ -52,7 +52,7 @@ AMZN does not focus on making profit.
 
 [![Amazon's Long-Term Growth](/img/amazon-profits.png)](/img/amazon-profits.png)
 
-(Sources: [https://www.statista.com/statistics/346167/facebook-global-dau/](https://www.statista.com/statistics/346167/facebook-global-dau/) and [https://www.statista.com/statistics/264810/number-of-monthly-active-facebook-users-worldwide/](https://www.statista.com/statistics/264810/number-of-monthly-active-facebook-users-worldwide/))
+(Source: [https://www.statista.com/chart/4298/amazons-long-term-growth/](https://www.statista.com/chart/4298/amazons-long-term-growth/))
 
 Instead, its mission is to seek market leadership, crushing competitors in the USA.
 
