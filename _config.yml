@@ -7,7 +7,7 @@ permalink: none
 
 excerpt_separator: "\n\n\n"
 exclude: ["signed_posts", "sign", "sign-all", "verify-all-signed"]
-include: [".well-known", "dat.json", "_redirects"]
+include: [".well-known", "dat.json", "_redirects", "g.txt", "f.txt"]
 defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
 gems:
   - octopress-autoprefixer
