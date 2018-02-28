@@ -1,2 +1,3 @@
-/.well-known/dat    /.well-known/dat
-/xstream            http://staltz.github.io/xstream/
+/.well-known/dat                              /dat
+/.well-known/brave-payments-verification.txt  /brave-payments-verification.txt
+/xstream                                      http://staltz.github.io/xstream/
