@@ -9,7 +9,7 @@ I've just given my third programming talk where I use only my IDE (integrated de
 - *[Two fundamental abstractions](https://hooktube.com/watch?v=fdol03pcvMA)*, April 2018
 - *[You will learn RxJS](https://hooktube.com/watch?v=uQ1zhJHclvs)*, November 2016
 
-I believe source code is best explained in the environment it usually found: in your day-to-day editor. Keynote or Powerpoint are rather alien environments for code to live in, and many developers actually rarely open them in their daily jobs. Presenting with the IDE also helps reduce the distance between the presenter and the audience (which is already big!), as it sets a common ground. A talk should be the shortest mental path from presenter to audience.
+I believe source code is best explained in the environment it is usually found: in your day-to-day editor. Keynote or Powerpoint are rather alien environments for code to live in, and many developers actually rarely open them in their daily jobs. Presenting with the IDE also helps reduce the distance between the presenter and the audience (which is already big!), as it sets a common ground. A talk should be the shortest mental path from presenter to audience.
 
 Live coding is not for everyone or for every type of presentation, I have to admit it is limited to a certain type of content. That said, a great amount of programming talks are done by default on presentation tools, even though they have plenty of slides with code. Maybe the default should be an IDE!
 
