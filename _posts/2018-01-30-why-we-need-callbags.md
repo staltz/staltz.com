@@ -13,13 +13,13 @@ In the past I've helped write parts of [RxJS](https://github.com/ReactiveX/RxJS)
 In reality, those 3 are realized in just one thing: [Callbags](https://github.com/staltz/callbag-basics).
 
 ```js
-const {observe, fromEvent, map, filter, pipe} = require('callbag-basics');
+const {forEach, fromEvent, map, filter, pipe} = require('callbag-basics');
 
 pipe(
   fromEvent(document, 'click'),
   filter(ev => ev.target.tagName === 'BUTTON'),
-  map(ev => ({x: ev.clientX, y: ev.clientY}))
-  observe(x => console.log(x))
+  map(ev => ({x: ev.clientX, y: ev.clientY})),
+  forEach(x => console.log(x))
 );
 ```
 
