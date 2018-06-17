@@ -20,7 +20,7 @@ Architectures might use the term "View" with drastically different connotations.
 
 The DOM and other layers such as frameworks and libraries are assumed to exist between the user and the architecture.
 
-**Ownership of inter-module arrow matters.** `A-->  B` is different than `A  -->B`. The former is Passive programming, while the latter is Reactive programming. Read more [here](http://cycle.js.org/observables.html#reactive-programming).
+**Ownership of inter-module arrow matters.** `A-->  B` is different than `A  -->B`. The former is Passive programming, while the latter is Reactive programming. Read more [here](https://cycle.js.org/streams.html#streams-reactive-programming).
 
 > A unidirectional architecture is said to be **fractal** if subcomponents are structured in the same way as the whole is.
 
