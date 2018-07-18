@@ -1,66 +1,66 @@
 @font-face {
-  font-family: "Lora";
-  src: url("fonts/Lora-Bold.ttf") format("truetype");
+  font-family: 'Lora';
+  src: url('fonts/Lora-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("fonts/Roboto-Light.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Light.ttf') format('truetype');
   font-weight: lighter;
   font-style: normal;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("fonts/Roboto-LightItalic.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-LightItalic.ttf') format('truetype');
   font-weight: lighter;
   font-style: italic;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("fonts/Roboto-Italic.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("fonts/Roboto-Bold.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("fonts/Roboto-BoldItalic.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Roboto Condensed";
-  src: url("fonts/RobotoCondensed-Regular.ttf") format("truetype");
+  font-family: 'Roboto Condensed';
+  src: url('fonts/RobotoCondensed-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("fonts/RobotoCondensed-Italic.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: url('fonts/RobotoCondensed-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
-  font-family: "Roboto Condensed";
-  src: url("fonts/RobotoCondensed-Bold.ttf") format("truetype");
+  font-family: 'Roboto Condensed';
+  src: url('fonts/RobotoCondensed-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("fonts/RobotoCondensed-BoldItalic.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: url('fonts/RobotoCondensed-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
@@ -71,10 +71,14 @@ body {
   padding: 0;
   margin: 0;
 }
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Roboto Condensed', serif;
 }
-p, ul {
+p,
+ul {
   font-size: 16px;
   line-height: 1.75;
   margin: 0 0 20px;
@@ -87,8 +91,18 @@ pre {
   margin: 30px 0;
 }
 
+p > code {
+  background-color: #f1f1f1;
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+pre.highlight > code {
+  font-size: 14px;
+}
+
 .header {
   height: calc(100vh - 120px);
+  max-height: 600px;
   background-image: url('../img/header_photo.jpg');
   background-size: cover;
   background-color: #598080;
@@ -97,15 +111,32 @@ pre {
 }
 .header-post {
   height: 100px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#83c3a5+0,72c2c1+100 */
-  background: #83c3a5; /* Old browsers */
-  background: -moz-linear-gradient(45deg,  #83c3a5 0%, #72c2c1 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#83c3a5), color-stop(100%,#72c2c1)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg,  #83c3a5 0%,#72c2c1 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg,  #83c3a5 0%,#72c2c1 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg,  #83c3a5 0%,#72c2c1 100%); /* IE10+ */
-  background: linear-gradient(45deg,  #83c3a5 0%,#72c2c1 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83c3a5', endColorstr='#72c2c1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #35e693; /* Old browsers */
+  background: -moz-linear-gradient(
+    45deg,
+    #35e693 0%,
+    #72a7ff 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    right top,
+    color-stop(0%, #35e693),
+    color-stop(100%, #72a7ff)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    45deg,
+    #35e693 0%,
+    #72a7ff 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    45deg,
+    #35e693 0%,
+    #72a7ff 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #35e693 0%, #72a7ff 100%); /* IE10+ */
+  background: linear-gradient(45deg, #35e693 0%, #72a7ff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35e693', endColorstr='#72a7ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   background-size: cover;
   text-transform: uppercase;
 }
@@ -121,9 +152,9 @@ pre {
   margin-bottom: -50px;
   border: 2px solid white;
   -webkit-border-radius: 50px;
-          border-radius: 50px;
-  -webkit-box-shadow: 0 0 6px 0 rgba(0,0,0,0.35);
-          box-shadow: 0 0 6px 0 rgba(0,0,0,0.35);
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.35);
 }
 .centered {
   text-align: center;
@@ -159,8 +190,9 @@ pre {
   text-align: center;
   border-bottom: 2px solid white;
 }
-.nav-item:hover, .nav-item:active {
-  border-bottom: 2px solid rgba(0,0,0,0.3);
+.nav-item:hover,
+.nav-item:active {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   margin-top: -2px;
 }
 
@@ -206,74 +238,74 @@ a.name-title:hover {
 }
 
 .big-tweet-header {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-align-content: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .big-tweet-name-part {
-    margin-left: 20px;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    height: 80px;
-
+  margin-left: 20px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: 80px;
 }
 
 .big-tweet-name {
-    margin: 0;
-    display: block;
+  margin: 0;
+  display: block;
 }
 
-.big-tweet-handle, .big-tweet-date {
-    display: inline-block;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color: #888;
+.big-tweet-handle,
+.big-tweet-date {
+  display: inline-block;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #888;
 }
 .big-tweet-handle a {
-    color: #888;
+  color: #888;
 }
 .big-tweet-date {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .big-tweet-avatar {
-    background-image: url('../img/andre.jpg');
-    background-size: cover;
-    height: 80px;
-    width: 80px;
-    border-radius: 10px;
+  background-image: url('../img/andre.jpg');
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
 }
 
 .big-tweet-body p {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 .big-tweet-body pre {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 .big-tweet-body table {
@@ -296,17 +328,17 @@ a.name-title:hover {
 h2.hr {
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid #aaa;
   line-height: 0;
   margin: 60px 0 30px;
   font-size: 16px;
   cursor: default;
   -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 span.hr {
   background-color: white;
@@ -343,26 +375,27 @@ blockquote {
   padding-top: 21px;
   padding-bottom: 1px;
   margin: 1.5em 0;
-  border-left: 4px solid #DDD;
-  background-color: #EEE;
+  border-left: 4px solid #ddd;
+  background-color: #eee;
   color: #333;
 }
-ul.horizontal li a:hover, ul.horizontal li a:active {
+ul.horizontal li a:hover,
+ul.horizontal li a:active {
   text-decoration: none;
-  border-bottom: 2px solid rgba(0,0,0,0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   margin-top: -2px;
 }
 .twitter-bg {
-  background-color: #33CCFF;
+  background-color: #33ccff;
 }
 .facebook-bg {
-  background-color: #3B5998;
+  background-color: #3b5998;
 }
 .linkedin-bg {
-  background-color: #0E76A8;
+  background-color: #0e76a8;
 }
 .stackexchange-bg {
-  background-color: #EF8236;
+  background-color: #ef8236;
 }
 .github-bg {
   background-color: #171515;
@@ -386,10 +419,10 @@ ul.horizontal li a:hover, ul.horizontal li a:active {
 }
 .footer {
   margin-top: 60px;
-  background-color: #EEE;
+  background-color: #eee;
   text-align: center;
-  border-top: 1px solid #DDD;
-  border-bottom: 1px solid #DDD;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   padding: 30px 0;
   color: #888;
 }
