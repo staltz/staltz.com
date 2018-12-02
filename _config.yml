@@ -1,14 +1,18 @@
-title: "André Staltz"
-author: "André Staltz"
-description: "Open Source Hacker"
-more: "read more"
-url: "https://staltz.com"
+title: 'André Staltz'
+author: 'André Staltz'
+description: 'Open Source Freelancer'
+more: 'read more'
+url: 'https://staltz.com'
 permalink: none
 
 excerpt_separator: "\n\n\n"
-exclude: ["signed_posts", "sign", "sign-all", "verify-all-signed"]
-include: [".well-known", "dat.json", "_redirects", "g.txt", "f.txt"]
-defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
+exclude: ['signed_posts', 'sign', 'sign-all', 'verify-all-signed']
+include: ['.well-known', 'dat.json', '_redirects', 'g.txt', 'f.txt']
+defaults:
+  [
+    {scope: {path: ''}, values: {layout: 'default'}},
+    {scope: {path: '', type: 'posts'}, values: {comments: true}},
+  ]
 plugins:
   - octopress-autoprefixer
   - jekyll-redirect-from
