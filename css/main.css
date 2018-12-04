@@ -403,8 +403,8 @@ ul.horizontal li a:active {
 .email-bg {
   background-color: #888;
 }
-.codementor-bg {
-  background-color: #003648;
+.patreon-bg {
+  background-color: rgb(249, 104, 84);
 }
 .post img {
   width: 100%;
@@ -435,4 +435,11 @@ ul.horizontal li a:active {
 }
 span.dot {
   margin: 0 5px;
+}
+.patreon-area {
+  text-align: center;
+  padding: 50px 0;
+}
+.patreon-area iframe {
+  width: 180px !important;
 }
