@@ -14,7 +14,7 @@ The cornerstone of JavaScript is the function. It is a flexible abstraction that
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="600"
+   width="100%"
    height="200"
    viewBox="0 0 158.74999 50"
    version="1.1"
@@ -66,7 +66,7 @@ Compared to hard coded chunks of code, functions provide a couple important bene
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="600"
+   width="100%"
    height="280"
    viewBox="0 0 158.74999 70"
    version="1.1"
@@ -169,7 +169,7 @@ It's also common to see getters being used with Promises, since Promises are kno
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="600"
+   width="100%"
    height="280"
    viewBox="0 0 158.74999 70"
    version="1.1"
@@ -243,7 +243,7 @@ function fancyConsoleLog(str) {
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="600"
+   width="100%"
    height="310"
    viewBox="0 0 158.74999 60"
    version="1.1"
@@ -373,7 +373,7 @@ function getGetNext() {
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="600"
+   width="100%"
    height="310"
    viewBox="0 0 158.74999 60"
    version="1.1"
@@ -513,14 +513,14 @@ console.log('after');
 
 <h2 id="iterables" class="hr"><span class="hr">ITERABLES</span></h2>
 
-<h3 style="text-align:center"><code>() => (() => {done, value})</code></h3>
+<h3 style="text-align:center"><code>() => (() => ({done, value}))</code></h3>
 <h4 style="text-align:center">An iterable is (with some details omitted:)<br />a getter-getter of an object that describes either a value or completion</h4>
 
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="600"
+   width="100%"
    height="400"
    viewBox="0 0 158.74999 57"
    version="1.1"
@@ -628,7 +628,7 @@ for (let result = getNext(); !result.done; result = getNext()) {
 }
 ```
 
-*ES6 Iterables* have further conventions beyond the simple `() => (() => {done, value})` pattern, they add a wrapper object on each getter:
+*ES6 Iterables* have further conventions beyond the simple `() => (() => ({done, value}))` pattern, they add a wrapper object on each getter:
 
 - The outer getter `f` becomes the object `{[Symbol.iterator]: f}`
 - The inner getter `g` becomes the object `{next: g}`
@@ -743,7 +743,7 @@ for (let x of oddNums()) {
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="600"
+   width="100%"
    height="400"
    viewBox="0 0 158.74999 57"
    version="1.1"
@@ -926,7 +926,7 @@ console.log('after Promise.then');
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="600"
+   width="100%"
    height="400"
    viewBox="0 0 158.74999 57"
    version="1.1"
@@ -1137,7 +1137,7 @@ setTimeout(() => {
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="600"
+   width="100%"
    height="440"
    viewBox="0 0 158.74999 116.41654"
    version="1.1"
@@ -1443,7 +1443,7 @@ Writing the above code example with none of the abstractions in the Getter-Sette
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="600"
+   width="100%"
    height="440"
    viewBox="0 0 158.74999 116.41654"
    version="1.1"
