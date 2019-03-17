@@ -46,7 +46,7 @@ When we need to choose between terseness and readability, we choose the latter. 
 
 *xstream*'s shorthand as `xs` is a convenient pun, because this is a very small library.
 
-When building the next big version of Cycle.js, called Cycle Diversity, we made it possible to build a driver in one stream library while consuming in in an application built with another stream library.
+When building the next big version of Cycle.js, called Cycle Diversity, we made it possible to build a driver in one stream library while consuming it in an application built with another stream library.
 
 For instance this would enable one to use the Cycle DOM driver written in RxJS v4 with a Cycle.js app written in RxJS v5. However, the off-the-shelf packages for these libraries are quite large (200+ kB each). Including both of them would be 400+ kB, before any user code is added. There are ways of customizing them to have only what is needed, but there is still some common large boilerplate to bring along, and it is quite common for developers not to customize their consumed variant of RxJS.
 
