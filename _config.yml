@@ -14,5 +14,4 @@ defaults:
     {scope: {path: '', type: 'posts'}, values: {comments: true}},
   ]
 plugins:
-  - octopress-autoprefixer
   - jekyll-feed
