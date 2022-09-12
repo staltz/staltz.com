@@ -12,7 +12,7 @@ The average TTOSA for the cases I measured is 7 years, and that seems like *plen
 
 ## The data
 
-I've been occasionally collecting data for this manually, and it's large enough now to publish. The following table lists proprietary software and corresponding open source alternatives that were **directly** inspired by the proprietary software. For both, I tried to determine the **birth date** of the software, which was often either the date the company was founded, or the date of the initial commit. My source for these dates has been Crunchbase, Wikipedia, and git logs on GitHub.
+I've been occasionally collected data for this manually, and it's large enough now to publish. The following table lists proprietary software and corresponding open source alternatives that were **directly** inspired by the proprietary software. For both, I tried to determine the **birth date** of the software, which was often either the date the company was founded, or the date of the initial commit. My source for these dates has been Crunchbase, Wikipedia, and git logs on GitHub.
 
 *Time Till Open Source Alternative* is then defined as the difference between those dates, assuming that the proprietary software always comes first. I identified 39 cases, see the table below, or [get the raw CSV here](https://github.com/staltz/ttosa).
 
