@@ -1,6 +1,7 @@
 .DS_Store
 
 .sass-cache/
+.jekyll-cache
 _site/
 
 # Editors
