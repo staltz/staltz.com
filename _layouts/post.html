@@ -25,13 +25,6 @@
         <h3 class="post-date">{{ page.date | date_to_string }}</h3>
     </div>
     {{ content }}
-    <p>
-      If you liked this article, consider sharing
-      <a href="https://twitter.com/intent/tweet?original_referer={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;text={{ page.title | uri_escape }}&amp;tw_p=tweetbutton&amp;url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;via=andrestaltz"
-        rel="nofollow" target="_blank" title="tweeting">(tweeting)
-        <span style="text-decoration: underline">
-      </a> it to your followers.
-    </p>
     <div class="patreon-area">
       <a href="https://www.patreon.com/bePatron?u=8666785" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
     </div>
