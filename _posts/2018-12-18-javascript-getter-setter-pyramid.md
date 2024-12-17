@@ -10,7 +10,6 @@ The cornerstone of JavaScript is the function. It is a flexible abstraction that
 
 <h3 style="text-align:center"><code>X => Y</code></h3>
 
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +61,6 @@ Compared to hard coded chunks of code, functions provide a couple important bene
 <h3 style="text-align:center"><code>() => X</code></h3>
 <h4 style="text-align:center">A getter is a function with no input arguments and X as output</h4>
 
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +163,6 @@ It's also common to see getters being used with Promises, since Promises are kno
 <h3 style="text-align:center"><code>X => ()</code></h3>
 <h4 style="text-align:center">A setter is a function with X as input and no output</h4>
 
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +236,6 @@ function fancyConsoleLog(str) {
 <h3 style="text-align:center"><code>() => (() => X)</code></h3>
 <h4 style="text-align:center">A getter-getter is a function with no input arguments and a getter as output</h4>
 
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -369,7 +365,6 @@ function getGetNext() {
 <h3 style="text-align:center"><code>(X => ()) => ()</code></h3>
 <h4 style="text-align:center">A setter-setter is a function with a setter as input and no output</h4>
 
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -516,7 +511,6 @@ console.log('after');
 <h3 style="text-align:center"><code>() => (() => ({done, value}))</code></h3>
 <h4 style="text-align:center">An iterable is (with some details omitted:)<br />a getter-getter of an object that describes either a value or completion</h4>
 
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -739,7 +733,6 @@ for (let x of oddNums()) {
 <h3 style="text-align:center"><code>(X => (), Err => ()) => ()</code></h3>
 <h4 style="text-align:center">A promise is (with some details omitted:)<br />a setter of two setters, with additional guarantees</h4>
 
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -922,7 +915,6 @@ console.log('after Promise.then');
 <h3 style="text-align:center"><code>(X => (), Err => (), () => ()) => ()</code></h3>
 <h4 style="text-align:center">An observable is (with some details omitted:)<br />a setter of three setters, with additional guarantees</h4>
 
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -1133,7 +1125,6 @@ setTimeout(() => {
 <h3 style="text-align:center"><code>() => (() => Promise<{done, value}>)</code></h3>
 <h4 style="text-align:center">An async iterable is (with some details omitted:)<br />like an iterable that yields promises of values</h4>
 
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -1439,7 +1430,6 @@ main();
 
 Writing the above code example with none of the abstractions in the Getter-Setter Pyramid requires more amount of code, which is also harder to read. Using operators and new syntax sugar features is how you can take advantage of these special cases of the function to do more with less code, without sacrificing readability.
 
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
