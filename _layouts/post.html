@@ -4,12 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>André Staltz{% if page.title %} - {{ page.title }}{% endif %}</title>
+  <title>André Staltz{% if title %} - {{ title }}{% endif %}</title>
   <meta name="description" content="Open Source Freelancer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="/css/main.css" rel="stylesheet">
   <link href="/css/github.css" rel="stylesheet">
+    <link href="/css/prism-staltz.css" rel="stylesheet">
   <script src="/js/modernizr-2.6.1.min.js"></script>
 </head>
 
@@ -21,15 +22,15 @@
       <h2 class="name-title">
         <a href="/">André Staltz</a>
       </h2>
-      <h2 class="post-title">{{ page.title }}</h3>
-        <h3 class="post-date">{{ page.date | date_to_string }}</h3>
+      <h2 class="post-title">{{ title }}</h3>
+        <h3 class="post-date">{{ page.date | dateToString }}</h3>
     </div>
     {{ content }}
     <div class="patreon-area">
       <a href="https://www.patreon.com/bePatron?u=8666785" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
     </div>
     <p class="verify-in-keybase">
-      Copyright (C) {{ page.date | date: "%Y" }} Andre 'Staltz' Medeiros, licensed under
+      Copyright (C) {{ page.date | year }} Andre 'Staltz' Medeiros, licensed under
       <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons BY-NC 4.0</a>, translations to other languages allowed.
     </p>
   </div>

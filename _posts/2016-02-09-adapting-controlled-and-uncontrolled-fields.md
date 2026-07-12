@@ -14,7 +14,7 @@ With RxJS in Cycle.js, we can create a component that takes an Event Stream of a
 
 We make an `Input(sources)` component which takes some props for its corresponding `<input>`, and an `Assign` Event Stream. The output/sink is just the `vtree$` for that `<input>`. It can then be used like this:
 
-{% highlight js %}
+```js
 function main(sources) {
   // Intent
   const add$ = sources.DOM.select('.add')
@@ -47,6 +47,6 @@ function main(sources) {
     DOM: vtree$,
   };
 }
-{% endhighlight %}
+```
 
 Now we have a square peg (Event Stream) for a square hole (assigning values). See a [JSBin example](https://jsbin.com/hojiluruva/1/edit?js,output) of this.

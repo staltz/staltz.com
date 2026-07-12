@@ -7,3 +7,6 @@ _site/
 # Editors
 .idea/
 .vscode/
+
+# Node / Eleventy
+node_modules/

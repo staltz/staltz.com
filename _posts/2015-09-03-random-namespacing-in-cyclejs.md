@@ -18,7 +18,7 @@ This is a problem fairly similar to global classnames used for CSS styling. Insp
 
 Consider the Nested Dialogues [example of a BMI calculator](https://github.com/cyclejs/cycle-examples/tree/master/bmi-nested). It has labeled slider components, which take a name as argument:
 
-{% highlight js %}
+```js
 function labeledSlider({DOM, props$}, name = '') {
   let initialValue$ = props$.map(props => props.initial).first();
   let newValue$ = DOM.select(name + '.labeled-slider .slider')
@@ -44,28 +44,28 @@ function labeledSlider({DOM, props$}, name = '') {
     value$
   };
 }
-{% endhighlight %}
+```
 
 The relevant parts are:
 
-{% highlight js %}
+```js
 function labeledSlider({DOM, props$}, name = '') {
-{% endhighlight %}
+```
 
-{% highlight js %}
+```js
 let newValue$ = DOM.select(name + '.labeled-slider .slider')
-{% endhighlight %}
+```
 
-{% highlight js %}
+```js
 h('div.labeled-slider' + name, [
-{% endhighlight %}
+```
 
 The default name is empty, which means you always need to give a name if you have more than one instance of this component in the application. For instance, in this BMI example, the BMI calculator uses two labeled sliders, one for weight and another for height:
 
-{% highlight js %}
+```js
 let weightSlider = labeledSlider({DOM, props$: weightProps$}, '.weight');
 let heightSlider = labeledSlider({DOM, props$: heightProps$}, '.height');
-{% endhighlight %}
+```
 
 Names `'.weight'` and `'.height'` are given.
 
@@ -73,20 +73,20 @@ Names `'.weight'` and `'.height'` are given.
 
 It occured to me that we could use a randomly generated name instead of the empty string by default.
 
-{% highlight js %}
+```js
 function randomName() {
   return '.x' + Math.round(Math.random()*1000);
 }
 
 function labeledSlider({DOM, props$}, name = randomName()) {
-{% endhighlight %}
+```
 
 The default parameter is a new randomly generated name whenever the labeled slider component function is called. This way, we can use the labeled sliders in the BMI parent without specifying the namespace:
 
-{% highlight js %}
+```js
 let weightSlider = labeledSlider({DOM, props$: weightProps$});
 let heightSlider = labeledSlider({DOM, props$: heightProps$});
-{% endhighlight %}
+```
 
 And it works.
 
@@ -94,7 +94,7 @@ And it works.
 
 The first problem that arises with that approach, though, it name collision possibilities. There are a couple of ways around that, though. One is through **incremental ids**:
 
-{% highlight js %}
+```js
 let c = 0;
 
 function randomName() {
@@ -102,11 +102,11 @@ function randomName() {
 }
 
 function labeledSlider({DOM, props$}, name = randomName()) {
-{% endhighlight %}
+```
 
 And the other is using collision-resistant ids such as from [`cuid`](https://www.npmjs.com/package/cuid):
 
-{% highlight js %}
+```js
 import cuid from 'cuid';
 
 function randomName() {
@@ -114,7 +114,7 @@ function randomName() {
 }
 
 function labeledSlider({DOM, props$}, name = randomName()) {
-{% endhighlight %}
+```
 
 Either way, the random name is optional. You can still explicitly provide the name, in case the parent component needs the child's name. This use case often happens when the parent component has a list of components of the same type, and the parent needs to extract information about its state from the child's id, such as in [this advanced list example](https://github.com/cyclejs/cycle-examples/tree/master/advanced-list-nest).
 

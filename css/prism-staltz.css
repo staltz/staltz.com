@@ -1,0 +1,104 @@
+/*
+ * Prism syntax highlighting theme for staltz.com.
+ * Colors mirror the previous Rouge/Pygments palette (css/github.css) so code
+ * blocks look the same after the Jekyll -> Eleventy migration.
+ */
+
+pre[class*="language-"],
+code[class*="language-"] {
+  color: #000;
+  background: none;
+  text-shadow: none;
+  font-family: monospace;
+  white-space: pre;
+  word-wrap: normal;
+  tab-size: 2;
+  hyphens: none;
+}
+
+pre[class*="language-"] > code {
+  font-size: 14px;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #0099ff;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #555555;
+}
+
+.token.keyword,
+.token.atrule,
+.token.important {
+  color: #006699;
+  font-weight: bold;
+}
+
+.token.boolean,
+.token.constant {
+  color: #006699;
+  font-weight: bold;
+}
+
+.token.number {
+  color: #ff6600;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.inserted {
+  color: #cc3300;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #555555;
+}
+
+.token.function {
+  color: #cc00ff;
+}
+
+.token.class-name {
+  color: #00aa88;
+  font-weight: bold;
+}
+
+.token.builtin {
+  color: #336666;
+}
+
+.token.tag {
+  color: #330099;
+  font-weight: bold;
+}
+
+.token.attr-name,
+.token.property,
+.token.symbol {
+  color: #330099;
+}
+
+.token.variable {
+  color: #003333;
+}
+
+.token.selector {
+  color: #00cc00;
+}
+
+.token.deleted {
+  color: #aa0000;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}

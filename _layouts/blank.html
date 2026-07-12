@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/github.css" rel="stylesheet">
-    {% feed_meta %}
+    <link href="/css/prism-staltz.css" rel="stylesheet">
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ site.title }}">
     <script src="/js/modernizr-2.6.1.min.js"></script>
   </head>
   <body>
 {{ content }}
-    {% unless page.tags contains 'nofooter' %}
+    {% unless tags contains 'nofooter' %}
       <div class="footer">
         <p><a href="https://github.com/staltz/staltz.github.io" target="_blank">Source code</a>
         </p>

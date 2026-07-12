@@ -45,21 +45,21 @@ Elm also gets out your way by having immutable types built-in, signals built-in,
 
 I am a proponent of using JavaScript functions instead of JSX for markup, because it is friendlier to any text/code editor, and less verbose than HTML-inspired JSX. Compare the following:
 
-{% highlight text %}
+```text
 // JSX
 <ul id="bestest-menu">
   {items.map( item =>
     <li className=".item" {...attrs(item.id)}>{item.title}</li>
   )}
 </ul>
-{% endhighlight %}
+```
 
-{% highlight js %}
+```js
 // hyperscript-helpers
 ul('#bestest-menu', items.map( item =>
   li('.item', attrs(item.id), item.title))
 );
-{% endhighlight %}
+```
 
 Neither of these two are unreadable (as long as you know the language), yet JSX is more verbose. `<` and `>` add no value, they are noise, among other quirks like `{ }` blocks.
 
@@ -67,27 +67,27 @@ That said, React does not have an out-of-the-box easy solution for JS-only marku
 
 **React.createElement or React.createFactory boilerplate.** To write JS-only markup with React, you have to use either of those two.
 
-{% highlight js %}
+```js
 React.createElement('ul', null, [
   React.createElement('li', null, 'Foo'),
   React.createElement('li', null, 'Bar'),
 ])
-{% endhighlight %}
+```
 
 or
 
-{% highlight js %}
+```js
 const h = React.createElement;
 
 h('ul', null, [
   h('li', null, 'Foo'),
   h('li', null, 'Bar'),
 ])
-{% endhighlight %}
+```
 
 or
 
-{% highlight js %}
+```js
 const ul = React.createFactory('ul');
 const li = React.createFactory('li');
 
@@ -95,17 +95,17 @@ ul(null, [
   li(null, 'Foo'),
   li(null, 'Bar'),
 ])
-{% endhighlight %}
+```
 
 With the additional complication that not all factories can be gathered and packaged as a utility, since we might need to make a factory for a custom component:
 
-{% highlight js %}
+```js
 const MyButton = React.createFactory(MyPackage.MyButton);
 
 ul(null, [
   MyButton({myProp: 123})
 ])
-{% endhighlight %}
+```
 
 Overall, having to handle createFactory or createElement by yourself is boilerplate and not necessarily less verbose than simply JSX.
 
@@ -113,7 +113,7 @@ Overall, having to handle createFactory or createElement by yourself is boilerpl
 
 In Cycle.js you can omit the props object. Since props are always an object and children are always an array, it's obvious which parameter is what:
 
-{% highlight js %}
+```js
 ul([
   li('Foo'),
   li('Bar'),
@@ -123,7 +123,7 @@ ul(null, [
   li(null, 'Foo'),
   li(null, 'Bar'),
 ])
-{% endhighlight %}
+```
 
 That is not true in React. You always need to provide the properties object. If not needed, then it should be `null` or `{}`. This just adds verbosity/noise.
 
@@ -131,19 +131,19 @@ That is not true in React. You always need to provide the properties object. If 
 
 Some React components have an invariant: "Invariant Violation: onlyChild must be passed a children with exactly one child". Which means this is an error:
 
-{% highlight js %}
+```js
 SomeComponent(null, [
   Button(null, 'Submit')
 ])
-{% endhighlight %}
+```
 
 And this is correct:
 
-{% highlight js %}
+```js
 SomeComponent(null,
   Button(null, 'Submit')
 )
-{% endhighlight %}
+```
 
 This is a gotcha that makes it annoying to develop, whereas with [hyperscript-helpers](https://github.com/ohanhi/hyperscript-helpers) or Elm, children are (intuitively) an array/list.
 

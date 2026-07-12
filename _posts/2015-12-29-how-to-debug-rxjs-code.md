@@ -26,24 +26,24 @@ This is the most rudimentary technique: to just "console.log" events happening o
 
 Given an Observable declaration as such
 
-{% highlight js %}
+```js
 var shortLowerCaseName$ = name$
   .map(name => name.toLowerCase())
   .filter(name => name.length < 5);
-{% endhighlight %}
+```
 
 We can add `.do(x => console.log(x))` between operators:
 
-{% highlight js %}
+```js
 var shortLowerCaseName$ = name$
   .map(name => name.toLowerCase())
   .do(x => console.log(x))
   .filter(name => name.length < 5);
-{% endhighlight %}
+```
 
 Operator `do` is like a `map` except it always returns exactly what it was given. The code above is equivalent to
 
-{% highlight js %}
+```js
 var shortLowerCaseName$ = name$
   .map(name => name.toLowerCase())
   .map(x => {
@@ -51,17 +51,17 @@ var shortLowerCaseName$ = name$
     return x;
   })
   .filter(name => name.length < 5);
-{% endhighlight %}
+```
 
 This is **not** the same as subscribing to `shortLowerCaseName$`:
 
-{% highlight js %}
+```js
 var shortLowerCaseName$ = name$
   .map(name => name.toLowerCase())
   .filter(name => name.length < 5);
 
 shortLowerCaseName$.subscribe(name => console.log(x));
-{% endhighlight %}
+```
 
 Because Observables are lazy until you subscribe, a subscription triggers the operator chain to execute. If you have the `console.log` inside a `do` and no subscription, the `console.log` will not happen at all.
 
@@ -69,14 +69,14 @@ So `.do(x => console.log(x))` is a non-intrusive tracing technique that does not
 
 Notice also that `do()` is an **operator**: it returns a new Observable. If you just simply replace `subscribe()` with `do()`, nothing will happen because you just got a new Observable as output but you dropped it on the ground:
 
-{% highlight js %}
+```js
 var shortLowerCaseName$ = name$
   .map(name => name.toLowerCase())
   .filter(name => name.length < 5);
 
 // This console.log will never happen!
 shortLowerCaseName$.do(name => console.log(name));
-{% endhighlight %}
+```
 
 The output from `do()` must be connected to the operator chain that gets eventually subscribed.
 
@@ -84,7 +84,7 @@ The output from `do()` must be connected to the operator chain that gets eventua
 
 Suppose you have RxJS code that looks like this:
 
-{% highlight js %}
+```js
 var shortLowerCaseName$ = name$
   .map(name => name.toLowerCase())
   .filter(name => name.length < 5);
@@ -94,7 +94,7 @@ var bmi$ = weight$.combineLatest(height$, (weight, height) =>
 );
 
 var fullInfo$ = shortLowerCaseName$.combineLatest(bmi$);
-{% endhighlight %}
+```
 
 If you follow the dependencies (e.g. `shortLowerCaseName$` depends on `name$`) and build the dependency graph, you get:
 
@@ -130,7 +130,7 @@ In the near future, we may see real-time rendering of the dependency graph or re
 
 Marble diagrams (in text format) are used extensively in RxJS 5 for unit tests, such as this case:
 
-{% highlight js %}
+```js
 it.asDiagram('debounce')('should debounce events', () => {
   var e1 =   hot('-a--bc--d---|');
   var e2 =  cold( '--|         ');
@@ -138,7 +138,7 @@ it.asDiagram('debounce')('should debounce events', () => {
   var result = e1.debounce(() => e2);
   expectObservable(result).toBe(expected);
 });
-{% endhighlight %}
+```
 
 These text-based marble diagrams [can already be used by RxJS 5 users](https://twitter.com/robwormald/status/675902034873225216). Also, their correspondent PNG diagrams can be automatically generated too. The PNG diagram for the test case above is:
 

@@ -10,7 +10,7 @@ What is it that makes React so innovative and compelling? What is so revolutiona
 
 When React was released, [a lot of people focused their attention on JSX](https://news.ycombinator.com/item?id=5789055). JSX allows developers to write "HTML" primitives directly inside JavaScript, without escaping them in strings.
 
-{% highlight html %}
+```html
 // Using JSX to express UI components.
 var dropdown =
   <Dropdown>
@@ -23,7 +23,7 @@ var dropdown =
   </Dropdown>;
 
 render(dropdown);
-{% endhighlight %}
+```
 
 The idea of embedding markup in real code is an old one. Facebook took some inspiration from PHP in this regards. Extensively writing markup in PHP code led them to create [XHP](https://www.facebook.com/notes/facebook-engineering/xhp-a-new-way-to-write-php/294003943919) to ease the pain of escaping, among other reasons. Inspired by XHP, [JSX itself was used internally in Facebook](https://twitter.com/sebmarkbage/status/599805631382552576) before React was invented.
 
