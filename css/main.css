@@ -368,6 +368,12 @@ img { max-width: 100%; }
 }
 
 .page-head { margin-bottom: var(--space-10); }
+.page-head:has(.talk-toolbar) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
 .page-head .kicker { display: block; margin-bottom: var(--space-4); }
 .page-title {
   font-size: clamp(2.25rem, 6vw, var(--text-4xl));
@@ -521,7 +527,7 @@ img { max-width: 100%; }
   text-transform: uppercase;
   color: var(--accent-strong);
 }
-.post-item__ext { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--text-muted); }
+.post-item__ext { font-family: var(--font-mono); font-size: calc(2 * var(--text-sm)); color: var(--text-muted); }
 .post-item__date {
   flex-shrink: 0;
   font-family: var(--font-mono);
@@ -532,23 +538,127 @@ img { max-width: 100%; }
 }
 .list-note { margin-top: var(--space-10); font-size: var(--text-sm); color: var(--text-muted); line-height: var(--leading-normal); }
 
-/* Talk / venue rows — like a post row but the meta may wrap on narrow screens */
-.talk-item {
+/* Talk grid */
+.talk-toolbar {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--space-2) var(--space-4);
-  padding: var(--space-3) 0;
-  border-bottom: 1px solid var(--border-subtle);
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
 }
-.talk-item__title { color: var(--text-primary); font-weight: var(--weight-medium); }
-.talk-item:hover .talk-item__title { color: var(--link-hover); text-decoration: underline; }
-.talk-item__meta {
+.talk-toolbar__label {
+  margin-right: var(--space-1);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+.talk-sort {
+  appearance: none;
+  padding: 7px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  line-height: 1;
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-standard),
+              border-color var(--dur-fast) var(--ease-standard),
+              background var(--dur-fast) var(--ease-standard);
+}
+.talk-sort:hover {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+.talk-sort.is-active {
+  border-color: var(--slate-900);
+  background: var(--slate-900);
+  color: var(--slate-0);
+}
+.talk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-10) var(--space-6);
+}
+.talk-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  color: var(--text-primary);
+  text-decoration: none;
+  container-type: inline-size;
+}
+.talk-card:hover { color: var(--text-primary); text-decoration: none; }
+.talk-card::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 28.125cqw;
+  left: 50%;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--slate-900) 82%, transparent);
+  box-shadow: 0 2px 12px rgba(14, 18, 24, 0.22);
+  transform: translate(-50%, -50%);
+  transition: transform var(--dur-base) var(--ease-out),
+              background var(--dur-base) var(--ease-out);
+}
+.talk-card::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 28.125cqw;
+  left: calc(50% + 2px);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 13px solid var(--slate-0);
+  transform: translate(-50%, -50%);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.talk-card:hover::before {
+  background: var(--accent);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+.talk-card:hover::after { transform: translate(-50%, -50%) scale(1.06); }
+.talk-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--surface-sunken);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
+}
+.talk-card:hover .talk-card__image {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.talk-card__body {
+  display: block;
+  padding-top: var(--space-3);
+}
+.talk-card__title {
+  display: block;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-snug);
+  text-wrap: balance;
+}
+.talk-card:hover .talk-card__title { color: var(--link-hover); }
+.talk-card__meta {
+  display: block;
+  margin-top: var(--space-1);
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--text-muted);
-  white-space: nowrap;
 }
 
 /* ==========================================================================
@@ -764,4 +874,5 @@ span.hr { flex: 0 0 auto; }
   .site-header { gap: var(--space-4); }
   .site-nav { gap: var(--space-4); }
   .hero { padding-top: var(--space-12); }
+  .talk-grid { grid-template-columns: 1fr; gap: var(--space-8); }
 }
