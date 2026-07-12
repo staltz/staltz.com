@@ -1,46 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>André Staltz{% if title %} - {{ title }}{% endif %}</title>
-    <meta name="description" content="Open Source Freelancer">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="/css/github.css" rel="stylesheet">
-    <link href="/css/prism-staltz.css" rel="stylesheet">
-    <script src="/js/modernizr-2.6.1.min.js"></script>
-  </head>
-  <body>
-    <div class="header-post"></div>
-    <div class="container post">
-      <h3 class="big-tweet-to-home"><a href="/">&#8592; Home</a></h3>
-      <div class="big-tweet-header">
-        <div class="big-tweet-avatar"></div>
-        <div class="big-tweet-name-part">
-          <h2 class="big-tweet-name">André Staltz</h2>
-          <h4 class="big-tweet-handle">
-            <a href="https://twitter.com/andrestaltz">@andrestaltz</a><span class="big-tweet-date">{{ page.date | dateToString }}</span>
-          </h4>
-        </div>
+---
+layout: base
+---
+<div class="wrap tweet">
+  <a class="article__back" href="/big-tweets.html">&larr; Big tweets</a>
+
+  <div class="tweet__head">
+    <div class="tweet__avatar"></div>
+    <div>
+      <div class="tweet__name">André Staltz</div>
+      <div class="tweet__handle">
+        <a href="https://twitter.com/andrestaltz">@andrestaltz</a><span class="tweet__dot">·</span>{{ page.date | dateToString }}
       </div>
-      <div class="big-tweet-body">
+    </div>
+  </div>
+
+  <div class="prose">
 {{ content }}
-        <p>PS: this is not a blog post, it's a "big tweet".</p>
-        <p>
-        If you liked this, consider sharing <a href="https://twitter.com/intent/tweet?original_referer={{ site.url | url_encode }}{{ page.url | url_encode }}&amp;text={{ title | url_encode }}&amp;tw_p=tweetbutton&amp;url={{ site.url | url_encode }}{{ page.url | url_encode }}&amp;via=andrestaltz" rel="nofollow" target="_blank" title="tweeting">(tweeting)<span style="text-decoration: underline"></a> it too.
-        </p>
-      </div>
-    </div>
-    <div class="footer">
-      <p><a href="/">Back home</a></p>
-      <p><a href="https://github.com/staltz/staltz.github.io" target="_blank">Source code</a>
-      </p>
-    </div>
-    <script
-    src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-    crossorigin="anonymous"></script>
-  </body>
-</html>
+    <p>PS: this is not a blog post, it's a "big tweet".</p>
+    <p>
+      If you liked this, consider
+      <a href="https://twitter.com/intent/tweet?original_referer={{ site.url | url_encode }}{{ page.url | url_encode }}&amp;text={{ title | url_encode }}&amp;tw_p=tweetbutton&amp;url={{ site.url | url_encode }}{{ page.url | url_encode }}&amp;via=andrestaltz" rel="nofollow" target="_blank">sharing it</a> too.
+    </p>
+  </div>
+</div>

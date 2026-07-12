@@ -1,33 +1,33 @@
 ---
 layout: blank
-tags: [nofooter]
+pageClass: home-wrap
 ---
-    <div class="header"></div>
-    <div class="avatar"></div>
-    <div class="container">
+<section class="hero">
+  <div class="hero__title-row">
+    <h1 class="hero__title">Hi,<br />I'm André Staltz</h1>
+    <img class="hero__avatar" src="/img/andre-avatar.png" alt="André Staltz" width="138" height="138" />
+  </div>
+  <p class="lead">I make software, teach programming, and write articles. My writing is mostly on open source and decentralization.</p>
+  <div class="btn-row">
+    <a class="btn btn--accent" href="/blog.html">Read the blog</a>
+    <a class="btn btn--secondary" href="/about.html">About me</a>
+  </div>
+</section>
 
-      <div class="centered">
-        <h2 class="name-title"><a href="/" class="name-title">André Staltz</a></h2>
-        <h3 class="name-subtitle">Open Source Freelancer</h3>
-      </div>
-
-      <p>Hi! I build open source software, teach programming, and write articles. My areas of focus are: JavaScript, user interfaces, reactive programming, React Native, and peer-to-peer networks.</p>
-
-      <p>I am creating <a href="https://manyver.se">Manyverse</a>, a social network off the grid. My hope for the project is to be a reliable and non-commercial mobile social app, specially for communities with limited internet connection. I want to help the world experience more kindness and simplicity, also in the information age. You can help me by donating to the Manyverse <a href="https://opencollective.com/manyverse">OpenCollective</a> or to my <a href="https://patreon.com/andrestaltz">Patreon</a> (<a href="https://staltz.com/thanks">thank you!</a>) page.</p>
-
-      <div class="nav">
-        <a class="nav-item" href="/about.html">About me</a>
-        <a class="nav-item" href="/blog.html">Blog</a>
-        <a class="nav-item" href="/hire.html">Hire me</a>
-      </div>
-
-      <ul class="horizontal">
-        <li><a href="mailto:andre@staltz.com" class="email-bg"><i class="fa fa-envelope"></i></a></li>
-        <li><a href="http://www.github.com/staltz" class="github-bg"><i class="fab fa-github"></i></a></li>
-        <li><a href="http://www.twitter.com/andrestaltz" class="twitter-bg"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://patreon.com/andrestaltz" class="patreon-bg"><i class="fab fa-patreon"></i></a></li>
-        <li><a href="http://www.stackoverflow.com/users/315752/staltz" class="stackexchange-bg"><i class="fab fa-stack-overflow"></i></a></li>
-        <li><a href="http://www.linkedin.com/in/andrestaltz" class="linkedin-bg"><i class="fab fa-linkedin"></i></a></li>
-      </ul>
-
-    </div>
+<section class="section">
+  <div class="section__head">
+    <h2 class="section__title">Recent writing</h2>
+    <a class="text-link" href="/blog.html">All posts <span class="arrow">&rarr;</span></a>
+  </div>
+  <div class="post-list">
+    {% assign recentPosts = collections.blog | reverse %}
+    {% for post in recentPosts limit: 6 %}
+    <a class="post-item" href="{{ post.url }}">
+      <span class="post-item__main">
+        <span class="post-item__title">{{ post.data.title }}</span>
+      </span>
+      <time class="post-item__date">{{ post.date | yearMonth }}</time>
+    </a>
+    {% endfor %}
+  </div>
+</section>

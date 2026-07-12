@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>André Staltz</title>
-    <meta name="description" content="Open Source Freelancer">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="flattr:id" content="rd03xn">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="/css/github.css" rel="stylesheet">
-    <link href="/css/prism-staltz.css" rel="stylesheet">
-    <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ site.title }}">
-    <script src="/js/modernizr-2.6.1.min.js"></script>
-  </head>
-  <body>
+---
+layout: base
+---
+<div class="wrap {{ pageClass | default: 'page' }}">
 {{ content }}
-    {% unless tags contains 'nofooter' %}
-      <div class="footer">
-        <p><a href="https://github.com/staltz/staltz.github.io" target="_blank">Source code</a>
-        </p>
-      </div>
-    {% endunless %}
-    <script
-    src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-    crossorigin="anonymous"></script>
-  </body>
-</html>
+</div>

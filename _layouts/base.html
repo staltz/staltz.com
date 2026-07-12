@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>André Staltz{% if title %} — {{ title }}{% endif %}</title>
+  <meta name="description" content="{{ description | default: site.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/prism-staltz.css" rel="stylesheet">
+  <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ site.title }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site">
+    <header class="site-header">
+      <a class="site-header__brand" href="/">
+        <span class="site-header__name">André Staltz</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/blog.html"{% if section == 'blog' %} class="is-active"{% endif %}>Blog</a>
+        <a href="/about.html"{% if section == 'about' %} class="is-active"{% endif %}>About</a>
+      </nav>
+    </header>
+
+    <main id="main">
+{{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__label">Find me</div>
+        <nav class="site-footer__links">
+          <a href="mailto:andre@staltz.com">Email</a>
+          <a href="https://github.com/staltz">GitHub</a>
+          <a href="https://twitter.com/andrestaltz">Twitter</a>
+          <a href="https://bsky.app/profile/staltz.com">Bluesky</a>
+          <a href="https://patreon.com/andrestaltz">Patreon</a>
+          <a href="https://linkedin.com/in/andrestaltz">LinkedIn</a>
+          <span class="site-footer__copy">© André Staltz</span>
+        </nav>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

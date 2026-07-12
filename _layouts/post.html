@@ -1,49 +1,26 @@
-<!DOCTYPE html>
-<html>
+---
+layout: base
+section: blog
+---
+<article class="wrap article">
+  <a class="article__back" href="/blog.html">&larr; Blog</a>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>André Staltz{% if title %} - {{ title }}{% endif %}</title>
-  <meta name="description" content="Open Source Freelancer">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link href="/css/main.css" rel="stylesheet">
-  <link href="/css/github.css" rel="stylesheet">
-    <link href="/css/prism-staltz.css" rel="stylesheet">
-  <script src="/js/modernizr-2.6.1.min.js"></script>
-</head>
-
-<body>
-  <div class="header-post"></div>
-  <div class="avatar"></div>
-  <div class="container post">
-    <div class="centered">
-      <h2 class="name-title">
-        <a href="/">André Staltz</a>
-      </h2>
-      <h2 class="post-title">{{ title }}</h3>
-        <h3 class="post-date">{{ page.date | dateToString }}</h3>
+  <header class="article__header">
+    <div class="article__meta">
+      <time datetime="{{ page.date | dateToRfc3339 }}">{{ page.date | dateToString }}</time>
     </div>
-    {{ content }}
-    <div class="patreon-area">
-      <a href="https://www.patreon.com/bePatron?u=8666785" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
-    </div>
-    <p class="post-license">
-      Copyright (C) {{ page.date | year }} Andre 'Staltz' Medeiros, licensed under
-      <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons BY-NC 4.0</a>, translations to other languages allowed.
-    </p>
-  </div>
-  <div class="footer">
-    <p>
-      <a href="/">Back home</a>
-    </p>
-    <p>
-      <a href="https://github.com/staltz/staltz.github.io" target="_blank">Source code</a>
-    </p>
-  </div>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-    crossorigin="anonymous"></script>
-</body>
+    <h1 class="article__title">{{ title }}</h1>
+  </header>
 
-</html>
+  <div class="prose">
+{{ content }}
+  </div>
+
+  <div class="article__foot">
+    <span class="article__license">
+      &copy; {{ page.date | year }} André Medeiros, licensed under
+      <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+    </span>
+    <a class="text-link" href="/blog.html">More essays <span class="arrow">&rarr;</span></a>
+  </div>
+</article>
