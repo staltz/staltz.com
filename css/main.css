@@ -416,6 +416,7 @@ img { max-width: 100%; }
 .btn--secondary { background: transparent; color: var(--text-primary); border-color: var(--border-strong); }
 .btn--secondary:hover { border-color: var(--text-primary); color: var(--text-primary); }
 .btn-row { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.prose + .btn-row { margin-top: var(--space-10); }
 
 /* ==========================================================================
    Tag
