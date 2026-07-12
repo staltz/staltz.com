@@ -2,7 +2,7 @@
    Staltz Design System — site stylesheet
    Ported from the "Staltz Design System" Claude Design project.
    Cool "paper & ink" with one confident cobalt. The neutrals are quietly cool
-   (blue-black ink on cool-white paper); cobalt is the single chromatic color —
+   (blue-black ink on cool-white paper); cobalt is the light-theme accent —
    it IS the hyperlink. Type-forward: Schibsted Grotesk + JetBrains Mono.
    ========================================================================== */
 
@@ -26,7 +26,7 @@
   --slate-800: #232A34;
   --slate-900: #0E1218;
 
-  /* Cobalt: the single accent — the color of a link */
+  /* Cobalt: the light-theme accent */
   --cobalt-50:  #EDF1FD;
   --cobalt-100: #DEE6FB;
   --cobalt-200: #C0CEF6;
@@ -36,6 +36,16 @@
   --cobalt-600: #2645C4;
   --cobalt-700: #1D3699;
 
+  /* Teal: the dark-theme accent */
+  --teal-50:  #E8FFFB;
+  --teal-100: #C5FFF5;
+  --teal-200: #8AF5E7;
+  --teal-300: #4AE5D3;
+  --teal-400: #20CEBD;
+  --teal-500: #00AD9E;
+  --teal-600: #007F75;
+  --teal-700: #00645D;
+
   /* Semantic aliases (light) */
   --surface-page:    var(--slate-50);
   --surface-card:    var(--slate-0);
@@ -43,7 +53,7 @@
   --surface-inverse: var(--slate-900);
 
   --text-primary:   var(--slate-900);
-  --text-secondary: var(--slate-700);
+  --text-secondary: var(--slate-800);
   --text-muted:     var(--slate-500);
   --text-inverse:   var(--slate-50);
   --text-on-accent: #FFFFFF;
@@ -148,28 +158,29 @@
 
 /* Dark theme — opt-in via [data-theme="dark"]. Cool-dark, never pure black. */
 [data-theme="dark"] {
+  color-scheme: dark;
   --surface-page:    #0C0F14;
   --surface-card:    #141922;
   --surface-sunken:  #090B0F;
   --surface-inverse: var(--slate-100);
 
   --text-primary:   #EAEDF2;
-  --text-secondary: #AEB6C2;
+  --text-secondary: #dbe0e6;
   --text-muted:     #6C7686;
   --text-inverse:   #0E1218;
-  --text-on-accent: #FFFFFF;
+  --text-on-accent: #071A18;
 
   --border-subtle: #1E2531;
   --border-strong: #2C3542;
   --border-ink:    #EAEDF2;
 
-  --accent:        var(--cobalt-400);
-  --accent-strong: var(--cobalt-300);
-  --accent-soft:   #16203A;
+  --accent:        var(--teal-300);
+  --accent-strong: var(--teal-200);
+  --accent-soft:   #0D302D;
 
-  --link:       var(--cobalt-300);
-  --link-hover: var(--cobalt-200);
-  --focus-ring: var(--cobalt-400);
+  --link:       var(--teal-300);
+  --link-hover: var(--teal-200);
+  --focus-ring: var(--teal-400);
 }
 
 /* ==========================================================================
@@ -214,7 +225,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 
 code, pre, kbd, samp { font-family: var(--font-mono); font-size: 0.9em; }
 
-::selection { background: var(--cobalt-100); color: var(--slate-900); }
+::selection { background: var(--accent-soft); color: var(--text-primary); }
 
 :focus-visible {
   outline: 2px solid var(--focus-ring);
@@ -307,6 +318,36 @@ img { max-width: 100%; }
   color: var(--text-primary);
   border-bottom-color: var(--accent);
 }
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  flex: 0 0 auto;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  background: var(--surface-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-standard),
+              border-color var(--dur-fast) var(--ease-standard),
+              background var(--dur-fast) var(--ease-standard);
+}
+.theme-toggle:hover {
+  color: var(--accent-strong);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.theme-toggle svg { width: 18px; height: 18px; }
+.theme-toggle__sun { display: none; }
+[data-theme="dark"] .theme-toggle__sun { display: block; }
+[data-theme="dark"] .theme-toggle__moon { display: none; }
 
 /* ==========================================================================
    Site footer
@@ -437,7 +478,7 @@ img { max-width: 100%; }
   border: 1px solid var(--border-strong);
   background: transparent;
 }
-.tag--accent { color: var(--accent-strong); border-color: var(--cobalt-200); background: var(--accent-soft); }
+.tag--accent { color: var(--accent-strong); border-color: color-mix(in srgb, var(--accent) 35%, var(--border-subtle)); background: var(--accent-soft); }
 .tag--solid { color: var(--text-inverse); border-color: var(--slate-900); background: var(--slate-900); }
 
 /* ==========================================================================
@@ -715,7 +756,7 @@ img { max-width: 100%; }
 }
 .prose > * + * { margin-top: var(--space-5); }
 .prose p { text-wrap: pretty; }
-.article .prose > p:first-child { font-size: var(--text-lg); color: var(--text-secondary); }
+.article .prose > p { font-size: var(--text-lg); color: var(--text-secondary); }
 .prose h2 {
   font-size: var(--text-2xl);
   font-weight: var(--weight-semibold);
@@ -874,6 +915,14 @@ span.hr { flex: 0 0 auto; }
   :root { --gutter: var(--space-5); }
   .site-header { gap: var(--space-4); }
   .site-nav { gap: var(--space-4); }
+  .site-header__actions { gap: var(--space-3); }
   .hero { padding-top: var(--space-12); }
   .talk-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+}
+
+@media (max-width: 480px) {
+  .site-header__name { font-size: var(--text-base); }
+  .site-nav { gap: var(--space-3); }
+  .site-nav a { font-size: var(--text-sm); }
+  .site-header__actions { gap: var(--space-2); }
 }
