@@ -1,3 +1,0 @@
-#!/bin/sh
-gpg2 --armor --sign --output signed_posts/$(basename $1).asc $1
-

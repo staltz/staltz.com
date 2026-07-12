@@ -228,12 +228,12 @@ a.name-title:hover {
   margin: 0 0 40px;
   text-transform: uppercase;
 }
-.verify-in-keybase {
+.post-license {
   color: #999;
   font-variant: small-caps;
   font-size: small;
 }
-.verify-in-keybase a {
+.post-license a {
   color: #999;
 }
 

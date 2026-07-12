@@ -33,10 +33,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("pgp.asc");
-  eleventyConfig.addPassthroughCopy("f.txt");
-  eleventyConfig.addPassthroughCopy("g.txt");
-
   // Standalone static sub-sites (old talks/demos) served under staltz.com/<dir>/.
   // Copy them verbatim and keep Eleventy from trying to render files inside them.
   const staticDirs = [
