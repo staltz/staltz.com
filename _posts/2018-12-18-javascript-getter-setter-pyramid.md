@@ -10,14 +10,7 @@ The cornerstone of JavaScript is the function. It is a flexible abstraction that
 
 <h3 style="text-align:center"><code>X => Y</code></h3>
 
-<svg
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   width="100%"
-   height="200"
-   viewBox="0 0 158.74999 50"
-   version="1.1"
-   >
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="200" viewBox="0 0 158.74999 50" version="1.1">
   <g transform="translate(0,-250.58345)">
     <path
        style="opacity:1;fill:#dfebfa;fill-opacity:1;stroke:#accbf2;stroke-width:0.26;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:17.20000076;stroke-dasharray:none;stroke-dashoffset:9.99999905;stroke-opacity:1"
@@ -61,14 +54,7 @@ Compared to hard coded chunks of code, functions provide a couple important bene
 <h3 style="text-align:center"><code>() => X</code></h3>
 <h4 style="text-align:center">A getter is a function with no input arguments and X as output</h4>
 
-<svg
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   width="100%"
-   height="280"
-   viewBox="0 0 158.74999 70"
-   version="1.1"
-   >
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="280" viewBox="0 0 158.74999 70" version="1.1">
   <g transform="translate(0,-225)">
     <path
        style="opacity:0.6;fill:#dfebfa;fill-opacity:1;stroke:#accbf2;stroke-width:0.26;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:17.20000076;stroke-dasharray:none;stroke-dashoffset:9.99999905;stroke-opacity:1"
@@ -163,14 +149,7 @@ It's also common to see getters being used with Promises, since Promises are kno
 <h3 style="text-align:center"><code>X => ()</code></h3>
 <h4 style="text-align:center">A setter is a function with X as input and no output</h4>
 
-<svg
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   width="100%"
-   height="280"
-   viewBox="0 0 158.74999 70"
-   version="1.1"
-   >
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="280" viewBox="0 0 158.74999 70" version="1.1">
   <g transform="translate(0,-225)">
     <path
        style="opacity:0.6;fill:#dfebfa;fill-opacity:1;stroke:#accbf2;stroke-width:0.26;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:17.20000076;stroke-dasharray:none;stroke-dashoffset:9.99999905;stroke-opacity:1"
@@ -236,14 +215,7 @@ function fancyConsoleLog(str) {
 <h3 style="text-align:center"><code>() => (() => X)</code></h3>
 <h4 style="text-align:center">A getter-getter is a function with no input arguments and a getter as output</h4>
 
-<svg
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   width="100%"
-   height="310"
-   viewBox="0 0 158.74999 60"
-   version="1.1"
-   >
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="310" viewBox="0 0 158.74999 63" version="1.1">
   <g transform="translate(0,-225)">
     <path
        style="opacity:0.6;fill:#dfebfa;fill-opacity:1;stroke:#accbf2;stroke-width:0.26;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:17.20000076;stroke-dasharray:none;stroke-dashoffset:9.99999905;stroke-opacity:1"
@@ -365,14 +337,7 @@ function getGetNext() {
 <h3 style="text-align:center"><code>(X => ()) => ()</code></h3>
 <h4 style="text-align:center">A setter-setter is a function with a setter as input and no output</h4>
 
-<svg
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   width="100%"
-   height="310"
-   viewBox="0 0 158.74999 60"
-   version="1.1"
-   >
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="310" viewBox="0 0 158.74999 63" version="1.1">
   <g transform="translate(0,-225)">
     <path
        style="opacity:0.6;fill:#dfebfa;fill-opacity:1;stroke:#accbf2;stroke-width:0.26;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:17.20000076;stroke-dasharray:none;stroke-dashoffset:9.99999905;stroke-opacity:1"
@@ -511,14 +476,7 @@ console.log('after');
 <h3 style="text-align:center"><code>() => (() => ({done, value}))</code></h3>
 <h4 style="text-align:center">An iterable is (with some details omitted:)<br />a getter-getter of an object that describes either a value or completion</h4>
 
-<svg
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   width="100%"
-   height="400"
-   viewBox="0 0 158.74999 57"
-   version="1.1"
-   >
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="400" viewBox="0 0 158.74999 67" version="1.1">
   <g transform="translate(0,-220)">
     <path
        style="opacity:0.6;fill:#dfebfa;fill-opacity:1;stroke:#accbf2;stroke-width:0.26;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:17.20000076;stroke-dasharray:none;stroke-dashoffset:9.99999905;stroke-opacity:1"
@@ -733,14 +691,7 @@ for (let x of oddNums()) {
 <h3 style="text-align:center"><code>(X => (), Err => ()) => ()</code></h3>
 <h4 style="text-align:center">A promise is (with some details omitted:)<br />a setter of two setters, with additional guarantees</h4>
 
-<svg
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   width="100%"
-   height="400"
-   viewBox="0 0 158.74999 57"
-   version="1.1"
-   >
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="400" viewBox="0 0 158.74999 67" version="1.1">
   <g transform="translate(0,-220)">
     <path
        style="opacity:0.6;fill:#dfebfa;fill-opacity:1;stroke:#accbf2;stroke-width:0.26;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:17.20000076;stroke-dasharray:none;stroke-dashoffset:9.99999905;stroke-opacity:1"
@@ -915,14 +866,7 @@ console.log('after Promise.then');
 <h3 style="text-align:center"><code>(X => (), Err => (), () => ()) => ()</code></h3>
 <h4 style="text-align:center">An observable is (with some details omitted:)<br />a setter of three setters, with additional guarantees</h4>
 
-<svg
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   width="100%"
-   height="400"
-   viewBox="0 0 158.74999 57"
-   version="1.1"
-   >
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="400" viewBox="0 0 158.74999 67" version="1.1">
   <g transform="translate(0,-220)">
     <path
        style="opacity:0.6;fill:#dfebfa;fill-opacity:1;stroke:#accbf2;stroke-width:0.26;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:17.20000076;stroke-dasharray:none;stroke-dashoffset:9.99999905;stroke-opacity:1"
@@ -1125,14 +1069,7 @@ setTimeout(() => {
 <h3 style="text-align:center"><code>() => (() => Promise<{done, value}>)</code></h3>
 <h4 style="text-align:center">An async iterable is (with some details omitted:)<br />like an iterable that yields promises of values</h4>
 
-<svg
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   width="100%"
-   height="440"
-   viewBox="0 0 158.74999 116.41654"
-   version="1.1"
-   >
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="440" viewBox="0 0 158.74999 116.41654" version="1.1">
   <g transform="translate(0,-180.58345)">
     <path
        style="opacity:0.6;fill:#dfebfa;fill-opacity:1;stroke:#accbf2;stroke-width:0.26;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:17.20000076;stroke-dasharray:none;stroke-dashoffset:9.99999905;stroke-opacity:1"
@@ -1430,14 +1367,7 @@ main();
 
 Writing the above code example with none of the abstractions in the Getter-Setter Pyramid requires more amount of code, which is also harder to read. Using operators and new syntax sugar features is how you can take advantage of these special cases of the function to do more with less code, without sacrificing readability.
 
-<svg
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   width="100%"
-   height="440"
-   viewBox="0 0 158.74999 116.41654"
-   version="1.1"
-   >
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="440" viewBox="0 0 158.74999 116.41654" version="1.1">
   <g transform="translate(0,-180.58345)">
     <path
        style="opacity:1;fill:#dfebfa;fill-opacity:1;stroke:#accbf2;stroke-width:0.26;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:17.20000076;stroke-dasharray:none;stroke-dashoffset:9.99999905;stroke-opacity:1"

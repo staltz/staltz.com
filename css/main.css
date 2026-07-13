@@ -827,7 +827,12 @@ img { max-width: 100%; }
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
 }
-.prose svg { max-width: 100%; height: auto; }
+.prose svg { max-width: 100%; }
+.prose svg:not([height]) { height: auto; }
+.prose svg text,
+.prose svg tspan {
+  font-family: var(--font-sans) !important;
+}
 .prose iframe { max-width: 100%; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); }
 .prose hr { border: none; border-top: 1px solid var(--border-subtle); margin: var(--space-12) 0; }
 
