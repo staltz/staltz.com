@@ -825,11 +825,12 @@ img { max-width: 100%; }
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   line-height: var(--leading-normal);
-  background: var(--slate-900);
-  color: var(--slate-100);
+  background: var(--code-bg, var(--surface-sunken));
+  color: var(--code-fg, var(--text-primary));
   border-radius: var(--radius-md);
   padding: var(--space-5);
   overflow-x: auto;
+  border: 1px solid var(--border-subtle);
 }
 .prose pre code { background: none; border: none; padding: 0; color: inherit; font-size: inherit; }
 .prose img {
