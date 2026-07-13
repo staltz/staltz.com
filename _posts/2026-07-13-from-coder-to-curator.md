@@ -20,11 +20,11 @@ I feel energized. I can finally revive projects that I never had time for, and t
 
 **The AI does the building. I am the curator.**
 
-The best analogy for AI is not a sentient robot, it is a genie in a lamp. It is magically capable of almost anything, but **subordinate by design**. Companies such as Anthropic and OpenAI are incentivized to build agents that do precisely what the user asks them to do. The genie can build your great ideas and your mediocre ideas, and it is not going to stand in your way.
+The best analogy for AI is not a sentient robot, it is a genie in a lamp. It is magically capable of almost anything, but **subordinate by design**. Companies such as Anthropic and OpenAI are incentivized to build agents that do precisely what the user asks them to do. The genie can build both your great ideas and your mediocre ideas, and it is not going to stand in your way.
 
-This means that AI tools delegate quality to you. Not because they cannot produce high quality software, but because people want different things. The model is incentivized to follow your instructions precisely, instead of building something even better than what you asked. So the most important question is no longer "_how_ do we build this?", it is "*what* is worth building?" or "what do you want?"
+This means that AI tools delegate quality to you. Not because they cannot produce high quality software, but because people want different things. Now that all sorts of things can be easily built, the difficulty is no longer in building in itself.
 
-The how is now just a small aspect of the what.
+So the real question is what should get built? **What do you want?** And the even more important question which will define the careers of many of us is: "What is worth building?"
 
 ## Bundling of roles
 
@@ -34,9 +34,9 @@ That job disappeared because typing became bundled into the programmer's respons
 
 Now the role of the coder is disappearing, and I think that is totally fine. We are bundling that responsibility into another role. That role may be product designer, solutions architect, cloud architect, founder, or something that does not yet have a common name. We no longer need such a clear separation between the architect and the builder, because the building can be bundled into the architect's tools.
 
-To be clear, understanding code is still important, and will remain so. My mother could type code without understanding it, but today's software curator cannot merely copy-paste prompts without understanding the outcome. The architecture and design aspects of software are increasing in importance, not decreasing.
+To be clear, understanding code is still important, and will remain so. The managers and the designers today who never knew how to code have the opportunity of finally independently giving their ideas life. However, they will inevitably compromise on software quality if they don't get this one thing right: understanding and shaping the code and architecture internally.
 
-Both are about solving problems while maintaining the bigger picture. I remember the CEO of a consultancy where I worked saying that quality is a combination of many factors. It is not enough that software is fast. It also has to be user-friendly, reliable, correct, and internally maintainable. Improvements to one of these can even make another worse. There is no single benchmark that tells the genie "make it good".
+Quality is complex. I remember the CEO of a consultancy where I worked saying that quality is a combination of many factors. It is not enough that software is fast. It also has to be user-friendly, reliable, correct, and internally maintainable. Improvements to one of these can even make another worse. There is no single benchmark that tells the genie "make it good".
 
 ## The quality imperative
 
