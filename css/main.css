@@ -37,14 +37,14 @@
   --cobalt-700: #1D3699;
 
   /* Teal: the dark-theme accent */
-  --teal-50:  #E8FFFB;
-  --teal-100: #C5FFF5;
-  --teal-200: #8AF5E7;
-  --teal-300: #4AE5D3;
-  --teal-400: #20CEBD;
-  --teal-500: #00AD9E;
-  --teal-600: #007F75;
-  --teal-700: #00645D;
+  --teal-50:  #E8FFF5;
+  --teal-100: #C5FFE6;
+  --teal-200: #8AF5CC;
+  --teal-300: #4AE5AC;
+  --teal-400: #20CE92;
+  --teal-500: #00AD73;
+  --teal-600: #007F55;
+  --teal-700: #006444;
 
   /* Semantic aliases (light) */
   --surface-page:    var(--slate-50);
@@ -516,6 +516,7 @@ img { max-width: 100%; }
   height: clamp(7rem, 20vw, 9rem);
   border-radius: var(--radius-full);
   object-fit: cover;
+  object-position: 70% 50%;
 }
 .lead {
   font-size: var(--text-lg);
@@ -614,9 +615,9 @@ img { max-width: 100%; }
   border-color: var(--text-primary);
 }
 .talk-sort.is-active {
-  border-color: var(--slate-900);
-  background: var(--slate-900);
-  color: var(--slate-0);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--text-on-accent);
 }
 .talk-grid {
   display: grid;
