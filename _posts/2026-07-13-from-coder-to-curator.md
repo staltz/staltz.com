@@ -80,7 +80,7 @@ This is not an exhaustive or final list. It is just my two cents on what is beco
 
 ## The new job
 
-There will still be people who write code by hand, just like there are still people who write assembly, grow their own food, or build furniture with hand tools. Sometimes that is the right choice. Sometimes it is enjoyable. But it will no longer define the mainstream profession.
+There will still be people who write code by hand, just like there are people who grow (all) their own food. But it will no longer define the mainstream profession.
 
 This is not the end of software development. We have more software to make than ever, including projects that were never economically possible before. What is ending is a particular arrangement of responsibilities, where a person was paid mostly to translate decisions into code.
 
