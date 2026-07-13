@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "build": "eleventy",
+    "deploy": "npm run build && netlify deploy --prod",
     "serve": "eleventy --serve",
     "start": "eleventy --serve"
   },
