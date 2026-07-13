@@ -745,6 +745,19 @@ img { max-width: 100%; }
 .article__license { font-size: var(--text-sm); color: var(--text-muted); }
 .article__license a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 0.18em; }
 .article__license a:hover { color: var(--link-hover); }
+.article__support {
+  margin-top: var(--space-10);
+  max-width: var(--measure);
+  font-size: var(--text-base);
+  color: var(--text-muted);
+  text-wrap: pretty;
+}
+.article__support a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.article__support a:hover { color: var(--link-hover); }
 
 /* ==========================================================================
    Prose — long-form reading typography
