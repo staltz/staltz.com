@@ -768,7 +768,7 @@ img { max-width: 100%; }
 }
 .prose > * + * { margin-top: var(--space-5); }
 .prose p { text-wrap: pretty; }
-.article .prose > p { font-size: var(--text-lg); color: var(--text-secondary); }
+.article .prose > p { font-size: var(--text-base); color: var(--text-secondary); }
 .prose h2 {
   font-size: var(--text-2xl);
   font-weight: var(--weight-semibold);
