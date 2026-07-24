@@ -7,8 +7,8 @@ tags: [blog]
 I have *felt* a lot more productive since getting into agentic coding with tools like Cursor, Claude, Grok Build, and Kimi. Beyond getting a lot more done at work and keeping my coworkers busy reviewing PRs, I've [revamped my personal blog](https://staltz.com/from-coder-to-curator), made games for my kids, started building the [spreadsheet app of my dreams](https://x.com/andrestaltz/status/2065170439077265904), [made my own clockface](https://staltz.com/one-handed-clock), and more.
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin:var(--space-8,2rem) 0">
-  <a href="/img/20260724-lintupeli.png"><img src="/img/20260724-lintupeli.png" alt="Lintupeli, a rollercoaster game" style="margin:0;width:100%"></a>
-  <a href="/img/20260724-prinsessa.png"><img src="/img/20260724-prinsessa.png" alt="Prinsessa, a castle adventure game" style="margin:0;width:100%"></a>
+  <a href="/img/20260724-lintupeli.jpg"><img src="/img/20260724-lintupeli.jpg" alt="Lintupeli, a rollercoaster game" style="margin:0;width:100%"></a>
+  <a href="/img/20260724-prinsessa.jpg"><img src="/img/20260724-prinsessa.jpg" alt="Prinsessa, a castle adventure game" style="margin:0;width:100%"></a>
 </div>
 
 <small><em>Lintupeli and Prinsessa, games I made for my kids</em></small>
