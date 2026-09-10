@@ -45,7 +45,7 @@ say what I'm doing today (pull request reviews, product and UX design, planning,
 coordination with customers and stakeholders, and team building) is just a
 version of programming. No, it is not.
 
-For me, **programming was about [living in the technical guts of the computer](/the-single-tip-that-made-me-a-better-programmer.html)**.
+For me, [programming was about living in the technical guts of the computer](/the-single-tip-that-made-me-a-better-programmer.html).
 Computers could do things *for* us only if they were programmed. Without
 programming, computers were dead and pointless. We were the ones who went inside
 and instilled them with *life*. There was no other way of giving meaning to a
