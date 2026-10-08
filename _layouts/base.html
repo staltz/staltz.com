@@ -19,6 +19,26 @@
   <link href="/css/main.css" rel="stylesheet">
   <link href="/css/prism-staltz.css" rel="stylesheet">
   <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ site.title }}">
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.author }}",
+    "description": "I make software, teach programming, and write articles. My writing is mostly on open source and decentralization.",
+    "url": "{{ site.url }}",
+    "image": "{{ site.url }}/img/andre-avatar.jpg",
+    "email": "andre@staltz.com",
+    "sameAs": [
+      "https://github.com/staltz",
+      "https://twitter.com/andrestaltz",
+      "https://bsky.app/profile/staltz.com",
+      "https://patreon.com/andrestaltz",
+      "https://linkedin.com/in/andrestaltz"
+    ]
+  }
+  </script>
+  {% endif %}
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
