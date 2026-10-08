@@ -1,4 +1,5 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const { prefetchTweetEmbeds, tweetEmbedPlugin } = require("./lib/tweet-embed");
 const {
   dateToRfc3339,
   getNewestCollectionItemDate,
@@ -22,6 +23,13 @@ function asDate(value) {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // A status URL alone in a paragraph becomes a static tweet embed.
+  eleventyConfig.on("eleventy.before", () => prefetchTweetEmbeds(__dirname));
+  eleventyConfig.amendLibrary("md", (mdLib) => {
+    mdLib.use(tweetEmbedPlugin, { root: __dirname });
+  });
+  eleventyConfig.watchIgnores.add("embeds/tweets/**");
 
   // Atom feed helpers (the RSS plugin no longer auto-registers these as filters)
   eleventyConfig.addFilter("dateToRfc3339", dateToRfc3339);

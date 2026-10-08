@@ -926,6 +926,107 @@ span.hr { flex: 0 0 auto; }
 .tweet__handle a:hover { color: var(--link-hover); }
 .tweet__dot { margin: 0 var(--space-1); }
 
+/* Embedded status posts. A bare tweet URL in Markdown becomes this card. */
+.tweet-embed {
+  margin: var(--space-8) 0;
+  padding: var(--space-5);
+  background: var(--surface-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+}
+.prose > .tweet-embed { margin-top: var(--space-8); margin-bottom: var(--space-8); }
+.tweet-embed__by {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-4);
+}
+.prose .tweet-embed img { margin: 0; }
+.prose .tweet-embed__avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 1px solid var(--border-subtle);
+}
+.tweet-embed__who {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  line-height: var(--leading-snug);
+}
+.prose .tweet-embed__name,
+.prose .tweet-embed__handle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.prose .tweet-embed__name {
+  color: var(--text-primary);
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+}
+.prose .tweet-embed__name:hover { color: var(--link); }
+.tweet-embed__handle,
+.tweet-embed__permalink {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+.prose .tweet-embed__handle,
+.prose .tweet-embed__permalink {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.prose .tweet-embed__handle:hover,
+.prose .tweet-embed__permalink:hover { color: var(--link-hover); }
+.tweet-embed__permalink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.tweet-embed__permalink svg { width: 14px; height: 14px; display: block; }
+.prose .tweet-embed blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: var(--text-primary);
+  font-style: normal;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+.prose .tweet-embed blockquote p { margin: 0; color: var(--text-primary); }
+.prose .tweet-embed blockquote a { text-decoration: underline; }
+.tweet-embed__photos {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+.tweet-embed__photos:has(img + img) { grid-template-columns: 1fr 1fr; }
+.prose .tweet-embed__photos img {
+  width: 100%;
+  margin: 0;
+  border-radius: var(--radius-md);
+}
+.tweet-embed__quote {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+.tweet-embed__quote p { margin: 0; color: var(--text-secondary); }
+.tweet-embed__quote p + p { margin-top: var(--space-2); }
+.tweet-embed__quote-by { font-size: var(--text-sm); }
+.prose .tweet-embed__quote a { color: var(--text-primary); text-decoration: none; font-weight: var(--weight-semibold); }
+.prose .tweet-embed__quote a:hover { color: var(--link); }
+.prose .tweet-embed__quote p + p a { color: var(--link); font-weight: var(--weight-regular); text-decoration: underline; }
+
 /* ==========================================================================
    Responsive
    ========================================================================== */
