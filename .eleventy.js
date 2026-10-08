@@ -1,5 +1,9 @@
+const fs = require("fs");
+const path = require("path");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { prefetchTweetEmbeds, tweetEmbedPlugin } = require("./lib/tweet-embed");
+const { buildSitemapEntries, SITEMAP_MAX_BYTES } = require("./lib/sitemap");
+const site = require("./_data/site.json");
 const {
   dateToRfc3339,
   getNewestCollectionItemDate,
@@ -36,6 +40,32 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("getNewestCollectionItemDate", getNewestCollectionItemDate);
   eleventyConfig.addFilter("absoluteUrl", absoluteUrl);
   eleventyConfig.addAsyncFilter("htmlToAbsoluteUrls", convertHtmlToAbsoluteUrls);
+  eleventyConfig.addFilter("xmlEscape", (value) =>
+    String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&apos;"),
+  );
+
+  eleventyConfig.addCollection("sitemapEntries", (collectionApi) =>
+    buildSitemapEntries(collectionApi.getAll(), __dirname).map((entry) => ({
+      loc: absoluteUrl(entry.loc, site.url),
+      lastmod: entry.lastmod,
+    })),
+  );
+
+  eleventyConfig.on("eleventy.after", ({ dir }) => {
+    const sitemapPath = path.join(dir.output, "sitemap.xml");
+    if (!fs.existsSync(sitemapPath)) return;
+    const size = fs.statSync(sitemapPath).size;
+    if (size > SITEMAP_MAX_BYTES) {
+      throw new Error(
+        `sitemap.xml is ${size} bytes, over the 50MB sitemap protocol limit`,
+      );
+    }
+  });
 
   // Static assets copied verbatim into _site
   eleventyConfig.addPassthroughCopy("css");
